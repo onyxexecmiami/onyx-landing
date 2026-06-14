@@ -1,219 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ONYX EXECUTIVE MIAMI</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-:root { --gold: #d4af37; --black: #050505; }
-
-body {
-margin: 0;
-padding: 0;
-background-color: var(--black);
-color: #fff;
-font-family: 'Inter', sans-serif;
-overflow-x: hidden;
-}
-
-/* АНИМАЦИЯ */
-@keyframes fadeInUp {
-from { opacity: 0; transform: translateY(30px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
-.hero {
-height: 100vh;
-background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),
-url('car.jpg');
-background-size: cover;
-background-position: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 0 20px;
-}
-
-.hero-content {
-animation: fadeInUp 1s ease-out;
-}
-
-h1 {
-font-family: 'Playfair Display', serif;
-font-size: clamp(2.5rem, 8vw, 4.5rem);
-text-transform: uppercase;
-letter-spacing: 8px;
-color: var(--gold);
-margin: 0;
-}
-
-.hero-subtitle {
-font-size: 1rem;
-letter-spacing: 5px;
-text-transform: uppercase;
-margin: 15px 0 30px;
-color: rgba(255,255,255,0.8);
-}
-
-.badges {
-display: flex;
-gap: 15px;
-justify-content: center;
-flex-wrap: wrap;
-}
-
-.badge {
-border: 1px solid var(--gold);
-padding: 8px 20px;
-font-size: 0.7rem;
-text-transform: uppercase;
-letter-spacing: 2px;
-background: rgba(0,0,0,0.7);
-backdrop-filter: blur(5px);
-}
-
-.cta-group {
-margin-top: 40px;
-display: flex;
-flex-direction: column;
-gap: 20px;
-align-items: center;
-}
-
-.btn-gold {
-padding: 18px 50px;
-background: var(--gold);
-color: #000;
-text-decoration: none;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 2px;
-transition: 0.4s;
-}
-
-.btn-gold:hover {
-background: #fff;
-transform: scale(1.05);
-}
-
-.insta-link {
-color: #fff;
-text-decoration: none;
-font-size: 0.8rem;
-letter-spacing: 2px;
-text-transform: uppercase;
-border-bottom: 1px solid var(--gold);
-padding-bottom: 5px;
-opacity: 0.7;
-transition: 0.3s;
-}
-
-.insta-link:hover {
-opacity: 1;
-}
-
-/* SERVICES */
-
-.services {
-padding: 100px 20px;
-max-width: 1100px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 40px;
-}
-
-.service-card {
-background: linear-gradient(145deg, #111, #050505);
-border: 1px solid #1a1a1a;
-padding: 50px 30px;
-text-align: center;
-transition: 0.4s;
-}
-
-.service-card:hover {
-border-color: var(--gold);
-transform: translateY(-10px);
-}
-
-.service-card h3 {
-font-family: 'Playfair Display', serif;
-color: var(--gold);
-font-size: 1.8rem;
-margin-bottom: 15px;
-}
-
-.service-card p {
-font-size: 0.9rem;
-color: #888;
-line-height: 1.8;
-margin-bottom: 30px;
-}
-
-.line {
-width: 40px;
-height: 1px;
-background: var(--gold);
-margin: 0 auto 20px;
-}
-
-@media (max-width: 768px) {
-h1 { font-size: 2.5rem; }
-}
-</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Onyx Executive Miami — Private Chauffeur Service | Miami, Fort Lauderdale, Palm Beach</title>
+<meta name="description" content="Boutique executive chauffeur service across Miami-Dade, Broward, and Palm Beach. Premium black-SUV transportation with one accountable point of contact — airport, FBO/private aviation, and corporate transfers." />
+<link rel="canonical" href="https://onyxexecmiami.com/" />
+<meta name="theme-color" content="#0A0A0A" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header class="hero">
-<div class="hero-content">
-
-<h1>Onyx Executive</h1>
-<div class="hero-subtitle">Black Car Service in Miami</div>
-
-<div class="badges">
-<div class="badge">Suburban RST</div>
-<div class="badge">VIP Driver</div>
-<div class="badge">24/7 Service</div>
-</div>
-
-<div class="cta-group">
-<a href="https://wa.me/13108579240" class="btn-gold">Book via WhatsApp</a>
-<a href="https://www.instagram.com/onyxexecmiami" target="_blank" class="insta-link">@onyxexecmiami</a>
-</div>
-
-</div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><b>ONYX</b> <span>·</span> Executive Miami</a>
+    <nav class="nav-links">
+      <a href="airport-transfers.html">Airport</a>
+      <a href="private-aviation.html">Private Aviation</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="service-area.html">Service Area</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="nav-cta" href="tel:+17869316699">Call +1 786 931 ONYX</a>
+  </div>
 </header>
 
-<section class="services">
-
-<div class="service-card">
-<div class="line"></div>
-<h3>Hourly Service</h3>
-<p>Maximum flexibility for business meetings or nightlife in Miami. Your driver is always ready.</p>
-<a href="https://wa.me/13108579240" class="insta-link">Request Info</a>
-</div>
-
-<div class="service-card" style="border-color: var(--gold);">
-<div class="line"></div>
-<h3>Full Day</h3>
-<p>Complete freedom. Premium SUV and professional chauffeur at your service all day.</p>
-<a href="https://wa.me/13108579240" class="btn-gold" style="padding:10px 25px; font-size:0.7rem;">Book Today</a>
-</div>
-
-<div class="service-card">
-<div class="line"></div>
-<h3>Events</h3>
-<p>Luxury transport for Art Basel, race weekends, and VIP events. Arrive in style.</p>
-<a href="https://wa.me/13108579240" class="insta-link">Get Quote</a>
-</div>
-
+<section class="hero" id="top" style="padding:0">
+  <div class="hero-media"><img src="hero.jpg" alt="Founder of Onyx Executive Miami stepping from a black Chevrolet Suburban at a South Florida resort" /></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow on-dark">Private Chauffeur Service · South Florida</p>
+      <h1 class="display">One standard.<br>Personally guaranteed.</h1>
+      <div class="rule"></div>
+      <p class="lead">Premium black-SUV transportation across Miami, Fort Lauderdale, and Palm Beach — arranged through one point of contact who answers directly. Not a call center.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="tel:+17869316699">Call now</a>
+        <a class="btn btn-light" href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20to%20arrange%20a%20chauffeur%20in%20South%20Florida." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" href="contact.html#book">Request a quote</a>
+      </div>
+      <div class="hero-foot">
+        <span><i class="dot"></i> Airport &amp; FBO transfers</span>
+        <span><i class="dot"></i> Corporate accounts</span>
+        <span><i class="dot"></i> Licensed &amp; insured</span>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- THE ONYX STANDARD -->
+<section id="standard" class="section-soft">
+  <div class="wrap split center">
+    <div class="prose reveal">
+      <p class="eyebrow">The Onyx Standard</p>
+      <h2 class="h2">Built behind the wheel.<br>Held the same at every mile.</h2>
+      <div class="rule"></div>
+      <p>Onyx began with its founder driving every trip. As the network grows, that same founder personally vets each chauffeur and holds every one to a single standard — so you work with one accountable partner, whoever is assigned.</p>
+      <ul class="points">
+        <li><i class="mark"></i><span><b>Personal accountability.</b> One owner stands behind every ride, reachable directly.</span></li>
+        <li><i class="mark"></i><span><b>Vetted, consistent chauffeurs.</b> The same safety, discretion, and presentation across the network.</span></li>
+        <li><i class="mark"></i><span><b>Languages.</b> English, Russian, Ukrainian, and Polish.</span></li>
+      </ul>
+      <div style="margin-top:28px"><a class="btn btn-outline" href="the-onyx-standard.html">Read the Onyx Standard</a></div>
+    </div>
+    <div class="feat-img portrait reveal"><img src="founder.jpg" alt="Vitalii, founder of Onyx Executive Miami" /></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-dark">
+  <div class="wrap">
+    <div class="grid-head reveal">
+      <p class="eyebrow on-dark">Services</p>
+      <h2 class="h2">Where we drive</h2>
+      <div class="rule"></div>
+      <p class="lead">Point-to-point and by the hour, across Miami-Dade, Broward, and Palm Beach.</p>
+    </div>
+    <div class="cards reveal">
+      <a class="card" href="airport-transfers.html"><div class="no">01</div><h3>Airport Transfers</h3><p>MIA, FLL, and PBI — with flight tracking and meet-and-greet.</p><div class="more">View →</div></a>
+      <a class="card" href="private-aviation.html"><div class="no">02</div><h3>Private Aviation · FBO</h3><p>Planeside transfers timed to your tail number.</p><div class="more">View →</div></a>
+      <a class="card" href="corporate.html"><div class="no">03</div><h3>Corporate Transportation</h3><p>Recurring executive travel on one accountable account.</p><div class="more">View →</div></a>
+      <a class="card" href="executive-chauffeur.html"><div class="no">04</div><h3>Executive Chauffeur</h3><p>Hourly and as-directed for meetings and full days.</p><div class="more">View →</div></a>
+      <a class="card" href="school-transportation.html"><div class="no">05</div><h3>School Transportation</h3><p>Onyx Executive Family — vetted, consistent family routes.</p><div class="more">View →</div></a>
+      <a class="card" href="event-transportation.html"><div class="no">06</div><h3>Event Transportation</h3><p>Discreet arrivals for galas, conferences, and occasions.</p><div class="more">View →</div></a>
+      <a class="card" href="long-distance.html"><div class="no">07</div><h3>Long-Distance</h3><p>The Keys, Naples, Palm Beach, and Orlando.</p><div class="more">View →</div></a>
+      <a class="card" href="service-area.html"><div class="no">08</div><h3>Service Area</h3><p>Aventura, Sunny Isles, Bal Harbour, Brickell, and more.</p><div class="more">View →</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP (verify before publishing) -->
+<div class="trust">
+  <div class="wrap">
+    <span><i class="mark"></i> Licensed Miami-Dade for-hire operator</span>
+    <span><i class="mark"></i> Commercial insurance</span>
+    <span><i class="mark"></i> Certificate of insurance on request</span>
+    <span><i class="mark"></i> Background-checked chauffeurs</span>
+  </div>
+</div>
+
+<!-- BOOK -->
+<section id="book" class="section-dark">
+  <div class="wrap book">
+    <div class="reveal">
+      <p class="eyebrow on-dark">Contact</p>
+      <h2 class="h2">Tell us where you need to be.</h2>
+      <div class="rule"></div>
+      <p class="lead">Send the details and your request opens straight in WhatsApp — or call for an immediate answer.</p>
+      <div class="contact-list">
+        <a href="tel:+17869316699"><span><span class="clab">Phone</span>+1 786 931 ONYX</span></a><a href="mailto:info@onyxexecmiami.com"><span><span class="clab">Email</span>info@onyxexecmiami.com</span></a>
+        <a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20to%20arrange%20a%20chauffeur%20in%20South%20Florida." target="_blank" rel="noopener"><span><span class="clab">WhatsApp</span>Message us</span></a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="form-grid">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" placeholder="Your name" /></div>
+        <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" type="tel" placeholder="+1 …" /></div>
+        <div class="field"><label for="f-date">Date &amp; time</label><input id="f-date" type="text" placeholder="e.g. Jun 20, 3:00 PM" /></div>
+        <div class="field"><label for="f-pax">Passengers</label><input id="f-pax" type="number" min="1" placeholder="2" /></div>
+        <div class="field full"><label for="f-from">Pickup</label><input id="f-from" type="text" placeholder="Address, airport, or FBO" /></div>
+        <div class="field full"><label for="f-to">Drop-off</label><input id="f-to" type="text" placeholder="Address, airport, or FBO" /></div>
+        <div class="field full"><label for="f-svc">Service</label>
+          <select id="f-svc">
+            <option>Airport transfer</option><option>Private aviation / FBO</option><option>Corporate</option>
+            <option>Hourly / as-directed</option><option>School / family</option><option>Event</option><option>Long-distance</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-light" id="sendBtn" type="button">Send via WhatsApp</button>
+        <a class="btn btn-ghost" href="tel:+17869316699">Or call instead</a>
+      </div>
+      <p class="form-note">Opens WhatsApp with your details prefilled. Nothing is sent until you press send there.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand"><b>ONYX</b> <span>·</span> Executive Miami</div>
+        <p class="foot-tag">Boutique executive transportation across South Florida.</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>Services</h4>
+          <a href="airport-transfers.html">Airport transfers</a>
+          <a href="private-aviation.html">Private aviation / FBO</a>
+          <a href="corporate.html">Corporate</a>
+          <a href="executive-chauffeur.html">Executive chauffeur</a>
+          <a href="school-transportation.html">School transportation</a>
+          <a href="event-transportation.html">Event transportation</a>
+          <a href="long-distance.html">Long-distance</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="the-onyx-standard.html">The Onyx Standard</a>
+          <a href="service-area.html">Service area</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+17869316699">+1 786 931 ONYX</a>
+          <a href="https://wa.me/17869316699" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/onyxexecmiami" target="_blank" rel="noopener">@onyxexecmiami</a><a href="mailto:info@onyxexecmiami.com">info@onyxexecmiami.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Onyx Executive Miami · Koretsky Logistics LLC</span>
+      <span>Miami-Dade · Broward · Palm Beach</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+17869316699">Call</a>
+  <a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20to%20arrange%20a%20chauffeur%20in%20South%20Florida." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var b=document.getElementById('sendBtn');
+  if(b){b.addEventListener('click',function(){
+    var v=function(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';};
+    var t=['New chauffeur request — Onyx Executive Miami','','Name: '+(v('f-name')||'—'),'Phone: '+(v('f-phone')||'—'),'Service: '+v('f-svc'),'Date/time: '+(v('f-date')||'—'),'Passengers: '+(v('f-pax')||'—'),'Pickup: '+(v('f-from')||'—'),'Drop-off: '+(v('f-to')||'—')];
+    window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'_blank');
+  });}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
 </body>
 </html>
