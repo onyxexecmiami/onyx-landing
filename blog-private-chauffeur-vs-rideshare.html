@@ -34,11 +34,17 @@
   "image": "https://onyxexecmiami.com/suburban-front.jpg",
   "inLanguage": "en-US",
   "url": "https://onyxexecmiami.com/blog-private-chauffeur-vs-rideshare.html",
-  "author": {"@type": "Person", "name": "Vitalii Koretskyi", "jobTitle": "Founder and Chauffeur", "worksFor": {"@type": "Organization", "name": "Onyx Executive Miami"}},
+  "author": {
+    "@type": "Person",
+    "name": "Vitalii Koretskyi",
+    "jobTitle": "Founder and Chauffeur",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Onyx Executive Miami"
+    }
+  },
   "publisher": {
-    "@type": "Organization",
-    "name": "Onyx Executive Miami",
-    "url": "https://onyxexecmiami.com/"
+    "@id": "https://onyxexecmiami.com/#business"
   },
   "datePublished": "2026-07-24",
   "dateModified": "2026-07-26",
@@ -58,18 +64,98 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Is a private chauffeur more expensive than Uber in Miami?", "acceptedAnswer": {"@type": "Answer", "text": "Often, private chauffeur service costs more than standard rideshare during normal demand. Rideshare pricing changes in real time, while a chauffeur quote is provided in advance. The best value depends on the route, vehicle category, pickup requirements, and level of coordination needed."}},
-    {"@type": "Question", "name": "Is Uber Black the same as a chauffeur service?", "acceptedAnswer": {"@type": "Answer", "text": "Not exactly. Uber Black is a commercially licensed premium ride category, and Uber Reserve may allow advance scheduling. A dedicated private chauffeur service differs mainly in the direct provider relationship: pickup details, luggage requirements, stops, passenger communication, and any return itinerary can be coordinated with the same transportation company before the trip."}},
-    {"@type": "Question", "name": "Does a private chauffeur track my flight?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We monitor the flight status using the flight number provided with the reservation. If the flight arrives early or is delayed, we adjust the pickup coordination accordingly and keep the booking contact informed when necessary."}},
-    {"@type": "Question", "name": "What happens if my flight is delayed?", "acceptedAnswer": {"@type": "Answer", "text": "We monitor the flight's actual arrival status and adjust pickup coordination accordingly. Expected baggage-claim or customs time, included waiting time, and any charges for extended delays should be confirmed as part of the reservation."}},
-    {"@type": "Question", "name": "Where does the chauffeur meet me at MIA, FLL, or DJT?", "acceptedAnswer": {"@type": "Answer", "text": "The specific pickup point is agreed at booking and depends on the airport, terminal, and any regulations in effect that day — curbside, or a meet-and-greet point inside the terminal if requested."}},
-    {"@type": "Question", "name": "Can the driver meet me inside the terminal?", "acceptedAnswer": {"@type": "Answer", "text": "Meet-and-greet inside the terminal may be available when requested and confirmed in advance, subject to airport access rules, parking conditions, and the agreed service plan."}},
-    {"@type": "Question", "name": "How much luggage fits in a Chevrolet Suburban?", "acceptedAnswer": {"@type": "Answer", "text": "Capacity depends on the number of passengers, suitcase dimensions, child seats, strollers, golf bags, and whether every seating row is required. Send the passenger count and a realistic bag count before booking so ONYX can confirm whether the Suburban is suitable."}},
-    {"@type": "Question", "name": "Can I request a child seat?", "acceptedAnswer": {"@type": "Answer", "text": "Child-seat requests must be discussed before booking. Availability, seat type, installation responsibility, and any additional charge are confirmed as part of the reservation."}},
-    {"@type": "Question", "name": "Can I book transportation for someone else?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We can coordinate with both the person booking and the passenger, which is common for family members, clients, or employees flying in separately."}},
-    {"@type": "Question", "name": "How far in advance should I book?", "acceptedAnswer": {"@type": "Answer", "text": "Booking as early as possible gives you the best chance of confirming the preferred vehicle and pickup method. Same-day requests may be available, while peak dates, group travel, and meet-and-greet service should be arranged earlier whenever possible."}},
-    {"@type": "Question", "name": "Do you cover FLL to Aventura and Sunny Isles?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. ONYX provides pre-arranged transfers between FLL and Aventura, Sunny Isles, Hallandale Beach, Hollywood, Bal Harbour, and other destinations across Miami-Dade and Broward counties."}}
-  ]
+    {
+      "@type": "Question",
+      "name": "Is a private chauffeur more expensive than Uber in Miami?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often, private chauffeur service costs more than standard rideshare during normal demand. Rideshare pricing changes in real time, while a chauffeur quote is provided in advance. The best value depends on the route, vehicle category, pickup requirements, and level of coordination needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Uber Black the same as a chauffeur service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not exactly. Uber Black is a commercially licensed premium ride category, and Uber Reserve may allow advance scheduling. A dedicated private chauffeur service differs mainly in the direct provider relationship: pickup details, luggage requirements, stops, passenger communication, and any return itinerary can be coordinated with the same transportation company before the trip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a private chauffeur track my flight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We monitor the flight status using the flight number provided with the reservation. If the flight arrives early or is delayed, we adjust the pickup coordination accordingly and keep the booking contact informed when necessary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my flight is delayed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We monitor the flight's actual arrival status and adjust pickup coordination accordingly. Expected baggage-claim or customs time, included waiting time, and any charges for extended delays should be confirmed as part of the reservation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the chauffeur meet me at MIA, FLL, or DJT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The specific pickup point is agreed at booking and depends on the airport, terminal, and any regulations in effect that day \u2014 curbside, or a meet-and-greet point inside the terminal if requested."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the driver meet me inside the terminal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meet-and-greet inside the terminal may be available when requested and confirmed in advance, subject to airport access rules, parking conditions, and the agreed service plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much luggage fits in a Chevrolet Suburban?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Capacity depends on the number of passengers, suitcase dimensions, child seats, strollers, golf bags, and whether every seating row is required. Send the passenger count and a realistic bag count before booking so ONYX can confirm whether the Suburban is suitable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I request a child seat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Child-seat requests must be discussed before booking. Availability, seat type, installation responsibility, and any additional charge are confirmed as part of the reservation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book transportation for someone else?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can coordinate with both the person booking and the passenger, which is common for family members, clients, or employees flying in separately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Booking as early as possible gives you the best chance of confirming the preferred vehicle and pickup method. Same-day requests may be available, while peak dates, group travel, and meet-and-greet service should be arranged earlier whenever possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cover FLL to Aventura and Sunny Isles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ONYX provides pre-arranged transfers between FLL and Aventura, Sunny Isles, Hallandale Beach, Hollywood, Bal Harbour, and other destinations across Miami-Dade and Broward counties."
+      }
+    }
+  ],
+  "publisher": {
+    "@id": "https://onyxexecmiami.com/#business"
+  }
 }
 </script>
 </head>
