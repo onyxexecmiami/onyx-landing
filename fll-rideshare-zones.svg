@@ -1,0 +1,56 @@
+<svg width="100%" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Montserrat',sans-serif">
+<title>FLL rideshare pickup zones by terminal</title>
+<desc>Diagram showing Fort Lauderdale-Hollywood International Airport rideshare pickup zones: Terminal 1 uses Zone Z, Terminal 2 uses the GTA-2 area, and Terminals 3 and 4 both use Zones A-D inside the Palm Garage across a pedestrian crosswalk.</desc>
+
+<!-- lower level / arrivals baseline -->
+<line x1="40" y1="140" x2="860" y2="140" stroke="#0A0A0A" stroke-width="1" opacity="0.35"/>
+<text x="40" y="128" font-size="11" letter-spacing="0.12em" fill="#6B6B66" text-transform="uppercase">LOWER LEVEL — ARRIVALS CURBSIDE</text>
+
+<!-- Terminal 1 -->
+<rect x="60" y="40" width="160" height="100" rx="4" fill="#F5F4F1" stroke="#0A0A0A" stroke-width="1"/>
+<text x="140" y="80" font-size="15" font-weight="500" fill="#0A0A0A" text-anchor="middle">Terminal 1</text>
+<text x="140" y="100" font-size="11" fill="#6B6B66" text-anchor="middle">American, JetBlue</text>
+
+<!-- Terminal 2 -->
+<rect x="245" y="40" width="160" height="100" rx="4" fill="#F5F4F1" stroke="#0A0A0A" stroke-width="1"/>
+<text x="325" y="80" font-size="15" font-weight="500" fill="#0A0A0A" text-anchor="middle">Terminal 2</text>
+<text x="325" y="100" font-size="11" fill="#6B6B66" text-anchor="middle">Delta, Air Canada</text>
+
+<!-- Terminal 3 -->
+<rect x="430" y="40" width="160" height="100" rx="4" fill="#F5F4F1" stroke="#0A0A0A" stroke-width="1"/>
+<text x="510" y="80" font-size="15" font-weight="500" fill="#0A0A0A" text-anchor="middle">Terminal 3</text>
+<text x="510" y="100" font-size="11" fill="#6B6B66" text-anchor="middle">Southwest</text>
+
+<!-- Terminal 4 -->
+<rect x="615" y="40" width="160" height="100" rx="4" fill="#F5F4F1" stroke="#0A0A0A" stroke-width="1"/>
+<text x="695" y="80" font-size="15" font-weight="500" fill="#0A0A0A" text-anchor="middle">Terminal 4</text>
+<text x="695" y="100" font-size="11" fill="#6B6B66" text-anchor="middle">Spirit and others</text>
+
+<!-- connectors down to pickup zones -->
+<line x1="140" y1="140" x2="140" y2="185" stroke="#0A0A0A" stroke-width="1"/>
+<line x1="325" y1="140" x2="325" y2="185" stroke="#0A0A0A" stroke-width="1"/>
+<line x1="510" y1="140" x2="605" y2="185" stroke="#0A0A0A" stroke-width="1"/>
+<line x1="695" y1="140" x2="605" y2="185" stroke="#0A0A0A" stroke-width="1"/>
+
+<!-- Zone Z (Terminal 1) -->
+<rect x="60" y="190" width="160" height="90" rx="4" fill="#0A0A0A"/>
+<text x="140" y="222" font-size="14" font-weight="500" fill="#D4AF37" text-anchor="middle">Zone Z</text>
+<text x="140" y="242" font-size="11" fill="#cfcfca" text-anchor="middle">Just past the taxi</text>
+<text x="140" y="256" font-size="11" fill="#cfcfca" text-anchor="middle">podium, on foot</text>
+
+<!-- GTA-2 (Terminal 2) -->
+<rect x="245" y="190" width="160" height="90" rx="4" fill="#0A0A0A"/>
+<text x="325" y="222" font-size="14" font-weight="500" fill="#D4AF37" text-anchor="middle">GTA-2 area</text>
+<text x="325" y="242" font-size="11" fill="#cfcfca" text-anchor="middle">Curbside, near</text>
+<text x="325" y="256" font-size="11" fill="#cfcfca" text-anchor="middle">Terminal 2 exit</text>
+
+<!-- Palm Garage Zones A-D (Terminal 3 & 4) -->
+<rect x="430" y="190" width="345" height="90" rx="4" fill="#0A0A0A"/>
+<text x="602" y="222" font-size="14" font-weight="500" fill="#D4AF37" text-anchor="middle">Palm Garage — Zones A–D</text>
+<text x="602" y="242" font-size="11" fill="#cfcfca" text-anchor="middle">Cross the pedestrian walkway from either</text>
+<text x="602" y="256" font-size="11" fill="#cfcfca" text-anchor="middle">terminal to Level 1 of the garage</text>
+
+<!-- footer note -->
+<text x="40" y="320" font-size="11" fill="#6B6B66">Source: Broward County Aviation Department, current wayfinding.</text>
+<text x="40" y="338" font-size="11" fill="#6B6B66">Always confirm the pickup zone shown in your rideshare app before you leave baggage claim.</text>
+</svg>
