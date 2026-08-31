@@ -29,7 +29,19 @@
 <a class="brand" href="index.html"><b>ONYX</b> <span>·</span> Executive Miami</a>
 <nav class="nav-links"><a href="airport-transfers.html">Airport</a><a href="private-aviation.html">Private Aviation</a><a href="corporate.html">Corporate</a><a href="fleet.html" aria-current="page">Fleet</a><a href="service-area.html">Service Area</a><a href="contact.html">Contact</a></nav>
 <a class="nav-cta" href="tel:+17869316699">Call +1 786 931 ONYX</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
+<div class="menu-backdrop"></div>
+<nav class="mobile-menu">
+<a href="airport-transfers.html">Airport</a>
+<a href="private-aviation.html">Private Aviation</a>
+<a href="corporate.html">Corporate</a>
+<a href="fleet.html">Fleet</a>
+<a href="service-area.html">Service Area</a>
+<a href="contact.html">Contact</a>
+<a class="mm-call" href="tel:+17869316699">Call +1 786 931 ONYX</a>
+</nav>
+
 <section class="page-hero">
 <div class="wrap">
 <p class="breadcrumb"><a href="index.html">Home</a> / Our Vehicle</p>
@@ -97,5 +109,30 @@
 </div></footer>
 <div class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></div>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});</script>
+<script>
+(function(){
+var toggle=document.querySelector('.nav-toggle');
+var menu=document.querySelector('.mobile-menu');
+var backdrop=document.querySelector('.menu-backdrop');
+function closeMenu(){
+  menu.classList.remove('open');
+  toggle.classList.remove('open');
+  backdrop.classList.remove('open');
+  toggle.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+if(toggle){
+  toggle.addEventListener('click',function(){
+    var isOpen=menu.classList.toggle('open');
+    toggle.classList.toggle('open',isOpen);
+    backdrop.classList.toggle('open',isOpen);
+    toggle.setAttribute('aria-expanded',isOpen?'true':'false');
+    document.body.style.overflow=isOpen?'hidden':'';
+  });
+  backdrop.addEventListener('click',closeMenu);
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',closeMenu);});
+}
+})();
+</script>
 </body>
 </html>

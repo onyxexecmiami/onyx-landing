@@ -128,8 +128,19 @@ gtag('config', 'G-0NQL5L01ZD');
 <a href="contact.html">Contact</a>
 </nav>
 <a class="nav-cta" href="tel:+17869316699">Call +1 786 931 ONYX</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 </header>
+<div class="menu-backdrop"></div>
+<nav class="mobile-menu">
+<a href="airport-transfers.html">Airport</a>
+<a href="private-aviation.html">Private Aviation</a>
+<a href="corporate.html">Corporate</a>
+<a href="fleet.html">Fleet</a>
+<a href="service-area.html">Service Area</a>
+<a href="contact.html">Contact</a>
+<a class="mm-call" href="tel:+17869316699">Call +1 786 931 ONYX</a>
+</nav>
 <section class="hero" id="top" style="padding:0">
 <div class="hero-media"><img src="hero.jpg" alt="Founder of Onyx Executive Miami stepping from a black Chevrolet Suburban at a South Florida resort" /></div>
 <div class="wrap">
@@ -400,6 +411,31 @@ window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'
 });}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+<script>
+(function(){
+var toggle=document.querySelector('.nav-toggle');
+var menu=document.querySelector('.mobile-menu');
+var backdrop=document.querySelector('.menu-backdrop');
+function closeMenu(){
+  menu.classList.remove('open');
+  toggle.classList.remove('open');
+  backdrop.classList.remove('open');
+  toggle.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+if(toggle){
+  toggle.addEventListener('click',function(){
+    var isOpen=menu.classList.toggle('open');
+    toggle.classList.toggle('open',isOpen);
+    backdrop.classList.toggle('open',isOpen);
+    toggle.setAttribute('aria-expanded',isOpen?'true':'false');
+    document.body.style.overflow=isOpen?'hidden':'';
+  });
+  backdrop.addEventListener('click',closeMenu);
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',closeMenu);});
+}
+})();
 </script>
 </body>
 </html>
