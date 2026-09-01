@@ -206,3 +206,6 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 .mobile-menu a:hover,.mobile-menu a:active{color:var(--gold)}
 .mobile-menu .mm-call{margin-top:auto;border-top:1px solid var(--hair-dark);padding-top:24px;color:var(--gold)}
 @media(min-width:901px){.mobile-menu,.menu-backdrop{display:none}}
+
+/* --- Gold trust line under hero CTAs --- */
+.trust-line{margin-top:22px;font-size:12px;letter-spacing:.04em;color:var(--gold)}
