@@ -222,3 +222,13 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 .post-card h3{font-family:var(--display);font-size:23px;font-weight:500;color:var(--onyx);margin-bottom:10px;line-height:1.25}
 .post-card p{font-size:14px;color:var(--muted);line-height:1.55;margin-bottom:20px}
 .post-card .more{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500}
+
+/* Trust grid — 4-up icon feature block */
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:8px}
+.trust-item{display:flex;flex-direction:column;gap:16px}
+.trust-icon{width:50px;height:50px;border-radius:50%;border:1px solid var(--hair-dark);display:flex;align-items:center;justify-content:center;color:#fff}
+.trust-icon svg{width:20px;height:20px}
+.trust-item h3{font-size:18px;font-weight:600;color:#fff}
+.trust-item p{font-size:14px;line-height:1.65;color:#b9b9b2}
+@media (max-width:900px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.trust-grid{grid-template-columns:1fr}}
