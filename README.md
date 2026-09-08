@@ -1,13 +1,13 @@
-# Правка внутренних ссылок — точки входа на новые 8 страниц
+# Объединение OPF-страниц — правка после находки про LEEMO/Detailed Drivers
 
-Это **замена существующих файлов** (не новые страницы) — GitHub: открыть файл → Edit this file → выделить всё → вставить содержимое → Commit.
+## Действия в GitHub
 
-- `service-area.html` — добавлены ссылки "More on Brickell & Downtown Miami" и "More on Miami Beach" в уже существующие текстовые блоки (текст был, ссылок не было, т.к. страниц ещё не существовало)
-- `private-aviation.html` — добавлен новый блок "Find your FBO" с прямыми ссылками на все 4 терминала (Signature Aviation MIA/OPF, Atlantic Aviation, Fontainebleau)
-- `airport-transfers.html` — добавлена ссылка "See rates & what's included" в hero-блок, плюс rates.html и cruise-transportation.html в блок "Often booked with"
+1. **УДАЛИТЬ из репозитория** (Delete file): `signature-aviation-opf.html`, `atlantic-aviation-opf.html`, `fontainebleau-aviation.html`
+   — они ещё не проиндексированы Google, терять нечего, но лучше убрать сейчас, а не позже
+2. **Создать новый файл**: `opa-locka-airport-opf.html` — одна страница на весь OPF, с разным текстом по каждому FBO (Signature/Atlantic/Fontainebleau), не copy-paste
+3. **Заменить**: `private-aviation.html` (обновлён блок "Find your FBO" — теперь 2 ссылки: MIA и единый OPF, вместо 4)
+4. **Заменить**: `sitemap.xml` (3 старых URL убраны, 1 новый добавлен — итого теперь 6 новых страниц с прошлого захода, не 8)
 
-Все 3 файла проверены строгим парсером — 0 ошибок.
+signature-aviation-mia.html НЕ трогать — она остаётся отдельно, другой аэропорт, реально другой контент.
 
-## Что осталось непокрытым (сознательно, малый охват)
-
-Остальные 23 страницы не трогал — эти 3 покрывают основные логичные точки входа (хаб по FBO, хаб по локациям, топовая страница по трафику). Если считаете нужным — можно точечно добавить ссылку на rates.html ещё и с mia-airport.html/fll-airport.html/pbi-airport.html, скажите отдельно.
+Всё провалидировано строгим парсером — 0 ошибок.
