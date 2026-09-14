@@ -48,7 +48,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.92);backdrop-f
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
 .brand{font-family:var(--display);font-size:22px;color:#fff;letter-spacing:.02em;white-space:nowrap}
 .brand b{font-weight:600}.brand span{color:var(--gold)}
-.nav-links{display:flex;gap:16px;align-items:center}
+.nav-links{display:flex;flex:1;justify-content:center;gap:20px;align-items:center;margin:0 24px}
 .nav-links a{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#cfcfca;transition:color .2s;white-space:nowrap;line-height:1}
 .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold)}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#fff;border:1px solid var(--hair);padding:9px 15px;transition:.25s;white-space:nowrap}
@@ -199,7 +199,7 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 .nav-links a:hover::after,.nav-links a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
 .nav-drop{position:relative}
 .nav-drop>a{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;line-height:1}
-.nav-drop>a::after{content:"▾";position:static;width:auto;height:auto;background:none;font-size:13px;color:#9a9a95;transition:color .2s,transform .2s;line-height:1;display:inline-block;transform:translateY(-0.5px)}
+.nav-drop>a::after{content:"▾";position:static;width:auto;height:auto;background:none;font-size:15px;color:#9a9a95;transition:color .2s,transform .2s;line-height:1;display:inline-block;transform:translateY(-0.5px)}
 .nav-drop:hover>a::after{color:var(--gold);transform:translateY(-0.5px) rotate(180deg)}
 .nav-drop-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:230px;background:var(--onyx);border:1px solid var(--hair);padding:10px 0;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s,transform .2s;box-shadow:0 18px 40px rgba(0,0,0,.45)}
 .nav-drop:hover .nav-drop-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px)}
