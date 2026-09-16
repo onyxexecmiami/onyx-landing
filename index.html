@@ -9,9 +9,23 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-0NQL5L01ZD');
 </script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a');
+  if(!a) return;
+  var href = a.getAttribute('href') || '';
+  if(href.indexOf('tel:') === 0){
+    gtag('event','call_click',{event_category:'contact',event_label:href});
+  } else if(href.indexOf('wa.me') !== -1){
+    gtag('event','whatsapp_click',{event_category:'contact',event_label:href});
+  } else if(href.indexOf('mailto:') === 0){
+    gtag('event','email_click',{event_category:'contact',event_label:href});
+  }
+}, true);
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Onyx Executive Miami — Private Chauffeur Service | Miami, Fort Lauderdale, Palm Beach</title>
+<title>Owner-Managed Chauffeur Service in Miami | Onyx Executive Miami</title>
 <meta name="description" content="Private chauffeur service across Miami-Dade, Broward, and Palm Beach: airport transfers, private aviation, and corporate accounts with one point of contact." />
 <link rel="canonical" href="https://onyxexecmiami.com/" />
 <link rel="alternate" hreflang="en" href="https://onyxexecmiami.com/" />
@@ -20,12 +34,12 @@ gtag('config', 'G-0NQL5L01ZD');
 <link rel="alternate" hreflang="x-default" href="https://onyxexecmiami.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Onyx Executive Miami" />
-<meta property="og:title" content="Onyx Executive Miami — Private Chauffeur Service | Miami, Fort Lauderdale, Palm Beach" />
+<meta property="og:title" content="Owner-Managed Chauffeur Service in Miami | Onyx Executive Miami" />
 <meta property="og:description" content="Private chauffeur service across Miami-Dade, Broward, and Palm Beach: airport transfers, private aviation, and corporate accounts with one point of contact." />
 <meta property="og:url" content="https://onyxexecmiami.com/" />
 <meta property="og:image" content="https://onyxexecmiami.com/hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Onyx Executive Miami — Private Chauffeur Service" />
+<meta name="twitter:title" content="Owner-Managed Chauffeur Service in Miami" />
 <meta name="twitter:description" content="Boutique executive chauffeur service across Miami-Dade, Broward, and Palm Beach." />
 <meta name="twitter:image" content="https://onyxexecmiami.com/hero.jpg" />
 <meta name="theme-color" content="#0A0A0A" />
@@ -509,6 +523,7 @@ var b=document.getElementById('sendBtn');
 if(b){b.addEventListener('click',function(){
 var v=function(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';};
 var t=['New chauffeur request — Onyx Executive Miami','','Name: '+(v('f-name')||'—'),'Phone: '+(v('f-phone')||'—'),'Service: '+v('f-svc'),'Date/time: '+(v('f-date')||'—'),'Passengers: '+(v('f-pax')||'—'),'Pickup: '+(v('f-from')||'—'),'Drop-off: '+(v('f-to')||'—')];
+if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'contact',event_label:'home_quick_form',service:v('f-svc')});}
 window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'_blank');
 });}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});

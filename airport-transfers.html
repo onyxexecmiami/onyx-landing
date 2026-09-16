@@ -9,6 +9,20 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-0NQL5L01ZD');
 </script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a');
+  if(!a) return;
+  var href = a.getAttribute('href') || '';
+  if(href.indexOf('tel:') === 0){
+    gtag('event','call_click',{event_category:'contact',event_label:href});
+  } else if(href.indexOf('wa.me') !== -1){
+    gtag('event','whatsapp_click',{event_category:'contact',event_label:href});
+  } else if(href.indexOf('mailto:') === 0){
+    gtag('event','email_click',{event_category:'contact',event_label:href});
+  }
+}, true);
+</script>
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Miami Airport Car Service — MIA, FLL &amp; DJT Transfers | Onyx Executive Miami</title>
 <meta name="description" content="Private airport transfers across South Florida: MIA, FLL, and DJT (formerly PBI). Flight tracking, meet-and-greet, and a fixed quote before you land." />
