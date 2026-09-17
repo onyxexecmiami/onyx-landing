@@ -257,22 +257,94 @@ document.addEventListener('click', function(e){
 </div>
 </div>
 </section>
-<!-- FOUR SCENARIOS -->
+<!-- WHO THIS SERVES (persona tabs) -->
 <section class="section-soft" style="padding-top:48px;padding-bottom:48px">
 <div class="wrap">
-<div class="grid-head reveal" style="margin-bottom:28px">
+<div class="grid-head reveal" style="margin-bottom:36px">
 <p class="eyebrow">Who This Serves</p>
-<h2 class="h2">Four ways clients work with Onyx</h2>
+<h2 class="h2">Built around how you actually travel.</h2>
 <div class="rule"></div>
+<p class="lead" style="max-width:640px">Select how you work with Onyx to see the details that apply to you.</p>
 </div>
-<div class="cards reveal">
-<a class="card" href="corporate.html"><div class="no">01</div><h3>Executive &amp; Corporate</h3><p>Recurring business travel on one accountable account, with consolidated billing.</p><div class="more">Learn more →</div></a>
-<a class="card" href="school-transportation.html"><div class="no">02</div><h3>Family &amp; Private</h3><p>Consistent chauffeur, known schedule, and privacy for recurring family transportation.</p><div class="more">Learn more →</div></a>
-<a class="card" href="airport-transfers.html"><div class="no">03</div><h3>Airport &amp; FBO</h3><p>MIA, FLL, DJT/PBI, and private aviation — flight-tracked, fixed quote.</p><div class="more">Learn more →</div></a>
-<a class="card" href="event-transportation.html"><div class="no">04</div><h3>Hotel &amp; Event</h3><p>Discreet arrivals for hotel guests, galas, and one-off occasions.</p><div class="more">Learn more →</div></a>
+<div class="persona-tabs reveal" role="tablist">
+<button class="persona-tab active" type="button" role="tab" aria-selected="true" data-tab="corporate">Executive &amp; Corporate</button>
+<button class="persona-tab" type="button" role="tab" aria-selected="false" data-tab="family">Family &amp; Private</button>
+<button class="persona-tab" type="button" role="tab" aria-selected="false" data-tab="event">Event Planners &amp; Hotel Concierge</button>
 </div>
-<div style="text-align:center;margin-top:32px">
-<a class="btn btn-outline" href="corporate.html#account">Open a Corporate Account</a>
+<div class="persona-panels reveal">
+
+<div class="persona-panel active" data-panel="corporate">
+<div class="split">
+<div class="prose">
+<h3 class="h2" style="font-size:26px">Less to manage, fewer surprises.</h3>
+<p>Recurring travel shouldn't mean re-explaining preferences every time or chasing a dispatcher. With an Onyx account, preferences are on file, billing is consolidated, and changes go to one person who answers — not a queue.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Consolidated billing.</b> One statement, clean records for expense reporting.</span></li>
+<li><i class="mark"></i><span><b>Authorized bookers.</b> EAs and travel coordinators can book directly, without going through the traveler.</span></li>
+<li><i class="mark"></i><span><b>Ride confirmations.</b> Vehicle, time, and pickup point confirmed in writing before travel day.</span></li>
+<li><i class="mark"></i><span><b>COI &amp; W-9 on request.</b> Provided when your office or venue requires it.</span></li>
+</ul>
+</div>
+<div class="figure">
+<div class="persona-stats">
+<div><div class="val">1</div><div class="lbl">Direct Point of Contact</div></div>
+<div><div class="val">3</div><div class="lbl">FL Counties Served</div></div>
+<div><div class="val">4</div><div class="lbl">Languages Spoken</div></div>
+<div><div class="val">COI</div><div class="lbl">&amp; W-9 on Request</div></div>
+</div>
+<div style="margin-top:20px"><a class="btn btn-outline" href="corporate.html#account" style="width:100%;text-align:center">Open a Corporate Account →</a></div>
+</div>
+</div>
+</div>
+
+<div class="persona-panel" data-panel="family">
+<div class="split">
+<div class="prose">
+<h3 class="h2" style="font-size:26px">Consistency parents can plan around.</h3>
+<p>The value isn't a one-off ride — it's the same vetted chauffeur, the same standard, the same arrival window, every day. Routes are set in advance with parents or the family office, and changes go to one accountable contact.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Same primary chauffeur.</b> Any approved backup communicated in advance — never an unannounced substitute.</span></li>
+<li><i class="mark"></i><span><b>Correct seating arranged.</b> Ages and number of children confirmed when the route is set up.</span></li>
+<li><i class="mark"></i><span><b>Confirmed hand-off.</b> Arrival and drop-off confirmed, never left unconfirmed.</span></li>
+<li><i class="mark"></i><span><b>Kept private.</b> Route and family details shared only with the assigned chauffeur.</span></li>
+</ul>
+</div>
+<div class="figure">
+<div class="persona-stats">
+<div><div class="val">Same</div><div class="lbl">Chauffeur Every Trip</div></div>
+<div><div class="val">Weekly–Term</div><div class="lbl">Route Set-Up</div></div>
+<div><div class="val">4</div><div class="lbl">Languages Spoken</div></div>
+<div><div class="val">#64666</div><div class="lbl">Miami-Dade Permit</div></div>
+</div>
+<div style="margin-top:20px"><a class="btn btn-outline" href="school-transportation.html" style="width:100%;text-align:center">Set Up a Family Route →</a></div>
+</div>
+</div>
+</div>
+
+<div class="persona-panel" data-panel="event">
+<div class="split">
+<div class="prose">
+<h3 class="h2" style="font-size:26px">The logistics, handled quietly.</h3>
+<p>Events live and die on timing. Arrivals are coordinated to avoid the valet crush, the vehicle is held for the duration when that's the plan, and the exit is managed so guests aren't standing on a curb.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Staged ahead of call time.</b> Vehicles positioned near the venue, sequenced for group arrivals.</span></li>
+<li><i class="mark"></i><span><b>One day-of contact.</b> Coordinates all vehicles and timing if plans shift.</span></li>
+<li><i class="mark"></i><span><b>Passenger manifest.</b> Names and vehicle assignments confirmed ahead for multi-vehicle bookings.</span></li>
+<li><i class="mark"></i><span><b>Return trip planned at booking.</b> Fixed time or on-call window, never left open-ended.</span></li>
+</ul>
+</div>
+<div class="figure">
+<div class="persona-stats">
+<div><div class="val">1</div><div class="lbl">Day-of Contact</div></div>
+<div><div class="val">60 min</div><div class="lbl">Free Wait, Airports</div></div>
+<div><div class="val">5.0</div><div class="lbl">Google Reviews</div></div>
+<div><div class="val">4</div><div class="lbl">Languages Spoken</div></div>
+</div>
+<div style="margin-top:20px"><a class="btn btn-outline" href="event-transportation.html" style="width:100%;text-align:center">Request an Event Quote →</a></div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 </section>
@@ -552,6 +624,23 @@ if(toggle){
   backdrop.addEventListener('click',closeMenu);
   document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',closeMenu);});
 }
+})();
+</script>
+<script>
+(function(){
+var tabs=document.querySelectorAll('.persona-tab');
+var panels=document.querySelectorAll('.persona-panel');
+tabs.forEach(function(tab){
+  tab.addEventListener('click',function(){
+    var target=tab.getAttribute('data-tab');
+    tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+    panels.forEach(function(p){p.classList.remove('active');});
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected','true');
+    var panel=document.querySelector('.persona-panel[data-panel="'+target+'"]');
+    if(panel){panel.classList.add('active');}
+  });
+});
 })();
 </script>
 <script>
