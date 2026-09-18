@@ -43,7 +43,9 @@ document.addEventListener('click', function(e){
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
 
 <link rel="stylesheet" href="style.css" />
 
@@ -286,7 +288,7 @@ document.addEventListener('click', function(e){
 </section>
 
 <section class="section-soft" style="padding-top:0">
-<div class="wrap"><div class="feat-img reveal" style="aspect-ratio:16/9"><img src="suburban-front.jpg" alt="Black Chevrolet Suburban operated by Onyx Executive Miami for Art Basel Miami Beach transportation" loading="lazy" width="1200" height="1600" decoding="async" /></div></div>
+<div class="wrap"><div class="feat-img reveal" style="aspect-ratio:16/9"><img src="suburban-front.webp" alt="Black Chevrolet Suburban operated by Onyx Executive Miami for Art Basel Miami Beach transportation" loading="lazy" width="1100" height="1467" decoding="async" /></div></div>
 </section>
 
 <section class="section-soft">

@@ -29,7 +29,9 @@ document.addEventListener('click', function(e){
 <link rel="canonical" href="https://onyxexecmiami.com/school-transportation.html" />
 <meta name="theme-color" content="#0A0A0A" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
 <link rel="stylesheet" href="style.css" />
 <script type="application/ld+json">
 {
@@ -64,6 +66,21 @@ document.addEventListener('click', function(e){
       "position": 2,
       "name": "School Transportation"
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "What if the primary chauffeur is unavailable one day?","acceptedAnswer": {"@type": "Answer","text": "An approved backup chauffeur, known to the family in advance, covers the route — never an unannounced substitute showing up cold."}},
+    {"@type": "Question","name": "Who is authorized to change pickup times or details?","acceptedAnswer": {"@type": "Answer","text": "Only the parents, guardians, or family office contacts named when the route is set up. Changes from anyone else are confirmed with an authorized contact before they're made."}},
+    {"@type": "Question","name": "What information do you need about the child?","acceptedAnswer": {"@type": "Answer","text": "Age, height, and weight, to arrange the correct child seat or booster — plus an emergency contact on file separate from the day-to-day authorized contacts."}},
+    {"@type": "Question","name": "How is drop-off confirmed?","acceptedAnswer": {"@type": "Answer","text": "The chauffeur confirms arrival at school and a completed handoff — the child is not left at a drop point unconfirmed."}},
+    {"@type": "Question","name": "Can I set this up weekly, monthly, or for the school term?","acceptedAnswer": {"@type": "Answer","text": "Yes — routes are typically arranged by the week, month, or full term, whichever matches the family's schedule."}},
+    {"@type": "Question","name": "What is the cancellation policy for a single day?","acceptedAnswer": {"@type": "Answer","text": "Tell your authorized contact as early as possible; standing routes are held for the arranged schedule, and single-day changes are handled directly, not through a general cancellation form."}},
+    {"@type": "Question","name": "Is our information kept private?","acceptedAnswer": {"@type": "Answer","text": "Yes — route details, schedules, and any information about the children are shared only with the assigned chauffeur and are not discussed outside the arrangement."}}
   ]
 }
 </script>

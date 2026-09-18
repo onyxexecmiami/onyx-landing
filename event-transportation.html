@@ -29,7 +29,9 @@ document.addEventListener('click', function(e){
 <link rel="canonical" href="https://onyxexecmiami.com/event-transportation.html" />
 <meta name="theme-color" content="#0A0A0A" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
 <link rel="stylesheet" href="style.css" />
 <script type="application/ld+json">
 {
@@ -64,6 +66,19 @@ document.addEventListener('click', function(e){
       "position": 2,
       "name": "Event Transportation"
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "How does staging work for a group arrival?","acceptedAnswer": {"@type": "Answer","text": "Vehicles are staged ahead of the call time at a confirmed point near the venue, sequenced so the group arrives together rather than trickling in."}},
+    {"@type": "Question","name": "Is there a single point of contact on the day?","acceptedAnswer": {"@type": "Answer","text": "Yes — one day-of contact coordinates all vehicles and timing, so you're not managing multiple drivers separately if plans shift."}},
+    {"@type": "Question","name": "Do you need a passenger manifest in advance?","acceptedAnswer": {"@type": "Answer","text": "For multi-vehicle bookings, yes — names and vehicle assignments confirmed ahead of the event avoid confusion at pickup, especially for weddings and large parties."}},
+    {"@type": "Question","name": "What about the return trip at the end of the night?","acceptedAnswer": {"@type": "Answer","text": "Return timing is planned at booking, not left open-ended — whether that's a fixed pickup time or an on-call window once the event wraps."}},
+    {"@type": "Question","name": "Who drives if you need more vehicles than you have?","acceptedAnswer": {"@type": "Answer","text": "Onyx's own vehicle is a privately maintained 2026 Chevrolet Suburban RST. When an event needs more vehicles than that, a vetted partner vehicle is arranged and confirmed with you before booking — never a surprise on the day."}}
   ]
 }
 </script>
