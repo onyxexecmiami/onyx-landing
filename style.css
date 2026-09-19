@@ -199,7 +199,10 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 .foot-cols h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-family:var(--body);font-weight:600}
 .foot-cols a,.foot-cols p{display:block;font-size:13.5px;color:#9d9d96;margin-bottom:9px}
 .foot-cols a:hover{color:#fff}
-.foot-bottom{border-top:1px solid var(--hair-dark);padding-top:22px;font-size:12px;color:#666;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+.foot-bottom{border-top:1px solid var(--hair-dark);padding-top:22px;font-size:12px;color:#666;display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between}
+.gridd-badge{display:inline-flex;align-items:center;opacity:.8;transition:opacity .2s}
+.gridd-badge:hover{opacity:1}
+.gridd-badge img{display:block;width:18px;height:22px}
 
 /* mobile bar */
 .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1fr 1fr;background:var(--onyx);border-top:1px solid var(--hair)}
