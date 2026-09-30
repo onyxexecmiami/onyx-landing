@@ -279,3 +279,6 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 .trust-item p{font-size:14px;line-height:1.65;color:#b9b9b2}
 @media (max-width:900px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.trust-grid{grid-template-columns:1fr}}
+
+/* <picture> wraps AVIF+WebP images; keep it out of layout so `.x img` rules apply as before */
+picture{display:contents}
