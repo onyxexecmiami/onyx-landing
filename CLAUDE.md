@@ -4,8 +4,9 @@ Site of Onyx Executive Miami (private chauffeur service, South Florida). Astro 7
 three languages, served by a Cloudflare Worker. The owner is not a programmer: explain in plain
 words, do the technical work yourself, ask before anything that changes the live site's DNS or mail.
 
-What was done to the site and why (move to Astro and Cloudflare, translations, fixes, what is left for the
-owner): [docs/WORK-LOG-2026-09-30.md](docs/WORK-LOG-2026-09-30.md) — read it first.
+What was done to the site and why (move to Astro and Cloudflare, translations, fixes, full error check,
+recommendations, what is left for the owner): [docs/WORK-LOG-2026-09-30.md](docs/WORK-LOG-2026-09-30.md) — read it first.
+When the owner asks what to improve next, start from its "Recommendations" section.
 
 ## How the site goes live
 
