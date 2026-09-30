@@ -1,11 +1,18 @@
 ---
-// Top bar, main navigation with dropdowns, and the mobile menu (English pages).
+// Top bar, main navigation with dropdowns, and the mobile menu, in the page's language.
 // `current` marks the page in the main nav (gold underline); `mobileCurrent` marks it in the mobile menu.
+// `page` is this page's file name, so the language switch leads to the same page in another language.
+import { LANGS, SITE, pageUrl, prefix, ui, type Lang } from '../i18n/ui';
 interface Props {
+  lang?: Lang;
+  page?: string;
   current?: string;
   mobileCurrent?: string;
 }
-const { current, mobileCurrent } = Astro.props;
+const { lang = 'en', page = 'index.html', current, mobileCurrent } = Astro.props;
+const t = ui[lang];
+const p = prefix(lang);
+const home = lang === 'en' ? '/' : `/${lang}/`;
 const c = (href: string) => (href === current ? 'page' : undefined);
 const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 ---
@@ -19,69 +26,67 @@ const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 <a href="https://wa.me/17869316699" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 <div class="util-right">
-<span>Miami-Dade · Broward · Palm Beach</span>
+<span>{t.region}</span>
 <div class="util-lang">
-<a href="/" aria-current="true">EN</a>
-<a href="/es/">ES</a>
-<a href="/ru/">RU</a>
+{LANGS.map((l) => <a href={pageUrl(l, page).slice(SITE.length)} hreflang={l} aria-current={l === lang ? 'true' : undefined}>{l.toUpperCase()}</a>)}
 </div>
 </div>
 </div></div>
 <div class="wrap nav">
-<a class="brand" href="/"><b>ONYX</b> <span>·</span> Executive Miami</a>
-<nav class="nav-links"><div class="nav-drop"><a href="airport-transfers.html" aria-current={c('airport-transfers.html')}>Airport</a>
+<a class="brand" href={home}><b>ONYX</b> <span>·</span> Executive Miami</a>
+<nav class="nav-links"><div class="nav-drop"><a href={p + 'airport-transfers.html'} aria-current={c('airport-transfers.html')}>{t.airport}</a>
 <div class="nav-drop-panel">
-<span class="nav-drop-label">Commercial Airports</span>
-<a href="mia-airport.html" aria-current={c('mia-airport.html')}>Miami (MIA)</a>
-<a href="fll-airport.html" aria-current={c('fll-airport.html')}>Fort Lauderdale (FLL)</a>
-<a href="pbi-airport.html" aria-current={c('pbi-airport.html')}>Palm Beach (PBI)</a>
+<span class="nav-drop-label">{t.commercialAirports}</span>
+<a href={p + 'mia-airport.html'} aria-current={c('mia-airport.html')}>{t.mia}</a>
+<a href={p + 'fll-airport.html'} aria-current={c('fll-airport.html')}>{t.fll}</a>
+<a href={p + 'pbi-airport.html'} aria-current={c('pbi-airport.html')}>{t.pbi}</a>
 <div class="nav-drop-hr"></div>
-<a href="private-aviation.html" aria-current={c('private-aviation.html')}>Private Aviation / FBO</a>
-<a href="airport-transfers.html">All Airport Transfers →</a>
+<a href={p + 'private-aviation.html'} aria-current={c('private-aviation.html')}>{t.privateAviationFbo}</a>
+<a href={p + 'airport-transfers.html'}>{t.allAirport}</a>
 </div>
-</div><a href="corporate.html" aria-current={c('corporate.html')}>Corporate</a><div class="nav-drop"><a href="executive-chauffeur.html" aria-current={c('executive-chauffeur.html')}>Services</a>
+</div><a href={p + 'corporate.html'} aria-current={c('corporate.html')}>{t.corporate}</a><div class="nav-drop"><a href={p + 'executive-chauffeur.html'} aria-current={c('executive-chauffeur.html')}>{t.services}</a>
 <div class="nav-drop-panel">
-<a href="executive-chauffeur.html">Executive Chauffeur</a>
-<a href="event-transportation.html" aria-current={c('event-transportation.html')}>Event Transportation</a>
-<a href="school-transportation.html" aria-current={c('school-transportation.html')}>School Transportation</a>
-<a href="long-distance.html" aria-current={c('long-distance.html')}>Long-Distance</a>
+<a href={p + 'executive-chauffeur.html'}>{t.executiveChauffeur}</a>
+<a href={p + 'event-transportation.html'} aria-current={c('event-transportation.html')}>{t.eventTransportation}</a>
+<a href={p + 'school-transportation.html'} aria-current={c('school-transportation.html')}>{t.schoolTransportation}</a>
+<a href={p + 'long-distance.html'} aria-current={c('long-distance.html')}>{t.longDistance}</a>
 </div>
-</div><a href="fleet.html" aria-current={c('fleet.html')}>Fleet</a><div class="nav-drop"><a href="service-area.html" aria-current={c('service-area.html')}>Service Area</a>
+</div><a href={p + 'fleet.html'} aria-current={c('fleet.html')}>{t.fleet}</a><div class="nav-drop"><a href={p + 'service-area.html'} aria-current={c('service-area.html')}>{t.serviceArea}</a>
 <div class="nav-drop-panel">
-<a href="aventura.html" aria-current={c('aventura.html')}>Aventura</a>
-<a href="sunny-isles.html" aria-current={c('sunny-isles.html')}>Sunny Isles Beach</a>
-<a href="bal-harbour.html" aria-current={c('bal-harbour.html')}>Bal Harbour</a>
-<a href="brickell-downtown-miami.html" aria-current={c('brickell-downtown-miami.html')}>Brickell / Downtown</a>
-<a href="fort-lauderdale.html" aria-current={c('fort-lauderdale.html')}>Fort Lauderdale</a>
-<a href="miami-beach.html" aria-current={c('miami-beach.html')}>Miami Beach</a>
+<a href={p + 'aventura.html'} aria-current={c('aventura.html')}>{t.aventura}</a>
+<a href={p + 'sunny-isles.html'} aria-current={c('sunny-isles.html')}>{t.sunnyIsles}</a>
+<a href={p + 'bal-harbour.html'} aria-current={c('bal-harbour.html')}>{t.balHarbour}</a>
+<a href={p + 'brickell-downtown-miami.html'} aria-current={c('brickell-downtown-miami.html')}>{t.brickell}</a>
+<a href={p + 'fort-lauderdale.html'} aria-current={c('fort-lauderdale.html')}>{t.fortLauderdale}</a>
+<a href={p + 'miami-beach.html'} aria-current={c('miami-beach.html')}>{t.miamiBeach}</a>
 <div class="nav-drop-hr"></div>
-<a href="service-area.html">All Service Areas →</a>
+<a href={p + 'service-area.html'}>{t.allAreas}</a>
 </div>
-</div><a href="blog.html" aria-current={c('blog.html')}>Blog</a>
-<a href="contact.html" aria-current={c('contact.html')}>Contact</a></nav>
-<a class="nav-cta" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a>
-<button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div><a href={p + 'blog.html'} aria-current={c('blog.html')}>{t.blog}</a>
+<a href={p + 'contact.html'} aria-current={c('contact.html')}>{t.contact}</a></nav>
+<a class="nav-cta" href="tel:+17869316699">{t.callCta}</a>
+<button class="nav-toggle" aria-label={t.menu} aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="menu-backdrop"></div>
 <nav class="mobile-menu">
-<a href="airport-transfers.html" aria-current={m('airport-transfers.html')}>Airport</a>
-<a href="mia-airport.html" aria-current={m('mia-airport.html')} style="padding-left:32px;font-size:14px">↳ Miami (MIA)</a>
-<a href="fll-airport.html" aria-current={m('fll-airport.html')} style="padding-left:32px;font-size:14px">↳ Fort Lauderdale (FLL)</a>
-<a href="pbi-airport.html" aria-current={m('pbi-airport.html')} style="padding-left:32px;font-size:14px">↳ Palm Beach (PBI)</a>
-<a href="corporate.html" aria-current={m('corporate.html')}>Corporate</a>
-<a href="executive-chauffeur.html" aria-current={m('executive-chauffeur.html')} style="padding-left:32px;font-size:14px">↳ Executive Chauffeur</a>
-<a href="event-transportation.html" aria-current={m('event-transportation.html')} style="padding-left:32px;font-size:14px">↳ Event Transportation</a>
-<a href="school-transportation.html" aria-current={m('school-transportation.html')} style="padding-left:32px;font-size:14px">↳ School Transportation</a>
-<a href="long-distance.html" aria-current={m('long-distance.html')} style="padding-left:32px;font-size:14px">↳ Long-Distance</a>
-<a href="fleet.html" aria-current={m('fleet.html')}>Fleet</a>
-<a href="service-area.html" aria-current={m('service-area.html')}>Service Area</a>
-<a href="aventura.html" aria-current={m('aventura.html')} style="padding-left:32px;font-size:14px">↳ Aventura</a>
-<a href="sunny-isles.html" aria-current={m('sunny-isles.html')} style="padding-left:32px;font-size:14px">↳ Sunny Isles Beach</a>
-<a href="bal-harbour.html" aria-current={m('bal-harbour.html')} style="padding-left:32px;font-size:14px">↳ Bal Harbour</a>
-<a href="brickell-downtown-miami.html" aria-current={m('brickell-downtown-miami.html')} style="padding-left:32px;font-size:14px">↳ Brickell / Downtown</a>
-<a href="fort-lauderdale.html" aria-current={m('fort-lauderdale.html')} style="padding-left:32px;font-size:14px">↳ Fort Lauderdale</a>
-<a href="miami-beach.html" aria-current={m('miami-beach.html')} style="padding-left:32px;font-size:14px">↳ Miami Beach</a>
-<a href="blog.html" aria-current={m('blog.html')}>Blog</a>
-<a href="contact.html" aria-current={m('contact.html')}>Contact</a>
-<a class="mm-call" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a>
+<a href={p + 'airport-transfers.html'} aria-current={m('airport-transfers.html')}>{t.airport}</a>
+<a href={p + 'mia-airport.html'} aria-current={m('mia-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.mia}</a>
+<a href={p + 'fll-airport.html'} aria-current={m('fll-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.fll}</a>
+<a href={p + 'pbi-airport.html'} aria-current={m('pbi-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.pbi}</a>
+<a href={p + 'corporate.html'} aria-current={m('corporate.html')}>{t.corporate}</a>
+<a href={p + 'executive-chauffeur.html'} aria-current={m('executive-chauffeur.html')} style="padding-left:32px;font-size:14px">↳ {t.executiveChauffeur}</a>
+<a href={p + 'event-transportation.html'} aria-current={m('event-transportation.html')} style="padding-left:32px;font-size:14px">↳ {t.eventTransportation}</a>
+<a href={p + 'school-transportation.html'} aria-current={m('school-transportation.html')} style="padding-left:32px;font-size:14px">↳ {t.schoolTransportation}</a>
+<a href={p + 'long-distance.html'} aria-current={m('long-distance.html')} style="padding-left:32px;font-size:14px">↳ {t.longDistance}</a>
+<a href={p + 'fleet.html'} aria-current={m('fleet.html')}>{t.fleet}</a>
+<a href={p + 'service-area.html'} aria-current={m('service-area.html')}>{t.serviceArea}</a>
+<a href={p + 'aventura.html'} aria-current={m('aventura.html')} style="padding-left:32px;font-size:14px">↳ {t.aventura}</a>
+<a href={p + 'sunny-isles.html'} aria-current={m('sunny-isles.html')} style="padding-left:32px;font-size:14px">↳ {t.sunnyIsles}</a>
+<a href={p + 'bal-harbour.html'} aria-current={m('bal-harbour.html')} style="padding-left:32px;font-size:14px">↳ {t.balHarbour}</a>
+<a href={p + 'brickell-downtown-miami.html'} aria-current={m('brickell-downtown-miami.html')} style="padding-left:32px;font-size:14px">↳ {t.brickell}</a>
+<a href={p + 'fort-lauderdale.html'} aria-current={m('fort-lauderdale.html')} style="padding-left:32px;font-size:14px">↳ {t.fortLauderdale}</a>
+<a href={p + 'miami-beach.html'} aria-current={m('miami-beach.html')} style="padding-left:32px;font-size:14px">↳ {t.miamiBeach}</a>
+<a href={p + 'blog.html'} aria-current={m('blog.html')}>{t.blog}</a>
+<a href={p + 'contact.html'} aria-current={m('contact.html')}>{t.contact}</a>
+<a class="mm-call" href="tel:+17869316699">{t.callCta}</a>
 </nav>

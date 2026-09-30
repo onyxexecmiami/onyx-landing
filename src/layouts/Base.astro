@@ -1,16 +1,23 @@
 ---
 import Analytics from '../components/Analytics.astro';
+import { LANGS, pageUrl, type Lang } from '../i18n/ui';
 
 interface Props {
-  lang: 'en' | 'es' | 'ru';
+  lang: Lang;
+  // This page's file name ("faq.html", "index.html"). With it the layout writes canonical and
+  // hreflang links for all three languages; without it (404) it writes none.
+  page?: string;
 }
-const { lang } = Astro.props;
+const { lang, page } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang={lang}>
 <head>
 <Analytics />
 <slot name="head" />
+{page && <link rel="canonical" href={pageUrl(lang, page)} />}
+{page && LANGS.map((l) => <link rel="alternate" hreflang={l} href={pageUrl(l, page)} />)}
+{page && <link rel="alternate" hreflang="x-default" href={pageUrl('en', page)} />}
 </head>
 <body>
 <slot />

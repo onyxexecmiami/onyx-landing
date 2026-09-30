@@ -6,12 +6,11 @@ import SiteFooter from '../components/SiteFooter.astro';
 import YearReveal from '../components/YearReveal.astro';
 import SiteScripts from '../components/SiteScripts.astro';
 ---
-<Base lang="en">
+<Base lang="en" page="blog.html">
 <Fragment slot="head">
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Blog — Travel Guides for South Florida | Onyx Executive Miami</title>
 <meta name="description" content="Practical guides on airport transfers, private aviation, and executive travel across Miami, Fort Lauderdale, and Palm Beach, from Onyx Executive Miami." />
-<link rel="canonical" href="https://onyxexecmiami.com/blog.html" />
 <meta name="theme-color" content="#0A0A0A" />
 <Fonts />
 <script is:inline type="application/ld+json">
@@ -45,7 +44,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 }
 </script>
 </Fragment>
-<SiteHeader current="blog.html" mobileCurrent="blog.html" />
+<SiteHeader page="blog.html" current="blog.html" mobileCurrent="blog.html" />
 
 <section class="page-hero">
 <div class="wrap">

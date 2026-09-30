@@ -4,17 +4,12 @@ import Fonts from '../components/Fonts.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 ---
-<Base lang="en">
+<Base lang="en" page="index.html">
 <Fragment slot="head">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Owner-Managed Chauffeur Service in Miami | Onyx Executive Miami</title>
 <meta name="description" content="Private chauffeur service across Miami-Dade, Broward, and Palm Beach: airport transfers, private aviation, and corporate accounts with one point of contact." />
-<link rel="canonical" href="https://onyxexecmiami.com/" />
-<link rel="alternate" hreflang="en" href="https://onyxexecmiami.com/" />
-<link rel="alternate" hreflang="es" href="https://onyxexecmiami.com/es/" />
-<link rel="alternate" hreflang="ru" href="https://onyxexecmiami.com/ru/" />
-<link rel="alternate" hreflang="x-default" href="https://onyxexecmiami.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Onyx Executive Miami" />
 <meta property="og:title" content="Owner-Managed Chauffeur Service in Miami | Onyx Executive Miami" />
@@ -125,7 +120,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 }
 </script>
 </Fragment>
-<SiteHeader />
+<SiteHeader page="index.html" />
 <section class="hero" id="top" style="padding:0">
 <div class="hero-media"><picture><source type="image/avif" srcset="hero-640.avif 640w, hero-937.avif 937w" sizes="100vw" /><img src="hero-937.webp" srcset="hero-640.webp 640w, hero-937.webp 937w" sizes="100vw" alt="Founder of Onyx Executive Miami stepping from a black Chevrolet Suburban at a South Florida resort" width="937" height="1678" decoding="async" fetchpriority="high" /></picture></div>
 <div class="wrap">
