@@ -1,0 +1,18 @@
+---
+import Analytics from '../components/Analytics.astro';
+
+interface Props {
+  lang: 'en' | 'es' | 'ru';
+}
+const { lang } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+<Analytics />
+<slot name="head" />
+</head>
+<body>
+<slot />
+</body>
+</html>

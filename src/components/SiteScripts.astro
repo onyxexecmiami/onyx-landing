@@ -1,0 +1,38 @@
+---
+// Mobile menu toggle and the Moovs booking widget. Same on every page, at the end of <body>.
+---
+<script is:inline>
+(function(){
+var toggle=document.querySelector('.nav-toggle');
+var menu=document.querySelector('.mobile-menu');
+var backdrop=document.querySelector('.menu-backdrop');
+function closeMenu(){
+  menu.classList.remove('open');
+  toggle.classList.remove('open');
+  backdrop.classList.remove('open');
+  toggle.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+if(toggle){
+  toggle.addEventListener('click',function(){
+    var isOpen=menu.classList.toggle('open');
+    toggle.classList.toggle('open',isOpen);
+    backdrop.classList.toggle('open',isOpen);
+    toggle.setAttribute('aria-expanded',isOpen?'true':'false');
+    document.body.style.overflow=isOpen?'hidden':'';
+  });
+  backdrop.addEventListener('click',closeMenu);
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',closeMenu);});
+}
+})();
+</script>
+<script is:inline>
+window["moovsAPI"] = moovsAPI = window["moovsAPI"] || [];
+moovsAPI.push(["operator", "71dde8d0-b08f-11f1-9709-6bc90bbc4c41"]);
+(function(m, oo, v, s) {
+    s = m.createElement(oo);
+    s.src = v;
+    s.async = 1;
+    m.head.appendChild(s);
+})(document, "script", "https://static.moovs.app");
+</script>

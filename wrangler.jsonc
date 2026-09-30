@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "onyx-landing",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-30",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // "none": no automatic /faq.html -> /faq redirect; worker/index.js maps paths itself.
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "onyxexecmiami.com", "custom_domain": true },
+    { "pattern": "www.onyxexecmiami.com", "custom_domain": true }
+  ]
+}

@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import Fonts from '../components/Fonts.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import YearReveal from '../components/YearReveal.astro';
+import SiteScripts from '../components/SiteScripts.astro';
+---
+<Base lang="en">
+<Fragment slot="head">
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page not found | Onyx Executive Miami</title>
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#0A0A0A" />
+<base href="/" />
+<Fonts />
+</Fragment>
+<SiteHeader />
+<section class="page-hero">
+<div class="wrap">
+<p class="eyebrow on-dark">404</p>
+<h1 class="display">Page not found.</h1>
+<div class="rule"></div>
+<p class="lead">This page has moved or never existed. Everything else is one call or message away.</p>
+</div>
+</section>
+<section class="cta-band"><div class="wrap">
+<h2 class="h2">Where to next?</h2>
+<p>Start from the home page, or reach us directly.</p>
+<div class="actions"><a class="btn btn-light" href="/">Home</a><a class="btn btn-ghost" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a></div>
+</div></section>
+<SiteFooter />
+<div class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></div>
+<YearReveal />
+<SiteScripts />
+</Base>
