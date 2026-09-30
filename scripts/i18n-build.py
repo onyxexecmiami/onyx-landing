@@ -17,6 +17,7 @@ SITE = 'https://onyxexecmiami.com'
 PREFIX = {'html': 'h', 'attr': 'a', 'wa': 'w', 'js': 'j', 'ld': 'l'}
 ASSET = re.compile(r'\.(?:css|js|webp|avif|jpe?g|png|svg|gif|ico|pdf)(?:[?#]|$)')
 LOCALE = {'es': 'es_US', 'ru': 'ru_RU'}
+ELEMENT_ID = re.compile(r'[a-z]+(?:-[a-z]+)+')
 
 
 def keyed(segs):
@@ -87,7 +88,9 @@ def build_page(src, tr, lang, pages):
             new = tr[s['key']] if s['kind'] == 'attr' else wa_encode(tr[s['key']])
             edits.append((s['start'], s['end'], new))
         elif s['kind'] == 'js':
-            edits.append((s['start'], s['end'], js_escape(tr[s['key']])))
+            # element ids such as 'f-name' sit in the same array as labels: never translated
+            new = s['text'] if ELEMENT_ID.fullmatch(s['text']) else js_escape(tr[s['key']])
+            edits.append((s['start'], s['end'], new))
 
     # JSON-LD: one edit per script block
     blocks = {}

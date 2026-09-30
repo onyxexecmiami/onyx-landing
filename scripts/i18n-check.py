@@ -38,7 +38,10 @@ def main():
             if k.startswith('j') and '\n' in t:
                 probs.append(f'{k}: line break in form label')
             text = TAG.sub('', src)
-            if t == src and re.search(r'[A-Za-z]{4,}', text) and not KEEP.match(text):
+            if k.startswith('j') and re.fullmatch(r'[a-z]+(?:-[a-z]+)+', src):
+                continue  # element id, kept as is by i18n-build.py
+            # names, addresses and codes stay as they are; only running text with lowercase words counts
+            if t == src and re.search(r'\b[a-z]{4,}\b', text) and not KEEP.match(text):
                 same.append(k)
         if len(same) > max(3, len(en) // 10):
             probs.append(f'{len(same)} segments identical to English (untranslated?): {same[:8]}')

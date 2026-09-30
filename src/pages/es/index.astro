@@ -1,0 +1,604 @@
+---
+import Base from '../../layouts/Base.astro';
+import Fonts from '../../components/Fonts.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+---
+<Base lang="es" page="index.html">
+<Fragment slot="head">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Servicio de Chófer Gestionado por su Propietario en Miami | Onyx Executive Miami</title>
+<meta name="description" content="Servicio de chófer privado en Miami-Dade, Broward y Palm Beach: traslados al aeropuerto, aviación privada y cuentas corporativas con un solo punto de contacto." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Onyx Executive Miami" />
+<meta property="og:title" content="Servicio de Chófer Gestionado por su Propietario en Miami | Onyx Executive Miami" />
+<meta property="og:description" content="Servicio de chófer privado en Miami-Dade, Broward y Palm Beach: traslados al aeropuerto, aviación privada y cuentas corporativas con un solo punto de contacto." />
+<meta property="og:url" content="https://onyxexecmiami.com/es/" />
+<meta property="og:image" content="https://onyxexecmiami.com/hero-937.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Servicio de Chófer Gestionado por su Propietario en Miami" />
+<meta name="twitter:description" content="Servicio de chófer ejecutivo boutique en Miami-Dade, Broward y Palm Beach." />
+<meta name="twitter:image" content="https://onyxexecmiami.com/hero-937.webp" />
+<meta name="theme-color" content="#0A0A0A" />
+<Fonts />
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "LocalBusiness",
+    "TaxiService"
+  ],
+  "@id": "https://onyxexecmiami.com/#business",
+  "name": "Onyx Executive Miami",
+  "alternateName": "ONYX Executive Miami",
+  "url": "https://onyxexecmiami.com/es/",
+  "telephone": "+17869316699",
+  "email": "info@onyxexecmiami.com",
+  "image": "https://onyxexecmiami.com/hero-937.webp",
+  "priceRange": "$$$",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Miami"
+    },
+    {
+      "@type": "City",
+      "name": "Fort Lauderdale"
+    },
+    {
+      "@type": "City",
+      "name": "Aventura"
+    },
+    {
+      "@type": "City",
+      "name": "Sunny Isles Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Bal Harbour"
+    },
+    {
+      "@type": "Place",
+      "name": "Brickell"
+    },
+    {
+      "@type": "City",
+      "name": "Boca Raton"
+    },
+    {
+      "@type": "City",
+      "name": "Palm Beach"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Aventura",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 25.9565,
+    "longitude": -80.1392
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://instagram.com/onyxexecmiami"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "8"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Zhanna"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "El vuelo de mi mamá se retrasó y no pude ir a recibirla. La recibieron en el aeropuerto y se aseguraron de que llegara bien a casa. ¡Muchas gracias!"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Medgroup Ukraine"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Simplemente espectacular. Reservé por WhatsApp y el servicio fue rápido y muy amable. La van estaba impecable, limpia y cómoda. El chófer fue puntual, profesional y atento durante todo el viaje."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Nataliia K."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Usamos Onyx Executive Miami para un traslado al aeropuerto y tuvimos una excelente experiencia. El chófer fue puntual, profesional y fácil de comunicar. La SUV estaba impecable, cómoda y perfecta para nuestro equipaje."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sam J."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Recomiendo ampliamente al Sr. V. Maneja una SUV de lujo hermosa y espaciosa, cómoda e impecable, donde caben fácilmente muchos pasajeros y equipaje. Siempre es puntual, cortés y comunicativo."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Nelia"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "He tenido el placer de usar el servicio de Onyx Executive Miami en varias ocasiones. Vitaliy siempre ha ofrecido un nivel excepcional de profesionalismo y atención: puntual, confiable y cortés."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Dmytro K."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Usamos el traslado del aeropuerto de Miami a nuestro hotel y, más tarde, de regreso. Todo salió excelente: puntual, confiable y muy agradable. Sin duda recomendamos el servicio."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Natalia N."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Servicio de primer nivel. Vitaliy habla inglés con fluidez y nos ayudó a hacer el check-in sin ningún problema. Es profesional, amable y respetuoso, y el auto era sumamente cómodo y estaba impecablemente limpio."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Alina G."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Estuve en Miami con mis hijos y Vitaliy nos llevó a muchos lugares. Muy profesional, habla inglés con fluidez y el vehículo era espacioso y cómodo. Quedamos muy satisfechos."
+    }
+  ]
+}
+</script>
+</Fragment>
+<SiteHeader lang="es" page="index.html" />
+<section class="hero" id="top" style="padding:0">
+<div class="hero-media"><picture><source type="image/avif" srcset="/hero-640.avif 640w, /hero-937.avif 937w" sizes="100vw" /><img src="/hero-937.webp" srcset="/hero-640.webp 640w, /hero-937.webp 937w" sizes="100vw" alt="Fundador de Onyx Executive Miami bajando de una Chevrolet Suburban negra en un resort del sur de Florida" width="937" height="1678" decoding="async" fetchpriority="high" /></picture></div>
+<div class="wrap">
+<div class="hero-inner">
+<p class="eyebrow on-dark">Sur de Florida</p>
+<h1 class="display">Servicio de Chófer Gestionado por su Propietario en Miami</h1>
+<div class="rule"></div>
+<p class="lead">Transporte a aeropuertos y FBO, corporativo, familiar y por hora a través de un único punto de contacto responsable. Cotización fija, vehículo confirmado y novedades directas desde la reserva hasta el destino.</p>
+<p class="hero-trust" style="margin-top:18px;font-size:12px;letter-spacing:.03em;color:#b9b9b3">Permiso de Miami-Dade #64666 · Seguro comercial · COI disponible · Chevrolet Suburban RST 2026</p>
+<div class="hero-stats reveal" style="display:flex;gap:32px;margin-top:28px;margin-bottom:28px;flex-wrap:wrap">
+<div><div style="font-family:var(--display);font-size:22px;color:#D4AF37;letter-spacing:2px">★★★★★</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">5.0 en Google Reviews</div></div>
+<div><div style="font-family:var(--display);font-size:26px;color:#fff">4</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">Idiomas que hablamos</div></div>
+<div><div style="font-family:var(--display);font-size:26px;color:#fff">3</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">Condados de Florida atendidos</div></div>
+<div><div style="font-family:var(--display);font-size:26px;color:#fff">60</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">Min de espera gratis, aeropuertos</div></div>
+</div>
+<div class="hero-actions">
+<a class="btn btn-light" href="contact.html#book">Solicitar cotización</a>
+<a class="btn btn-ghost" href="tel:+17869316699">Llamar</a>
+<a class="btn btn-ghost" href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20reservar%20un%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW YOUR RIDE IS HANDLED -->
+<section class="section-dark" style="padding-top:48px;padding-bottom:48px">
+<div class="wrap">
+<div class="grid-head reveal" style="margin-bottom:28px">
+<p class="eyebrow on-dark">El Proceso</p>
+<h2 class="h2">Cómo se gestiona su viaje</h2>
+<div class="rule"></div>
+</div>
+<div class="cards cards-5 reveal">
+<div class="card" style="cursor:default"><div class="no">01</div><h3>Solicitud recibida</h3></div>
+<div class="card" style="cursor:default"><div class="no">02</div><h3>Cotización confirmada</h3></div>
+<div class="card" style="cursor:default"><div class="no">03</div><h3>Viaje asignado</h3></div>
+<div class="card" style="cursor:default"><div class="no">04</div><h3>Actualizaciones de estado</h3></div>
+<div class="card" style="cursor:default"><div class="no">05</div><h3>Finalización confirmada</h3></div>
+</div>
+</div>
+</section>
+<!-- WHO THIS SERVES (persona tabs) -->
+<section class="section-soft" style="padding-top:48px;padding-bottom:48px">
+<div class="wrap">
+<div class="grid-head reveal" style="margin-bottom:36px">
+<p class="eyebrow">A quién servimos</p>
+<h2 class="h2">Pensado en torno a cómo usted realmente viaja.</h2>
+<div class="rule"></div>
+<p class="lead" style="max-width:640px">Seleccione cómo trabaja con Onyx para ver los detalles que le corresponden.</p>
+</div>
+<div class="persona-tabs reveal" role="tablist">
+<button class="persona-tab active" type="button" role="tab" aria-selected="true" data-tab="corporate">Ejecutivos y corporativo</button>
+<button class="persona-tab" type="button" role="tab" aria-selected="false" data-tab="family">Familias y particulares</button>
+<button class="persona-tab" type="button" role="tab" aria-selected="false" data-tab="event">Organizadores de eventos y concierges de hotel</button>
+</div>
+<div class="persona-panels reveal">
+
+<div class="persona-panel active" data-panel="corporate">
+<div class="split">
+<div class="prose">
+<h3 class="h2" style="font-size:26px">Menos que gestionar, menos sorpresas.</h3>
+<p>Los viajes recurrentes no deberían significar volver a explicar sus preferencias cada vez ni perseguir a un despachador. Con una cuenta Onyx, sus preferencias quedan registradas, la facturación se consolida y los cambios van a una sola persona que responde, no a una fila de espera.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Facturación consolidada.</b> Un solo estado de cuenta y registros claros para reportes de gastos.</span></li>
+<li><i class="mark"></i><span><b>Reservantes autorizados.</b> Asistentes ejecutivos y coordinadores de viaje pueden reservar directamente, sin pasar por el viajero.</span></li>
+<li><i class="mark"></i><span><b>Confirmaciones de viaje.</b> Vehículo, hora y punto de recogida confirmados por escrito antes del día del viaje.</span></li>
+<li><i class="mark"></i><span><b>COI y W-9 a solicitud.</b> Se entregan cuando su oficina o recinto lo requiere.</span></li>
+</ul>
+</div>
+<div class="figure">
+<div class="persona-stats">
+<div><div class="val">1</div><div class="lbl">Punto de contacto directo</div></div>
+<div><div class="val">3</div><div class="lbl">Condados de Florida atendidos</div></div>
+<div><div class="val">4</div><div class="lbl">Idiomas que hablamos</div></div>
+<div><div class="val">COI</div><div class="lbl">&amp; W-9 a solicitud</div></div>
+</div>
+<div style="margin-top:28px"><a class="btn btn-outline" href="corporate.html#account" style="width:100%;justify-content:center">Abrir una cuenta corporativa →</a></div>
+</div>
+</div>
+</div>
+
+<div class="persona-panel" data-panel="family">
+<div class="split">
+<div class="prose">
+<h3 class="h2" style="font-size:26px">Una constancia con la que los padres pueden planificar.</h3>
+<p>El valor no está en un viaje aislado, sino en el mismo chófer verificado, el mismo estándar y la misma ventana de llegada, todos los días. Las rutas se definen de antemano con los padres o la oficina familiar, y los cambios van a un único contacto responsable.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>El mismo chófer principal.</b> Cualquier suplente aprobado se comunica con antelación, nunca un reemplazo sin aviso.</span></li>
+<li><i class="mark"></i><span><b>Asientos adecuados.</b> Se confirman las edades y el número de niños al configurar la ruta.</span></li>
+<li><i class="mark"></i><span><b>Entrega confirmada.</b> Llegada y bajada confirmadas, nunca sin confirmar.</span></li>
+<li><i class="mark"></i><span><b>Privacidad garantizada.</b> La ruta y los datos de la familia se comparten únicamente con el chófer asignado.</span></li>
+</ul>
+</div>
+<div class="figure">
+<div class="persona-stats">
+<div><div class="val">El mismo</div><div class="lbl">Chófer en cada viaje</div></div>
+<div><div class="val">Semanal–Por período</div><div class="lbl">Configuración de ruta</div></div>
+<div><div class="val">4</div><div class="lbl">Idiomas que hablamos</div></div>
+<div><div class="val">#64666</div><div class="lbl">Permiso de Miami-Dade</div></div>
+</div>
+<div style="margin-top:28px"><a class="btn btn-outline" href="school-transportation.html" style="width:100%;justify-content:center">Configurar una ruta familiar →</a></div>
+</div>
+</div>
+</div>
+
+<div class="persona-panel" data-panel="event">
+<div class="split">
+<div class="prose">
+<h3 class="h2" style="font-size:26px">La logística, resuelta con discreción.</h3>
+<p>Los eventos dependen del momento justo. Las llegadas se coordinan para evitar la congestión del valet parking, el vehículo permanece disponible durante todo el evento cuando así se planea, y la salida se gestiona para que los invitados no esperen en la acera.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Preparados antes de la hora de llamado.</b> Vehículos ubicados cerca del recinto y ordenados para llegadas en grupo.</span></li>
+<li><i class="mark"></i><span><b>Un contacto el día del evento.</b> Coordina todos los vehículos y los horarios si los planes cambian.</span></li>
+<li><i class="mark"></i><span><b>Lista de pasajeros.</b> Nombres y asignación de vehículos confirmados con antelación en reservas de varios vehículos.</span></li>
+<li><i class="mark"></i><span><b>Regreso planificado al reservar.</b> Hora fija o ventana a disposición, nunca algo abierto e indefinido.</span></li>
+</ul>
+</div>
+<div class="figure">
+<div class="persona-stats">
+<div><div class="val">1</div><div class="lbl">Contacto el día del evento</div></div>
+<div><div class="val">60 min</div><div class="lbl">de espera gratis, aeropuertos</div></div>
+<div><div class="val">5.0</div><div class="lbl">Google Reviews</div></div>
+<div><div class="val">4</div><div class="lbl">Idiomas que hablamos</div></div>
+</div>
+<div style="margin-top:28px"><a class="btn btn-outline" href="event-transportation.html" style="width:100%;justify-content:center">Solicitar cotización para un evento →</a></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- THE ONYX STANDARD -->
+<section id="standard" class="section-soft">
+<div class="wrap split center">
+<div class="prose reveal">
+<p class="eyebrow">El Estándar Onyx</p>
+<h2 class="h2">Construido al volante.<br>Sostenido igual en cada milla.</h2>
+<div class="rule"></div>
+<p class="lead" style="font-style:italic;color:var(--muted)">Un estándar. Sin importar quién conduzca. No es un centro de llamadas.</p>
+<p>Onyx comenzó con su fundador conduciendo cada viaje. A medida que la red crece, ese mismo fundador evalúa personalmente a cada chófer y mantiene a todos bajo un único estándar, así que usted trabaja con un solo socio responsable, sea quien sea el asignado.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Responsabilidad personal.</b> Un propietario respalda cada viaje y es accesible directamente.</span></li>
+<li><i class="mark"></i><span><b>Chóferes verificados y consistentes.</b> La misma seguridad, discreción y presentación en toda la red.</span></li>
+<li><i class="mark"></i><span><b>Idiomas.</b> Inglés, ruso, ucraniano y polaco.</span></li>
+</ul>
+<div style="margin-top:28px"><a class="btn btn-outline" href="the-onyx-standard.html">Leer el Estándar Onyx</a></div>
+</div>
+<div class="feat-img portrait reveal"><picture><source type="image/avif" srcset="/founder.avif" /><img src="/founder.webp" alt="Vitalii, fundador de Onyx Executive Miami" width="700" height="933" decoding="async" loading="lazy" /></picture></div>
+</div>
+</section>
+<!-- SERVICES -->
+<section id="services" class="section-dark">
+<div class="wrap">
+<div class="grid-head reveal">
+<p class="eyebrow on-dark">Servicios</p>
+<h2 class="h2">Dónde conducimos</h2>
+<div class="rule"></div>
+<p class="lead">De punto a punto y por hora, en Miami-Dade, Broward y Palm Beach.</p>
+</div>
+<div class="cards reveal">
+<a class="card" href="airport-transfers.html"><div class="no">01</div><h3>Traslados al aeropuerto</h3><p>MIA, FLL y DJT, con seguimiento de vuelo y recibimiento personalizado (meet-and-greet).</p><div class="more">Ver →</div></a>
+<a class="card" href="private-aviation.html"><div class="no">02</div><h3>Aviación privada · FBO</h3><p>Traslados a FBO con seguimiento por matrícula, junto al avión o en la terminal según lo permita el FBO.</p><div class="more">Ver →</div></a>
+<a class="card" href="corporate.html"><div class="no">03</div><h3>Transporte corporativo</h3><p>Viajes ejecutivos recurrentes en una cuenta con un único responsable.</p><div class="more">Ver →</div></a>
+<a class="card" href="executive-chauffeur.html"><div class="no">04</div><h3>Chófer ejecutivo</h3><p>Por hora y a disposición, para reuniones y jornadas completas.</p><div class="more">Ver →</div></a>
+<a class="card" href="school-transportation.html"><div class="no">05</div><h3>Transporte escolar</h3><p>Onyx Executive Family: rutas familiares verificadas y consistentes.</p><div class="more">Ver →</div></a>
+<a class="card" href="event-transportation.html"><div class="no">06</div><h3>Transporte para eventos</h3><p>Llegadas discretas para galas, conferencias y ocasiones especiales.</p><div class="more">Ver →</div></a>
+<a class="card" href="long-distance.html"><div class="no">07</div><h3>Larga distancia</h3><p>Los Cayos, Naples, Palm Beach y Orlando.</p><div class="more">Ver →</div></a>
+<a class="card" href="service-area.html"><div class="no">08</div><h3>Zona de servicio</h3><p>Aventura, Sunny Isles, Bal Harbour, Brickell y más.</p><div class="more">Ver →</div></a>
+</div>
+</div>
+</section>
+<!-- REVIEWS -->
+<section id="reviews" class="section-soft">
+<div class="wrap">
+<div class="grid-head reveal" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+<div>
+<p class="eyebrow">Reseñas</p>
+<h2 class="h2">Apreciado por clientes reales.</h2>
+<div class="rule"></div>
+</div>
+<a href="https://g.page/r/CQSVKiosf6VSEAE" target="_blank" rel="noopener" style="text-align:right;text-decoration:none;color:inherit;display:block">
+<p style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#6b6b6b;margin-bottom:6px">Verificado en Google</p>
+<p style="color:#B8912E;font-size:20px;letter-spacing:3px">★★★★★</p>
+<p style="font-size:14px;color:#6b6b6b;margin-top:4px">5.0 de promedio · 8 reseñas →</p>
+</a>
+</div>
+<div class="cards reveal" style="display:flex;flex-wrap:nowrap;overflow-x:auto;gap:14px;background:none;border:none;margin-top:32px;padding-bottom:12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch">
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">Z</div>
+<div>
+<p style="font-weight:500;font-size:15px">Zhanna</p>
+<p style="font-size:12px;color:#8a8a8a">nueva</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"El vuelo de mi mamá se retrasó y no pude ir a recibirla. La recibieron en el aeropuerto y se aseguraron de que llegara bien a casa. ¡Muchas gracias!"</p>
+</div>
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">M</div>
+<div>
+<p style="font-weight:500;font-size:15px">Medgroup Ukraine</p>
+<p style="font-size:12px;color:#8a8a8a">hace un mes</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"Simplemente espectacular. Reservé por WhatsApp y el servicio fue rápido y muy amable. La van estaba impecable, limpia y cómoda. El chófer fue puntual y profesional en todo momento."</p>
+</div>
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">N</div>
+<div>
+<p style="font-weight:500;font-size:15px">Nataliia K.</p>
+<p style="font-size:12px;color:#8a8a8a">hace un mes</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"Usamos Onyx para un traslado al aeropuerto y tuvimos una excelente experiencia. El chófer fue puntual, profesional y fácil de comunicar. La SUV estaba impecable y perfecta para nuestro equipaje."</p>
+</div>
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">S</div>
+<div>
+<p style="font-weight:500;font-size:15px">Sam J.</p>
+<p style="font-size:12px;color:#8a8a8a">hace un mes</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"Recomiendo ampliamente al Sr. V. Maneja una SUV de lujo hermosa y espaciosa, cómoda e impecable. Siempre puntual, cortés y comunicativo: un servicio tan confiable es difícil de encontrar."</p>
+</div>
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">N</div>
+<div>
+<p style="font-weight:500;font-size:15px">Nelia</p>
+<p style="font-size:12px;color:#8a8a8a">nueva</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"Vitaliy siempre ha ofrecido un nivel excepcional de profesionalismo y atención. Puntual, confiable y cortés, hizo que un viaje de negocios importante transcurriera sin estrés."</p>
+</div>
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">D</div>
+<div>
+<p style="font-weight:500;font-size:15px">Dmytro K.</p>
+<p style="font-size:12px;color:#8a8a8a">nueva</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"Usamos el traslado del aeropuerto de Miami a nuestro hotel y, más tarde, de regreso. Todo salió excelente: puntual, confiable y muy agradable. Sin duda recomendamos el servicio."</p>
+</div>
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">N</div>
+<div>
+<p style="font-weight:500;font-size:15px">Natalia N.</p>
+<p style="font-size:12px;color:#8a8a8a">nueva</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"Servicio de primer nivel. Vitaliy habla inglés con fluidez y nos ayudó a hacer el check-in sin ningún problema. Es profesional, amable y respetuoso, y el auto era sumamente cómodo y estaba impecablemente limpio."</p>
+</div>
+<div class="card" style="cursor:default;flex:0 0 280px;scroll-snap-align:start">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<div style="width:40px;height:40px;border-radius:50%;background:#0A0A0A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0">A</div>
+<div>
+<p style="font-weight:500;font-size:15px">Alina G.</p>
+<p style="font-size:12px;color:#8a8a8a">nueva</p>
+</div>
+</div>
+<p style="color:#B8912E;letter-spacing:2px;margin-bottom:10px;font-size:15px">★★★★★</p>
+<p style="font-size:15px;line-height:1.6">"Estuve en Miami con mis hijos y Vitaliy nos llevó a muchos lugares. Muy profesional, habla inglés con fluidez y el vehículo era espacioso y cómodo. Quedamos muy satisfechos."</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:36px">
+<a class="btn btn-outline" href="https://g.page/r/CQSVKiosf6VSEAE/review" target="_blank" rel="noopener">¿Viajó con Onyx? Deje una reseña</a>
+</div>
+</div>
+</section>
+<!-- TRUST STRIP (verify before publishing) -->
+<div class="trust">
+<div class="wrap">
+<span><i class="mark"></i> Operador de transporte con licencia de Miami-Dade</span>
+<span><i class="mark"></i> Seguro comercial</span>
+<span><i class="mark"></i> Certificado de seguro a solicitud</span>
+<span><i class="mark"></i> Chóferes con verificación de antecedentes</span>
+</div>
+</div>
+<!-- BOOK -->
+<section id="book" class="section-dark">
+<div class="wrap book">
+<div class="reveal">
+<p class="eyebrow on-dark">Contacto</p>
+<h2 class="h2">Díganos a dónde necesita ir.</h2>
+<div class="rule"></div>
+<p class="lead">Envíe los detalles y su solicitud se abrirá directamente en WhatsApp, o llame para una respuesta inmediata.</p>
+<div class="contact-list">
+<a href="tel:+17869316699"><span><span class="clab">Teléfono</span>+1 786 931 ONYX (6699)</span></a><a href="mailto:info@onyxexecmiami.com"><span><span class="clab">Correo</span>info@onyxexecmiami.com</span></a>
+<a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20reservar%20un%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener"><span><span class="clab">WhatsApp</span>Escríbanos</span></a>
+</div>
+</div>
+<div class="reveal">
+<div class="form-grid">
+<div class="field"><label for="f-name">Nombre</label><input id="f-name" type="text" placeholder="Su nombre" /></div>
+<div class="field"><label for="f-phone">Teléfono / WhatsApp</label><input id="f-phone" type="tel" placeholder="+1 …" /></div>
+<div class="field"><label for="f-date">Fecha y hora</label><input id="f-date" type="text" placeholder="p. ej. 20 jun, 3:00 PM" /></div>
+<div class="field"><label for="f-pax">Pasajeros</label><input id="f-pax" type="number" min="1" placeholder="2" /></div>
+<div class="field full"><label for="f-from">Recogida</label><input id="f-from" type="text" placeholder="Dirección, aeropuerto o FBO" /></div>
+<div class="field full"><label for="f-to">Destino</label><input id="f-to" type="text" placeholder="Dirección, aeropuerto o FBO" /></div>
+<div class="field full"><label for="f-svc">Servicio</label>
+<select id="f-svc">
+<option>Traslado al aeropuerto</option><option>Aviación privada / FBO</option><option>Corporativo</option>
+<option>Por hora / a disposición</option><option>Escolar / familiar</option><option>Evento</option><option>Larga distancia</option>
+</select>
+</div>
+</div>
+<div class="form-actions">
+<button class="btn btn-light" id="sendBtn" type="button">Enviar por WhatsApp</button>
+<a class="btn btn-ghost" href="tel:+17869316699">O llame en su lugar</a>
+</div>
+<p class="form-note">Abre WhatsApp con sus datos ya escritos. No se envía nada hasta que usted lo presione allí.</p>
+</div>
+</div>
+</section>
+<SiteFooter lang="es" />
+<div class="mbar">
+<a href="tel:+17869316699">Llamar</a>
+<a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20reservar%20un%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<script is:inline>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var b=document.getElementById('sendBtn');
+if(b){b.addEventListener('click',function(){
+var v=function(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';};
+var t=['Nueva solicitud de chófer — Onyx Executive Miami','','Nombre: '+(v('f-name')||'—'),'Teléfono: '+(v('f-phone')||'—'),'Servicio: '+v('f-svc'),'Fecha/hora: '+(v('f-date')||'—'),'Pasajeros: '+(v('f-pax')||'—'),'Recogida: '+(v('f-from')||'—'),'Destino: '+(v('f-to')||'—')];
+if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'contact',event_label:'home_quick_form',service:v('f-svc')});}
+window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'_blank');
+});}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+<script is:inline>
+(function(){
+var toggle=document.querySelector('.nav-toggle');
+var menu=document.querySelector('.mobile-menu');
+var backdrop=document.querySelector('.menu-backdrop');
+function closeMenu(){
+  menu.classList.remove('open');
+  toggle.classList.remove('open');
+  backdrop.classList.remove('open');
+  toggle.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+if(toggle){
+  toggle.addEventListener('click',function(){
+    var isOpen=menu.classList.toggle('open');
+    toggle.classList.toggle('open',isOpen);
+    backdrop.classList.toggle('open',isOpen);
+    toggle.setAttribute('aria-expanded',isOpen?'true':'false');
+    document.body.style.overflow=isOpen?'hidden':'';
+  });
+  backdrop.addEventListener('click',closeMenu);
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',closeMenu);});
+}
+})();
+</script>
+<script is:inline>
+(function(){
+var tabs=document.querySelectorAll('.persona-tab');
+var panels=document.querySelectorAll('.persona-panel');
+tabs.forEach(function(tab){
+  tab.addEventListener('click',function(){
+    var target=tab.getAttribute('data-tab');
+    tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+    panels.forEach(function(p){p.classList.remove('active');});
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected','true');
+    var panel=document.querySelector('.persona-panel[data-panel="'+target+'"]');
+    if(panel){panel.classList.add('active');}
+  });
+});
+})();
+</script>
+<script is:inline>
+window["moovsAPI"] = moovsAPI = window["moovsAPI"] || [];
+moovsAPI.push(["operator", "71dde8d0-b08f-11f1-9709-6bc90bbc4c41"]);
+(function(m, oo, v, s) {
+    s = m.createElement(oo);
+    s.src = v;
+    s.async = 1;
+    m.head.appendChild(s);
+})(document, "script", "https://static.moovs.app");
+</script>
+</Base>

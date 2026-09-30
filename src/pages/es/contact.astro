@@ -1,0 +1,127 @@
+---
+import Base from '../../layouts/Base.astro';
+import Fonts from '../../components/Fonts.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import SiteScripts from '../../components/SiteScripts.astro';
+---
+<Base lang="es" page="contact.html">
+<Fragment slot="head">
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contacto y reservas — Onyx Executive Miami | +1 786 931 ONYX (6699)</title>
+<meta name="description" content="Reserve con Onyx Executive Miami: llame al +1 786 931 ONYX (6699), escriba por WhatsApp o envíe el formulario. Servicio de chófer privado en Miami, Fort Lauderdale y Palm Beach." />
+<meta name="theme-color" content="#0A0A0A" />
+<Fonts />
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://onyxexecmiami.com/es/contact.html",
+  "about": {
+    "@id": "https://onyxexecmiami.com/#business"
+  }
+}
+</script>
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://onyxexecmiami.com/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contacto"
+    }
+  ]
+}
+</script>
+</Fragment>
+<SiteHeader lang="es" page="contact.html" current="contact.html" mobileCurrent="contact.html" />
+
+<section class="page-hero">
+<div class="wrap">
+<p class="breadcrumb"><a href="/es/">Inicio</a> / Contacto</p>
+<p class="eyebrow on-dark">Contacto y reservas</p>
+<h1 class="display">Díganos adónde necesita llegar.</h1>
+<div class="rule"></div>
+<p class="lead">Llame para una respuesta rápida, escriba por WhatsApp o envíe los datos a continuación.</p>
+</div>
+</section>
+<section class="section-soft" style="padding-bottom:0">
+<div class="wrap">
+<div class="cards reveal" style="margin-bottom:0">
+<a class="card" href="#book"><div class="no">01</div><h3>Solicitar un traslado</h3><p>Traslado al aeropuerto, por horas o servicio puntual.</p><div class="more">Use el formulario a continuación ↓</div></a>
+<a class="card" href="corporate.html#account"><div class="no">02</div><h3>Cuenta corporativa</h3><p>Viajes de negocios recurrentes, facturación consolidada.</p><div class="more">Abrir una cuenta →</div></a>
+<a class="card" href="school-transportation.html"><div class="no">03</div><h3>Transporte familiar y recurrente</h3><p>Un chófer constante para los desplazamientos habituales de su familia.</p><div class="more">Más información →</div></a>
+</div>
+</div>
+</section>
+<section id="book" class="section-dark">
+<div class="wrap book">
+<div class="reveal">
+<p class="eyebrow on-dark">Directo</p>
+<h2 class="h2">Un solo contacto. Respuesta rápida.</h2>
+<div class="rule"></div>
+<p class="lead">Usted habla con la persona responsable de su transporte, no con una cola de espera.</p>
+<div class="contact-list">
+<a href="tel:+17869316699"><span><span class="clab">Teléfono</span>+1 786 931 ONYX (6699)</span></a><a href="mailto:info@onyxexecmiami.com"><span><span class="clab">Correo electrónico</span>info@onyxexecmiami.com</span></a>
+<a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20coordinar%20un%20servicio%20de%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener"><span><span class="clab">WhatsApp</span>Escríbanos</span></a>
+<a href="https://instagram.com/onyxexecmiami" target="_blank" rel="noopener"><span><span class="clab">Instagram</span>@onyxexecmiami</span></a>
+</div>
+</div>
+<div class="reveal">
+<div class="form-grid">
+<div class="field"><label for="f-name">Nombre</label><input id="f-name" type="text" placeholder="Su nombre" /></div>
+<div class="field"><label for="f-phone">Teléfono / WhatsApp</label><input id="f-phone" type="tel" placeholder="+1 …" /></div>
+<div class="field"><label for="f-email">Correo electrónico</label><input id="f-email" type="email" placeholder="usted@ejemplo.com" /></div>
+<div class="field"><label for="f-date">Fecha y hora</label><input id="f-date" type="text" placeholder="p. ej., 20 de jun., 3:00 p. m." /></div>
+<div class="field full"><label for="f-from">Dirección de recogida</label><input id="f-from" type="text" placeholder="Dirección, aeropuerto o FBO" /></div>
+<div class="field full"><label for="f-to">Destino</label><input id="f-to" type="text" placeholder="Dirección, aeropuerto o FBO" /></div>
+<div class="field"><label for="f-pax">Pasajeros</label><input id="f-pax" type="number" min="1" placeholder="2" /></div>
+<div class="field"><label for="f-luggage">Equipaje</label><input id="f-luggage" type="number" min="0" placeholder="2" /></div>
+<div class="field"><label for="f-flight">Número de vuelo</label><input id="f-flight" type="text" placeholder="Si aplica" /></div>
+<div class="field"><label for="f-for">Reserva para</label>
+<select id="f-for"><option>Yo mismo</option><option>Otro pasajero</option></select>
+</div>
+<div class="field"><label for="f-seat">Silla para niños / elevador</label>
+<select id="f-seat"><option>No es necesaria</option><option>Silla para bebés</option><option>Silla convertible</option><option>Elevador</option></select>
+</div>
+<div class="field"><label for="f-contact-pref">Respuesta preferida</label>
+<select id="f-contact-pref"><option>Llamada</option><option>WhatsApp</option><option>Correo electrónico</option></select>
+</div>
+<div class="field full"><label for="f-svc">Servicio</label>
+<select id="f-svc"><option>Traslado al aeropuerto</option><option>Aviación privada / FBO</option><option>Corporativo</option><option>Por horas / a disposición</option><option>Escolar / familiar</option><option>Evento</option><option>Larga distancia</option></select>
+</div>
+<div class="field full"><label for="f-notes">Información adicional</label><input id="f-notes" type="text" placeholder="Cualquier otro dato que debamos conocer" /></div>
+</div>
+<div class="form-actions">
+<button class="btn btn-light" id="sendBtn" type="button">Enviar por WhatsApp</button>
+<a class="btn btn-ghost" href="tel:+17869316699">O prefiero llamar</a>
+</div>
+<p class="form-note">Abre WhatsApp con sus datos ya completados. No se envía nada hasta que usted presione enviar allí. Cada solicitud se revisa y se confirma de forma individual antes de asignar un vehículo.</p>
+<p class="form-note" style="margin-top:8px;opacity:.7">Al enviar este formulario, sus datos se envían a Onyx Executive Miami por WhatsApp o correo electrónico y se utilizan únicamente para coordinar y confirmar su traslado. No se vende ni se comparte información con terceros.</p>
+</div>
+</div>
+</section>
+<SiteFooter lang="es" current="contact.html" />
+<div class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20coordinar%20un%20servicio%20de%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener">WhatsApp</a></div>
+<script is:inline>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var b=document.getElementById('sendBtn');
+if(b){b.addEventListener('click',function(){
+var v=function(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';};
+var t=['Nueva solicitud de chófer — Onyx Executive Miami','','Nombre: '+(v('f-name')||'—'),'Teléfono: '+(v('f-phone')||'—'),'Correo electrónico: '+(v('f-email')||'—'),'Servicio: '+v('f-svc'),'Fecha/hora: '+(v('f-date')||'—'),'Pasajeros: '+(v('f-pax')||'—'),'Equipaje: '+(v('f-luggage')||'—'),'N.º de vuelo: '+(v('f-flight')||'—'),'Reserva para: '+v('f-for'),'Silla para niños: '+v('f-seat'),'Recogida: '+(v('f-from')||'—'),'Destino: '+(v('f-to')||'—'),'Respuesta preferida: '+v('f-contact-pref'),'Notas: '+(v('f-notes')||'—')];
+if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'contact',event_label:'contact_full_form',service:v('f-svc')});}
+window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'_blank');
+});}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+<SiteScripts />
+</Base>

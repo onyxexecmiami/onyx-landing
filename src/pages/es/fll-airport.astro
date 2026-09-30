@@ -1,0 +1,187 @@
+---
+import Base from '../../layouts/Base.astro';
+import Fonts from '../../components/Fonts.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import YearReveal from '../../components/YearReveal.astro';
+import SiteScripts from '../../components/SiteScripts.astro';
+---
+<Base lang="es" page="fll-airport.html">
+<Fragment slot="head">
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Servicio de chófer en el aeropuerto FLL | Onyx Executive Miami</title>
+<meta name="description" content="Traslados privados en SUV negra desde y hacia el Aeropuerto Internacional de Fort Lauderdale-Hollywood (FLL). Seguimiento de vuelo, recibimiento personalizado (meet-and-greet) y cotización fija confirmada antes de su aterrizaje." />
+<meta name="theme-color" content="#0A0A0A" />
+<Fonts />
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Servicio de traslado al aeropuerto",
+  "provider": {
+    "@id": "https://onyxexecmiami.com/#business",
+    "name": "Onyx Executive Miami",
+    "url": "https://onyxexecmiami.com/es/"
+  },
+  "areaServed": {
+    "@type": "Airport",
+    "name": "Aeropuerto Internacional de Fort Lauderdale-Hollywood",
+    "iataCode": "FLL"
+  },
+  "url": "https://onyxexecmiami.com/es/fll-airport.html"
+}
+</script>
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://onyxexecmiami.com/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Traslados al aeropuerto",
+      "item": "https://onyxexecmiami.com/es/airport-transfers.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "FLL"
+    }
+  ]
+}
+</script>
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dónde recogen en FLL a los pasajeros que llegan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Por defecto, en la acera de llegadas, o en un punto de recibimiento personalizado (meet-and-greet) después de la zona de equipaje si prefiere no llevar sus maletas solo hasta la acera; se confirma con usted al reservar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo maneja Onyx un aterrizaje retrasado o adelantado en FLL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Su chófer sigue el vuelo en tiempo real y ajusta automáticamente la ventana de recogida, sin ningún cambio en la cotización fija que se le dio al reservar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen traslados de FLL a Port Everglades para cruceros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El trayecto de FLL a Port Everglades es corto y muy conocido para nosotros, dada la cercanía del aeropuerto al puerto, y se calcula según el horario de embarque de su barco."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Suele ser FLL más rápido que MIA para llegadas al sur de la Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para el corredor de Aventura y Sunny Isles, en la mayoría de los casos sí: FLL suele tomar de 25 a 35 minutos frente a 25 a 40 desde MIA, y FLL por lo general tiene menos congestión en los accesos. Para destinos en Fort Lauderdale y Boca Raton, FLL resulta aún más conveniente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo reservar una recogida semanal o de temporada recurrente en FLL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Las recogidas recurrentes en FLL para residentes de temporada o viajeros de negocios frecuentes se organizan igual que un traslado único, y siempre que sea posible se mantiene al mismo chófer para el horario fijo."
+      }
+    }
+  ]
+}
+</script>
+</Fragment>
+<SiteHeader lang="es" page="fll-airport.html" />
+
+<section class="page-hero">
+<div class="wrap">
+<p class="breadcrumb"><a href="/es/">Inicio</a> / <a href="airport-transfers.html">Traslados al aeropuerto</a> / FLL</p>
+<p class="eyebrow on-dark">Fort Lauderdale-Hollywood International</p>
+<h1 class="display">Su vehículo, esperándole en FLL.</h1>
+<div class="rule"></div>
+<p class="lead">Recogidas en SUV negra con seguimiento de vuelo en Fort Lauderdale-Hollywood International, en la acera o en un punto de recibimiento personalizado (meet-and-greet) dentro de la terminal acordado de antemano; su chófer trabaja para estar listo cuando usted aterrice.</p>
+<div class="page-actions">
+<a class="btn btn-light" href="tel:+17869316699">Llame ahora</a>
+<a class="btn btn-light" href="https://wa.me/17869316699?text=Hola%2C%20me%20gustar%C3%ADa%20una%20cotizaci%C3%B3n%20para%20un%20traslado%20al%20aeropuerto%20FLL." target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn btn-ghost" href="contact.html#book">Solicite una cotización</a>
+</div>
+<p class="trust-line">+1 786 931 ONYX (6699) · Con licencia y seguro · Permiso de Miami-Dade n.º 64666 · D-U-N-S&reg; 13-860-0693</p>
+</div>
+</section>
+<section class="section-soft">
+<div class="wrap split">
+<div class="prose reveal">
+<h2 class="h2">Llegadas a FLL</h2>
+<div class="rule"></div>
+<p>Su chófer sigue el vuelo y se adapta a llegadas adelantadas o retrasadas, y luego le recibe en la acera o en un punto de recibimiento personalizado (meet-and-greet) dentro de la terminal, acordado al reservar según su terminal específica (FLL cuenta con las Terminales 1 a 4, cada una con su propia acera). El plan de recogida incluye un margen razonable para posibles demoras en aduana; pídanos que le confirmemos las condiciones vigentes de tiempo de espera al reservar.</p>
+<h2 class="h2" style="margin-top:40px">Hacia Aventura, Sunny Isles, Las Olas &amp; el sur de la Florida</h2>
+<div class="rule"></div>
+<p>De FLL al corredor de Aventura y Sunny Isles el trayecto suele tomar de 25 a 35 minutos fuera de las horas pico. Está cerca de nuestra base, por lo que los tiempos y las rutas son bien conocidos, no una suposición basada en una aplicación de mapas. De FLL a Las Olas y al centro de Fort Lauderdale es aún más corto, por lo general de 10 a 15 minutos.</p>
+</div>
+<div class="prose reveal">
+<h2 class="h2">Cotización fija, confirmada de antemano</h2>
+<div class="rule"></div>
+<p>Cada traslado en FLL se cotiza a un precio fijo antes del viaje, con peajes y tiempo de espera estándar incluidos. Sin tarifas dinámicas ni cambio de chófer durante el trayecto.</p>
+<h2 class="h2" style="margin-top:40px">Conexiones con cruceros</h2>
+<div class="rule"></div>
+<p>¿Continúa en un crucero desde Fort Lauderdale? FLL está a minutos de Port Everglades y manejamos equipaje de crucero como algo habitual. Volar el día anterior al zarpe, en lugar del mismo día, elimina la mayor fuente de riesgo de perder el embarque, algo que vale la pena considerar en cualquier crucero con hora de salida fija. También cubrimos <a href="airport-transfers.html" style="color:#B8912E;text-decoration:underline;font-weight:500">traslados a MIA y DJT →</a>, además de recogidas de cruceros en PortMiami.</p>
+<p style="margin-top:16px">¿Viajes compartidos (Uber/Lyft) o un chófer reservado de antemano en FLL? Consulte nuestra <a href="blog-private-chauffeur-vs-rideshare.html" style="color:#B8912E;text-decoration:underline;font-weight:500">comparación entre Uber y un servicio de auto privado →</a></p>
+<p style="margin-top:16px">¿Se hospeda en Fort Lauderdale y no solo está de paso? Consulte la <a href="fort-lauderdale.html" style="color:#B8912E;text-decoration:underline;font-weight:500">cobertura en Fort Lauderdale →</a></p>
+</div>
+</div>
+</section>
+<section class="section-soft" style="padding-top:0">
+<div class="wrap"><div class="feat-img reveal" style="aspect-ratio:16/9"><picture><source type="image/avif" srcset="/suburban-side.avif" /><img src="/suburban-side.webp" alt="Chevrolet Suburban de Onyx Executive Miami para traslados al aeropuerto de Fort Lauderdale-Hollywood" width="1100" height="825" decoding="async" fetchpriority="high" /></picture></div></div>
+</section>
+<section class="section-dark">
+<div class="wrap">
+<div class="grid-head reveal">
+<h2 class="h2">Preguntas sobre los traslados en FLL</h2>
+<div class="rule"></div>
+</div>
+<div class="faq reveal">
+<details><summary>¿Dónde recogen en FLL a los pasajeros que llegan?<span class="pm">+</span></summary><div class="ans">Por defecto, en la acera de llegadas, o en un punto de recibimiento personalizado (meet-and-greet) después de la zona de equipaje si prefiere no llevar sus maletas solo hasta la acera; se confirma con usted al reservar.</div></details>
+<details><summary>¿Cómo maneja Onyx un aterrizaje retrasado o adelantado en FLL?<span class="pm">+</span></summary><div class="ans">Su chófer sigue el vuelo en tiempo real y ajusta automáticamente la ventana de recogida, sin ningún cambio en la cotización fija que se le dio al reservar.</div></details>
+<details><summary>¿Ofrecen traslados de FLL a Port Everglades para cruceros?<span class="pm">+</span></summary><div class="ans">Sí. El trayecto de FLL a Port Everglades es corto y muy conocido para nosotros, dada la cercanía del aeropuerto al puerto, y se calcula según el horario de embarque de su barco.</div></details>
+<details><summary>¿Suele ser FLL más rápido que MIA para llegadas al sur de la Florida?<span class="pm">+</span></summary><div class="ans">Para el corredor de Aventura y Sunny Isles, en la mayoría de los casos sí: FLL suele tomar de 25 a 35 minutos frente a 25 a 40 desde MIA, y FLL por lo general tiene menos congestión en los accesos. Para destinos en Fort Lauderdale y Boca Raton, FLL resulta aún más conveniente.</div></details>
+<details><summary>¿Puedo reservar una recogida semanal o de temporada recurrente en FLL?<span class="pm">+</span></summary><div class="ans">Sí. Las recogidas recurrentes en FLL para residentes de temporada o viajeros de negocios frecuentes se organizan igual que un traslado único, y siempre que sea posible se mantiene al mismo chófer para el horario fijo.</div></details>
+</div>
+</div>
+</section>
+<section class="section-soft">
+<div class="wrap">
+<div class="grid-head reveal"><h2 class="h2">Relacionado</h2><div class="rule"></div></div>
+<div class="related reveal">
+<a href="mia-airport.html"><span class="rk">Aeropuerto</span><h3>Transporte al aeropuerto MIA</h3></a>
+<a href="pbi-airport.html"><span class="rk">Aeropuerto</span><h3>Transporte a DJT / Palm Beach</h3></a>
+<a href="fort-lauderdale.html"><span class="rk">Cerca</span><h3>Fort Lauderdale</h3></a>
+<a href="aventura.html"><span class="rk">Cerca</span><h3>Aventura</h3></a>
+<a href="private-aviation.html"><span class="rk">Servicio</span><h3>Aviación privada / FBO</h3></a>
+<a href="blog-private-chauffeur-vs-rideshare.html"><span class="rk">Guía</span><h3>Chófer vs. viajes compartidos</h3></a>
+</div>
+</div>
+</section>
+<section class="cta-band"><div class="wrap">
+<h2 class="h2">¿Aterriza pronto en FLL?</h2>
+<p>Envíenos su número de vuelo y su dirección: le confirmaremos una cotización fija y tendremos un chófer listo.</p>
+<div class="actions"><a class="btn btn-light" href="tel:+17869316699">Llame al +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Solicite una cotización</a></div>
+</div></section>
+<SiteFooter lang="es" />
+<div class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20me%20gustar%C3%ADa%20una%20cotizaci%C3%B3n%20para%20un%20traslado%20al%20aeropuerto%20FLL." target="_blank" rel="noopener">WhatsApp</a></div>
+<YearReveal />
+<SiteScripts />
+</Base>

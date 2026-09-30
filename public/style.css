@@ -314,5 +314,11 @@ picture{display:contents}
 .cards-5 .card h3{font-size:clamp(19px,1.7vw,23px);line-height:1.2}
 
 /* Phones: tighter sub-page hero, hero buttons share the row evenly */
-@media (max-width:600px){.page-hero .wrap{padding:56px 24px 48px}}
+@media (max-width:600px){.page-hero{padding-block:0}.page-hero .wrap{padding:56px 24px 48px}}
 @media (max-width:520px){.hero-actions .btn,.page-actions .btn{flex:1 1 auto;justify-content:center}}
+
+/* Mid widths: the call button drops the number (it stays in the top bar) so the nav fits */
+@media (min-width:901px) and (max-width:1240px){.nav-cta-num{display:none}.nav-links{gap:16px;margin:0 18px}}
+
+/* Persona tabs: Spanish and Russian labels are long, let them wrap on narrow screens */
+@media (max-width:900px){.persona-tab{white-space:normal;text-align:start}}
