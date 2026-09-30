@@ -1,0 +1,48 @@
+# Every push to main: test, build, deploy to the Cloudflare Worker "onyx-landing".
+# Needs the repository secret CLOUDFLARE_API_TOKEN (Settings -> Secrets and variables -> Actions),
+# a Cloudflare API token with Workers Scripts:Edit on the account and Workers Routes:Edit + DNS:Edit
+# on the onyxexecmiami.com zone. Can also be started by hand: Actions -> Deploy -> Run workflow.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Check the Cloudflare token is set
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::Repository secret CLOUDFLARE_API_TOKEN is missing (Settings -> Secrets and variables -> Actions)."
+            exit 1
+          fi
+
+      - run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler deploy

@@ -6,12 +6,15 @@ words, do the technical work yourself, ask before anything that changes the live
 
 ## How the site goes live
 
-Push to `main` → GitHub Actions `.github/workflows/deploy.yml` → `npm ci`, `npm test`, `npm run build`,
+Push to `main` → GitHub Actions `.github/workflows/deploy.yml` (until set up: `docs/deploy.yml`, see step 0) → `npm ci`, `npm test`, `npm run build`,
 `wrangler deploy` → Cloudflare Worker `onyx-landing` (custom domains onyxexecmiami.com and www).
 The workflow needs the repository secret `CLOUDFLARE_API_TOKEN`. If a run fails, the old version stays
 live; read the run log (`gh run view --log-failed`) before changing anything.
 
 First-time setup, if not done yet:
+0. If `.github/workflows/deploy.yml` does not exist yet, create it from the prepared copy and push
+   (pushing workflow files needs a GitHub token with the `workflow` scope, e.g. `gh auth refresh -s workflow`):
+   `mkdir -p .github/workflows && git mv docs/deploy.yml .github/workflows/deploy.yml && git commit -m "Enable deploy on push" && git push`.
 1. The owner creates a Cloudflare API token in the dashboard (My Profile → API Tokens → template
    "Edit Cloudflare Workers", account resources: the owner's account, zone resources: onyxexecmiami.com,
    plus Zone → DNS → Edit). You cannot create it; ask the owner to paste it to you.

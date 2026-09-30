@@ -49,6 +49,13 @@ After editing an English page: extract, update the changed keys in `translations
 Header, footer, mobile menu and 404 strings live in `src/i18n/ui.ts`. `Base.astro` writes canonical and
 hreflang for every page; `src/pages/sitemap.xml.ts` lists all pages in all languages.
 
+## Deploy
+
+Every push to `main` runs `.github/workflows/deploy.yml`: `npm ci`, tests, build, `wrangler deploy`.
+It needs the repository secret `CLOUDFLARE_API_TOKEN`. Until it is enabled, the workflow waits in
+`docs/deploy.yml` (see CLAUDE.md, first-time setup, step 0). Deploying by hand still works:
+`CLOUDFLARE_API_TOKEN=... npm run deploy`.
+
 ## Hosting
 
 Cloudflare Worker `onyx-landing` (account "Vik.ironman@gmail.com's Account"), custom domains
