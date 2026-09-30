@@ -297,7 +297,7 @@ picture{display:contents}
 .page-hero .wrap>*{max-width:780px}
 
 /* Grids never end with empty cells */
-@media (min-width:901px){
+@media (min-width:821px){
   .cards:has(> :nth-child(4):last-child),
   .cards:has(> :nth-child(7):last-child),
   .cards:has(> :nth-child(8):last-child){grid-template-columns:repeat(4,1fr)}
@@ -305,7 +305,7 @@ picture{display:contents}
   .trust-grid:has(> :nth-child(3):last-child){grid-template-columns:repeat(3,1fr)}
   .related:has(> :nth-child(2):last-child){grid-template-columns:repeat(2,1fr)}
 }
-@media (min-width:521px) and (max-width:900px){
+@media (min-width:521px) and (max-width:820px){
   .cards > :nth-child(odd):last-child{grid-column:span 2}
 }
 
@@ -347,11 +347,25 @@ picture{display:contents}
 /* Text-only sections (heading + paragraphs / FAQ / list) sit in a centred reading column instead of
    hugging the left edge with half the screen empty; sections with grids, two columns, tables or images
    keep the full width. Text stays left-aligned inside the column and fills it. */
-main section:not(.page-hero,.hero,.cta-band) > .wrap:not(.split,.book,.cards,.trust-grid):not(:has(.split,.cards,.related,.blog-grid,.reviews,.trust-grid,.book,table,iframe,img,.persona-tabs,.figure,[style*="grid"],[style*="display:flex"])){max-width:820px}
-main section:not(.page-hero,.hero,.cta-band) > .wrap:not(.split,.book,.cards,.trust-grid):not(:has(.split,.cards,.related,.blog-grid,.reviews,.trust-grid,.book,table,iframe,img,.persona-tabs,.figure,[style*="grid"],[style*="display:flex"])) :is(.grid-head,.prose,.prose p,.lead,.faq,.ans,.points){max-width:none}
+main section:not(.page-hero,.hero,.cta-band) > .wrap:only-child:not(.split,.book,.cards,.trust-grid):not(:has(.split,.cards,.related,.blog-grid,.reviews,.trust-grid,.book,table,iframe,img,.persona-tabs,.figure,[style*="grid"],[style*="display:flex"])){max-width:820px}
+main section:not(.page-hero,.hero,.cta-band) > .wrap:only-child:not(.split,.book,.cards,.trust-grid):not(:has(.split,.cards,.related,.blog-grid,.reviews,.trust-grid,.book,table,iframe,img,.persona-tabs,.figure,[style*="grid"],[style*="display:flex"])) :is(.grid-head,.prose,.prose p,.lead,.faq,.ans,.points){max-width:none}
 /* A centred section heading sits in the middle of the page; a heading row with a right-hand block spans the width */
 .grid-head[style*="text-align:center"]{margin-inline:auto}
 .grid-head[style*="justify-content:space-between"]{max-width:none}
 /* Where a section with zeroed top padding follows a section of a different colour, give it room */
 :is(.section-dark,.page-hero,.hero,.cta-band) + section:not(.section-dark,.page-hero,.hero,.cta-band)[style*="padding-top:0"],
 section:not(.section-dark,.page-hero,.hero,.cta-band) + section.section-dark[style*="padding-top:0"]{padding-top:64px!important}
+
+/* Grids never leave a lone card in the last row (30.09.2026, second pass) */
+@media (min-width:1024px){.split:has(> :nth-child(3):last-child){grid-template-columns:repeat(3,1fr);gap:48px}}
+@media (min-width:821px) and (max-width:1023px){.split:has(> :nth-child(3):last-child) > :last-child{grid-column:1/-1}}
+@media (min-width:781px){.related:has(> :nth-child(5):last-child){grid-template-columns:repeat(5,1fr)}}
+@media (min-width:561px){.trust-grid:has(> :nth-child(3):last-child){grid-template-columns:repeat(3,1fr)}}
+
+/* Hero stats on the home page: an even grid (4 across, 2 x 2 on phones) so long ES/RU labels never leave one stat alone */
+.hero-stats{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:28px;row-gap:22px}
+@media (max-width:600px){.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Phones: buttons inside text blocks take the full column and centre their label, so long ES/RU labels read cleanly */
+@media (max-width:520px){.btn{text-align:center;justify-content:center;line-height:1.35}:is(.persona-panel,.prose,.cards) .btn{width:100%}}
+.related .card{min-height:0}
+@media (max-width:520px){:is(.persona-panel,.figure) .btn{font-size:12px;letter-spacing:.04em;padding:14px 12px}}
