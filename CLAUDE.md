@@ -28,9 +28,10 @@ First-time setup, if not done yet:
   `src/pages/ru/` are GENERATED — never edit them by hand. After changing English text:
   `python3 scripts/i18n-extract.py`, update the changed keys in `translations/es/<page>.json` and
   `translations/ru/<page>.json` (translate them yourself: usted in Spanish, «вы» in Russian, brand names,
-  airport codes, addresses, prices unchanged), `python3 scripts/i18n-check.py es` / `ru` until "ok",
-  `python3 scripts/i18n-build.py es ru`. Keys are assigned by text, so when an English text changes,
-  compare the old and new `translations/en/<page>.json` to see which keys need a new translation.
+  airport codes, addresses, prices unchanged), `python3 scripts/i18n-mark.py es` / `ru` (records which English text was translated),
+  `python3 scripts/i18n-check.py es` / `ru` until "ok", `python3 scripts/i18n-build.py es ru`.
+  The deploy workflow refuses to publish when a translation is STALE (English changed since it was
+  translated) or when `src/pages/es|ru` do not match `translations/`. `i18n-check.py` lists the STALE keys that need a new translation.
 - Menu, footer, 404 in all languages: `src/i18n/ui.ts`.
 - Styles: `public/style.css`. Images: `public/` (serve AVIF with WebP fallback, see `scripts/make-avif.py`
   and `scripts/wrap-picture.py`).

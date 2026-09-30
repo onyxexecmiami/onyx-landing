@@ -1,8 +1,9 @@
 ---
-// Brand fonts (Cormorant Garamond + Montserrat) loaded without blocking render, then the site stylesheet.
+// Brand fonts (Cormorant Garamond + Montserrat, self-hosted via the Astro fonts config), then the site stylesheet.
+// No preload: each family is split by script (latin, cyrillic...) and Astro's preload data carries no subset,
+// so preloading would fetch all eight files. Metric-matched fallbacks keep text from jumping while they load.
+import { Font } from 'astro:assets';
 ---
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
+<Font cssVariable="--font-display" />
+<Font cssVariable="--font-body" />
 <link rel="stylesheet" href="/style.css" />

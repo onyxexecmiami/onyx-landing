@@ -13,6 +13,23 @@ export function candidates(pathname) {
   return [pathname + '.html'];
 }
 
+// Browser cache lifetime per file type. HTML is always revalidated so edits show at once;
+// /_astro/ files carry a content hash in their name, so they can be cached for a year.
+export function cacheControl(pathname) {
+  if (pathname.startsWith('/_astro/')) return 'public, max-age=31536000, immutable';
+  if (/\.(avif|webp|jpe?g|png|svg|gif|ico|woff2?)$/i.test(pathname)) return 'public, max-age=2592000, stale-while-revalidate=86400';
+  if (/\.(css|js)$/i.test(pathname)) return 'public, max-age=3600, stale-while-revalidate=86400';
+  return null;
+}
+
+function withCache(res, pathname) {
+  const value = res.ok ? cacheControl(pathname) : null;
+  if (!value) return res;
+  const out = new Response(res.body, res);
+  out.headers.set('Cache-Control', value);
+  return out;
+}
+
 // Missing pages under /es/ and /ru/ get the 404 page in that language.
 export function notFoundPage(pathname) {
   const m = pathname.match(/^\/(es|ru)(\/|$)/);
@@ -42,7 +59,7 @@ export default {
 
     for (const path of candidates(url.pathname)) {
       const res = await env.ASSETS.fetch(new URL(path, url), request);
-      if (res.status !== 404) return res;
+      if (res.status !== 404) return withCache(res, path);
     }
 
     const dir = directoryRedirect(url.pathname);

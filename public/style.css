@@ -3,8 +3,8 @@
   --ink:#1A1A19; --muted:#6B6B66; --muted-light:#A9A9A2;
   --gold:#D4AF37; --gold-deep:#9A7B23;
   --hair:rgba(212,175,55,.45); --hair-dark:rgba(255,255,255,.12); --hair-light:rgba(10,10,10,.12);
-  --display:"Cormorant Garamond",Georgia,serif;
-  --body:"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --display:var(--font-display,"Cormorant Garamond",Georgia,serif);
+  --body:var(--font-body,"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif);
   --maxw:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -322,3 +322,7 @@ picture{display:contents}
 
 /* Persona tabs: Spanish and Russian labels are long, let them wrap on narrow screens */
 @media (max-width:900px){.persona-tab{white-space:normal;text-align:start}}
+
+/* Dropdowns open for keyboard users too (Tab into the item), not only on mouse hover */
+.nav-drop:focus-within .nav-drop-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px)}
+.nav-drop:focus-within>a::after{border-top-color:var(--gold);transform:translateY(1px) rotate(180deg)}

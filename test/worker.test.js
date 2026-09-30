@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { candidates, directoryRedirect, notFoundPage } from '../worker/index.js';
+import { cacheControl, candidates, directoryRedirect, notFoundPage } from '../worker/index.js';
 
 test('pages keep their .html URLs', () => {
   assert.deepEqual(candidates('/faq.html'), ['/faq.html']);
@@ -27,4 +27,12 @@ test('404 page follows the language prefix', () => {
   assert.equal(notFoundPage('/es/nope.html'), '/es/404.html');
   assert.equal(notFoundPage('/ru/x/y'), '/ru/404.html');
   assert.equal(notFoundPage('/essay.html'), '/404.html');
+});
+
+test('cache lifetime by file type', () => {
+  assert.match(cacheControl('/_astro/fonts/abc.woff2'), /immutable/);
+  assert.match(cacheControl('/hero-937.avif'), /max-age=2592000/);
+  assert.match(cacheControl('/style.css'), /max-age=3600/);
+  assert.equal(cacheControl('/faq.html'), null);
+  assert.equal(cacheControl('/es/index.html'), null);
 });

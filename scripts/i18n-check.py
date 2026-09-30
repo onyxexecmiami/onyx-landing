@@ -1,6 +1,6 @@
 """Check translations/<lang>/<page>.json against translations/en/<page>.json.
 
-Reports: missing or extra keys, HTML segments whose tags/attributes changed (translators must only
+Reports: keys whose English changed since they were translated (STALE, see i18n-mark.py), missing or extra keys, HTML segments whose tags/attributes changed (translators must only
 change text between tags), untranslated segments (identical to English with 4+ letter words),
 line breaks in form labels. Exit code 1 on any error.
 Usage: python3 scripts/i18n-check.py es [page ...]
@@ -26,6 +26,14 @@ def main():
         except ValueError as e:
             print(f'{page}: BAD JSON {e}'); errors += 1; continue
         probs = []
+        src_path = os.path.join(ROOT, 'translations', lang, '_source', page + '.json')
+        if os.path.exists(src_path):
+            source = json.load(open(src_path))
+            stale = [k for k in en if k in tr and source.get(k) != en[k]]
+            if stale:
+                probs.append(f'STALE (English changed since translation, re-translate then run i18n-mark.py): {stale[:12]}')
+        else:
+            probs.append('no translations/%s/_source/%s.json: run i18n-mark.py after translating' % (lang, page))
         for k in en.keys() - tr.keys(): probs.append(f'missing key {k}')
         for k in tr.keys() - en.keys(): probs.append(f'extra key {k}')
         same = []

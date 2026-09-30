@@ -41,7 +41,8 @@ English pages in `src/pages/*.astro` are the source. Spanish and Russian pages u
 ```bash
 python3 scripts/i18n-extract.py        # English pages -> translations/en/<page>.json
 # translate translations/en/<page>.json -> translations/<lang>/<page>.json (same keys)
-python3 scripts/i18n-check.py es       # keys, tags and attributes intact, nothing left in English
+python3 scripts/i18n-mark.py es        # remember which English text each translation came from
+python3 scripts/i18n-check.py es       # keys, tags intact, nothing left in English, nothing STALE
 python3 scripts/i18n-build.py es ru    # -> src/pages/es/*.astro, src/pages/ru/*.astro
 ```
 

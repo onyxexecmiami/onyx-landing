@@ -39,6 +39,21 @@ jobs:
       - name: Test
         run: npm test
 
+      - name: Translations are current
+        run: |
+          python3 scripts/i18n-extract.py > /dev/null
+          if [ -n "$(git status --porcelain translations/en)" ]; then
+            echo "::error::English pages changed but their texts were not extracted. Run: python3 scripts/i18n-extract.py, translate the changed keys, python3 scripts/i18n-mark.py es / ru."
+            git status --porcelain translations/en; exit 1
+          fi
+          python3 scripts/i18n-check.py es
+          python3 scripts/i18n-check.py ru
+          python3 scripts/i18n-build.py es ru > /dev/null
+          if [ -n "$(git status --porcelain src/pages/es src/pages/ru)" ]; then
+            echo "::error::src/pages/es or src/pages/ru do not match translations/. Never edit them by hand; run: python3 scripts/i18n-build.py es ru"
+            git status --porcelain src/pages/es src/pages/ru; exit 1
+          fi
+
       - name: Build
         run: npm run build
 
