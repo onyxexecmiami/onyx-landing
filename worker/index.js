@@ -13,6 +13,12 @@ export function candidates(pathname) {
   return [pathname + '.html'];
 }
 
+// Missing pages under /es/ and /ru/ get the 404 page in that language.
+export function notFoundPage(pathname) {
+  const m = pathname.match(/^\/(es|ru)(\/|$)/);
+  return m ? `/${m[1]}/404.html` : '/404.html';
+}
+
 // A directory requested without its trailing slash (/es) is redirected to /es/.
 export function directoryRedirect(pathname) {
   if (pathname.endsWith('/')) return null;
@@ -45,7 +51,7 @@ export default {
       if (index.ok) return Response.redirect(new URL(dir + url.search, url).toString(), 301);
     }
 
-    const page = await env.ASSETS.fetch(new URL('/404.html', url));
+    const page = await env.ASSETS.fetch(new URL(notFoundPage(url.pathname), url));
     return new Response(request.method === 'HEAD' ? null : page.body, {
       status: 404,
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
