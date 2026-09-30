@@ -73,6 +73,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <Fonts />
 </Fragment>
 <SiteHeader lang="es" page="airport-transfers.html" current="airport-transfers.html" />
+<main id="main">
 
 <section class="page-hero">
 <div class="wrap">
@@ -126,7 +127,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="wrap">
 <p class="eyebrow">Comparar</p>
 <h2 class="h2" style="margin-bottom:24px">MIA vs. FLL vs. DJT (Palm Beach)</h2>
-<div style="overflow-x:auto">
+<div style="overflow-x:auto" tabindex="0">
 <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:640px">
 <thead><tr style="border-bottom:2px solid #0A0A0A;text-align:left">
 <th style="padding:10px 12px">Aeropuerto</th><th style="padding:10px 12px">Ideal para</th><th style="padding:10px 12px">Puertos cercanos</th><th style="padding:10px 12px">Página de Onyx</th>
@@ -189,8 +190,9 @@ import SiteScripts from '../../components/SiteScripts.astro';
 </div>
 </div>
 </section>
+</main>
 <SiteFooter lang="es" />
-<div class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n%20para%20un%20traslado%20al%20aeropuerto." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n%20para%20un%20traslado%20al%20aeropuerto." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

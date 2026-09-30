@@ -34,7 +34,7 @@ const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 </div></div>
 <div class="wrap nav">
 <a class="brand" href={home}><b>ONYX</b> <span>·</span> Executive Miami</a>
-<nav class="nav-links"><div class="nav-drop"><a href={p + 'airport-transfers.html'} aria-current={c('airport-transfers.html')}>{t.airport}</a>
+<nav class="nav-links" aria-label={t.navMain}><div class="nav-drop"><a href={p + 'airport-transfers.html'} aria-current={c('airport-transfers.html')}>{t.airport}</a>
 <div class="nav-drop-panel">
 <span class="nav-drop-label">{t.commercialAirports}</span>
 <a href={p + 'mia-airport.html'} aria-current={c('mia-airport.html')}>{t.mia}</a>
@@ -65,10 +65,10 @@ const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 </div><a href={p + 'blog.html'} aria-current={c('blog.html')}>{t.blog}</a>
 <a href={p + 'contact.html'} aria-current={c('contact.html')}>{t.contact}</a></nav>
 <a class="nav-cta" href="tel:+17869316699">{t.call}<span class="nav-cta-num"> +1 786 931 ONYX (6699)</span></a>
-<button class="nav-toggle" aria-label={t.menu} aria-expanded="false"><span></span><span></span><span></span></button>
+<button type="button" class="nav-toggle" aria-label={t.menu} aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="menu-backdrop"></div>
-<nav class="mobile-menu">
+<nav class="mobile-menu" aria-label={t.navMobile}>
 <a href={p + 'airport-transfers.html'} aria-current={m('airport-transfers.html')}>{t.airport}</a>
 <a href={p + 'mia-airport.html'} aria-current={m('mia-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.mia}</a>
 <a href={p + 'fll-airport.html'} aria-current={m('fll-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.fll}</a>

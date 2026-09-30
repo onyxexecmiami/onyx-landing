@@ -147,6 +147,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 </script>
 </Fragment>
 <SiteHeader page="blog-miami-airports-guide.html" />
+<main id="main">
 
 <section class="page-hero">
 <div class="wrap">
@@ -174,7 +175,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="wrap">
 <p class="eyebrow">At a glance</p>
 <h2 class="h2" style="margin-bottom:24px">The fastest answer by destination</h2>
-<div style="overflow-x:auto">
+<div style="overflow-x:auto" tabindex="0">
 <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:640px">
 <thead><tr style="border-bottom:2px solid #0A0A0A;text-align:left">
 <th scope="col" style="padding:10px 12px">Destination</th><th scope="col" style="padding:10px 12px">Usually best</th><th scope="col" style="padding:10px 12px">Alternative</th><th scope="col" style="padding:10px 12px">Note</th>
@@ -351,8 +352,9 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="actions"><a class="btn btn-light" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Request a quote</a></div>
 <p style="font-size:12px;color:#9a9a9a;margin-top:24px">Editorial note: airport names, codes, schedules, and traffic conditions can change. This guide was last updated September 9, 2026. Confirm current flight and terminal information with your airline before departure.</p>
 </div></section>
+</main>
 <SiteFooter />
-<div class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

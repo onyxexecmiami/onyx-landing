@@ -57,7 +57,7 @@ const wa = 'https://wa.me/17869316699?text=' + encodeURIComponent(t.waQuote);
   </div>
 </main>
 <SiteFooter lang={lang} />
-<div class="mbar"><a href="tel:+17869316699">{t.call}</a><a href={wa} target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">{t.call}</a><a href={wa} target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>
@@ -110,7 +110,7 @@ const wa = 'https://wa.me/17869316699?text=' + encodeURIComponent(t.waQuote);
     user-select: none;
   }
   .nf-title { max-width: 18ch; font-size: clamp(34px, 4.2vw, 54px); }
-  .nf-lead { max-width: 46ch; }
+  .nf-lead { max-width: 46ch; color: #c9c9c3; }
   .nf-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-block-start: 34px; }
 
   .nf-menu {

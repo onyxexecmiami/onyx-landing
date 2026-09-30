@@ -45,6 +45,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 </script>
 </Fragment>
 <SiteHeader lang="es" page="blog.html" current="blog.html" mobileCurrent="blog.html" />
+<main id="main">
 
 <section class="page-hero">
 <div class="wrap">
@@ -62,7 +63,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="/aventura-chauffeur-pickup.avif" /><img src="/aventura-chauffeur-pickup.webp" width="700" height="933" alt="Recogida de un chófer de Onyx cerca de Sunny Isles Beach" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">01</div>
-<h3>Dónde comer en Sunny Isles Beach</h3>
+<h2>Dónde comer en Sunny Isles Beach</h2>
 <p>Cenas para ocasiones especiales, sushi, parrillas mediterráneas y adónde ir cuando la cena se convierte en una larga noche.</p>
 <div class="more">Leer →</div>
 </div>
@@ -71,7 +72,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="/chauffeur-meet-and-greet.avif" /><img src="/chauffeur-meet-and-greet.webp" width="700" height="875" alt="Chófer de Onyx con un cartel con el nombre en la sala de llegadas de un aeropuerto de Miami" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">02</div>
-<h3>Aeropuertos de Miami: MIA, FLL y PBI/DJT</h3>
+<h2>Aeropuertos de Miami: MIA, FLL y PBI/DJT</h2>
 <p>A qué aeropuerto del sur de Florida volar y cómo se comparan realmente los tiempos de traslado entre ellos.</p>
 <div class="more">Leer →</div>
 </div>
@@ -80,7 +81,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="/bag-handoff.avif" /><img src="/bag-handoff.webp" width="700" height="872" alt="Chófer de Onyx entregando su bolso a una pasajera junto a la acera en Miami" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">03</div>
-<h3>Chófer privado frente a Uber y Lyft en Miami</h3>
+<h2>Chófer privado frente a Uber y Lyft en Miami</h2>
 <p>Una comparación punto por punto: recogida, seguimiento de vuelo, tarifas, equipaje y en qué situaciones conviene cada opción.</p>
 <div class="more">Leer →</div>
 </div>
@@ -89,7 +90,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="/miami-skyline-aerial.avif" /><img src="/miami-skyline-aerial.webp" width="600" height="338" alt="Vista aérea del horizonte de Miami cerca de Brickell al atardecer" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">04</div>
-<h3>Guía de transporte en Aventura</h3>
+<h2>Guía de transporte en Aventura</h2>
 <p>Aeropuertos, hoteles, el centro comercial y qué hacer con los niños según su edad, todo en el corredor de Aventura.</p>
 <div class="more">Leer →</div>
 </div>
@@ -102,8 +103,9 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <p>Llame o escriba para una cotización fija a cualquier aeropuerto del sur de Florida.</p>
 <div class="actions"><a class="btn btn-light" href="tel:+17869316699">Llamar al +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Solicitar cotización</a></div>
 </div></section>
+</main>
 <SiteFooter lang="es" />
-<div class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

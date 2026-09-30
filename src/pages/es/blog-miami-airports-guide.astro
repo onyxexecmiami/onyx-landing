@@ -161,6 +161,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 </script>
 </Fragment>
 <SiteHeader lang="es" page="blog-miami-airports-guide.html" />
+<main id="main">
 
 <section class="page-hero">
 <div class="wrap">
@@ -188,7 +189,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="wrap">
 <p class="eyebrow">De un vistazo</p>
 <h2 class="h2" style="margin-bottom:24px">La respuesta más rápida según el destino</h2>
-<div style="overflow-x:auto">
+<div style="overflow-x:auto" tabindex="0">
 <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:640px">
 <thead><tr style="border-bottom:2px solid #0A0A0A;text-align:left">
 <th scope="col" style="padding:10px 12px">Destino</th><th scope="col" style="padding:10px 12px">Por lo general, el mejor</th><th scope="col" style="padding:10px 12px">Alternativa</th><th scope="col" style="padding:10px 12px">Nota</th>
@@ -365,8 +366,9 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="actions"><a class="btn btn-light" href="tel:+17869316699">Llamar +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Solicitar cotización</a></div>
 <p style="font-size:12px;color:#9a9a9a;margin-top:24px">Nota editorial: los nombres de los aeropuertos, los códigos, los horarios y las condiciones del tráfico pueden cambiar. Esta guía se actualizó por última vez el 9 de septiembre de 2026. Confirme con su aerolínea la información vigente de vuelos y terminales antes de la salida.</p>
 </div></section>
+</main>
 <SiteFooter lang="es" />
-<div class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

@@ -45,6 +45,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 </script>
 </Fragment>
 <SiteHeader page="blog.html" current="blog.html" mobileCurrent="blog.html" />
+<main id="main">
 
 <section class="page-hero">
 <div class="wrap">
@@ -62,7 +63,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="aventura-chauffeur-pickup.avif" /><img src="aventura-chauffeur-pickup.webp" width="700" height="933" alt="Onyx chauffeur pickup near Sunny Isles Beach" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">01</div>
-<h3>Where to Eat in Sunny Isles Beach</h3>
+<h2>Where to Eat in Sunny Isles Beach</h2>
 <p>Special-occasion dinners, sushi, Mediterranean grills, and where to go when dinner turns into a late night out.</p>
 <div class="more">Read →</div>
 </div>
@@ -71,7 +72,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="chauffeur-meet-and-greet.avif" /><img src="chauffeur-meet-and-greet.webp" width="700" height="875" alt="Onyx chauffeur holding a name sign in a Miami airport arrivals hall" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">02</div>
-<h3>Miami Airports: MIA vs. FLL vs. PBI/DJT</h3>
+<h2>Miami Airports: MIA vs. FLL vs. PBI/DJT</h2>
 <p>Which South Florida airport to fly into, and how transfer time actually compares between them.</p>
 <div class="more">Read →</div>
 </div>
@@ -80,7 +81,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="bag-handoff.avif" /><img src="bag-handoff.webp" width="700" height="872" alt="Onyx chauffeur handing a passenger her bag curbside in Miami" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">03</div>
-<h3>Private Chauffeur vs. Uber and Lyft in Miami</h3>
+<h2>Private Chauffeur vs. Uber and Lyft in Miami</h2>
 <p>A factor-by-factor comparison — pickup, flight tracking, pricing, luggage, and which situations favor each option.</p>
 <div class="more">Read →</div>
 </div>
@@ -89,7 +90,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="thumb"><picture><source type="image/avif" srcset="miami-skyline-aerial.avif" /><img src="miami-skyline-aerial.webp" width="600" height="338" alt="Aerial view of the Miami skyline near Brickell at sunset" loading="lazy" decoding="async" /></picture></div>
 <div class="body">
 <div class="no">04</div>
-<h3>Aventura Transportation Guide</h3>
+<h2>Aventura Transportation Guide</h2>
 <p>Airports, hotels, the mall, and what to do with kids by age — all in the Aventura corridor.</p>
 <div class="more">Read →</div>
 </div>
@@ -102,8 +103,9 @@ import SiteScripts from '../components/SiteScripts.astro';
 <p>Call or message for a fixed quote across any South Florida airport.</p>
 <div class="actions"><a class="btn btn-light" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Request a quote</a></div>
 </div></section>
+</main>
 <SiteFooter />
-<div class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

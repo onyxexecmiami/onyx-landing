@@ -115,6 +115,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 </script>
 </Fragment>
 <SiteHeader lang="es" page="aventura-transportation-guide.html" />
+<main id="main">
 
 
 <section class="page-hero">
@@ -156,7 +157,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="wrap">
 <p class="eyebrow">¿Qué aeropuerto debería elegir?</p>
 <h2 class="h2" style="margin-bottom:24px">Los tres sirven. Elija según su vuelo.</h2>
-<div style="overflow-x:auto">
+<div style="overflow-x:auto" tabindex="0">
 <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:640px">
 <thead><tr style="border-bottom:2px solid #0A0A0A;text-align:left">
 <th style="padding:10px 12px">Aeropuerto</th><th style="padding:10px 12px">Distancia a Aventura</th><th style="padding:10px 12px">Tiempo de manejo típico (sin tráfico)</th><th style="padding:10px 12px">Ideal para</th>
@@ -322,8 +323,9 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <p style="font-size:12px;color:#9a9a9a;margin-top:24px">Nota editorial: las distancias, los tiempos de manejo, los horarios y los precios mencionados son estimaciones o pueden cambiar. Esta guía fue revisada el 27 de julio de 2026. Confirme los datos actuales directamente con cada lugar antes de su visita.</p>
 </div></section>
 
+</main>
 <SiteFooter lang="es" />
-<div class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

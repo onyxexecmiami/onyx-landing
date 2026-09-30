@@ -189,6 +189,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 </script>
 </Fragment>
 <SiteHeader page="blog-private-chauffeur-vs-rideshare.html" />
+<main id="main">
 
 <section class="page-hero">
 <div class="wrap">
@@ -219,7 +220,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <h2 class="h2" style="margin-bottom:12px">Rideshare vs. pre-booked chauffeur</h2>
 <p style="max-width:820px;font-size:14px;color:var(--muted);margin-bottom:20px">Features vary by rideshare product and private transportation provider. The table below compares the typical on-demand rideshare model with the pre-arranged service model used by ONYX Executive Miami.</p>
 <p class="swipe-hint">Swipe horizontally to compare all columns.</p>
-<div style="overflow-x:auto">
+<div style="overflow-x:auto" tabindex="0">
 <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:640px">
 <caption class="sr-only">Comparison of typical on-demand rideshare features against ONYX Executive Miami's pre-arranged chauffeur service</caption>
 <thead><tr style="border-bottom:2px solid #0A0A0A;text-align:left">
@@ -423,8 +424,9 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="actions"><a class="btn btn-light" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Request a quote</a></div>
 <p style="font-size:12px;color:#9a9a9a;margin-top:24px">Editorial note: airport pickup zones, access rules, terminal doors, and passenger-facing airport codes may change. This guide was reviewed on July 26, 2026. Travelers should follow current airport signage, airline instructions, and the pickup details confirmed for their reservation.</p>
 </div></section>
+</main>
 <SiteFooter />
-<div class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

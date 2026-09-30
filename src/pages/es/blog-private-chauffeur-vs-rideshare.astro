@@ -189,6 +189,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 </script>
 </Fragment>
 <SiteHeader lang="es" page="blog-private-chauffeur-vs-rideshare.html" />
+<main id="main">
 
 <section class="page-hero">
 <div class="wrap">
@@ -219,7 +220,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <h2 class="h2" style="margin-bottom:12px">Viajes compartidos vs. chófer reservado de antemano</h2>
 <p style="max-width:820px;font-size:14px;color:var(--muted);margin-bottom:20px">Las características varían según el producto de viajes compartidos y el proveedor de transporte privado. La tabla siguiente compara el modelo típico de viajes compartidos a demanda con el modelo de servicio programado de antemano que utiliza ONYX Executive Miami.</p>
 <p class="swipe-hint">Deslice horizontalmente para comparar todas las columnas.</p>
-<div style="overflow-x:auto">
+<div style="overflow-x:auto" tabindex="0">
 <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:640px">
 <caption class="sr-only">Comparación de las características típicas de los viajes compartidos a demanda con el servicio de chófer programado de antemano de ONYX Executive Miami</caption>
 <thead><tr style="border-bottom:2px solid #0A0A0A;text-align:left">
@@ -423,8 +424,9 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <div class="actions"><a class="btn btn-light" href="tel:+17869316699">Llame al +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Solicite una cotización</a></div>
 <p style="font-size:12px;color:#9a9a9a;margin-top:24px">Nota editorial: las zonas de recogida del aeropuerto, las normas de acceso, las puertas de las terminales y los códigos del aeropuerto visibles para los pasajeros pueden cambiar. Esta guía fue revisada el 26 de julio de 2026. Los viajeros deben seguir la señalización vigente del aeropuerto, las instrucciones de su aerolínea y los detalles de recogida confirmados para su reserva.</p>
 </div></section>
+</main>
 <SiteFooter lang="es" />
-<div class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></div>
+<aside class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
 <SiteScripts />
 </Base>

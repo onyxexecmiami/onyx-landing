@@ -1,7 +1,7 @@
 :root{
   --onyx:#0A0A0A; --onyx-soft:#161615; --paper:#F5F4F1; --paper-pure:#FFFFFF;
   --ink:#1A1A19; --muted:#6B6B66; --muted-light:#A9A9A2;
-  --gold:#D4AF37; --gold-deep:#9A7B23;
+  --gold:#D4AF37; --gold-deep:#866B1E;
   --hair:rgba(212,175,55,.45); --hair-dark:rgba(255,255,255,.12); --hair-light:rgba(10,10,10,.12);
   --display:var(--font-display,"Cormorant Garamond",Georgia,serif);
   --body:var(--font-body,"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif);
@@ -196,7 +196,7 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 .foot-brand{font-family:var(--display);font-size:25px;color:#fff}.foot-brand span{color:var(--gold)}
 .foot-tag{font-size:13px;color:var(--muted);margin-top:8px;max-width:34ch}
 .foot-cols{display:flex;gap:54px;flex-wrap:wrap}
-.foot-cols h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-family:var(--body);font-weight:600}
+.foot-cols .foot-h{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-family:var(--body);font-weight:600}
 .foot-cols a,.foot-cols p{display:block;font-size:13.5px;color:#9d9d96;margin-bottom:9px}
 .foot-cols a:hover{color:#fff}
 .foot-bottom{border-top:1px solid var(--hair-dark);padding-top:22px;font-size:12px;color:#666;display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between}
@@ -266,7 +266,7 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 .post-card:hover .thumb img{transform:scale(1.04)}
 .post-card .body{padding:26px 28px 30px}
 .post-card .no{font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:10px}
-.post-card h3{font-family:var(--display);font-size:23px;font-weight:500;color:var(--onyx);margin-bottom:10px;line-height:1.25}
+.post-card :is(h2,h3){font-family:var(--display);font-size:23px;font-weight:500;color:var(--onyx);margin-bottom:10px;line-height:1.25}
 .post-card p{font-size:14px;color:var(--muted);line-height:1.55;margin-bottom:20px}
 .post-card .more{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500}
 
@@ -326,3 +326,20 @@ picture{display:contents}
 /* Dropdowns open for keyboard users too (Tab into the item), not only on mouse hover */
 .nav-drop:focus-within .nav-drop-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px)}
 .nav-drop:focus-within>a::after{border-top-color:var(--gold);transform:translateY(1px) rotate(180deg)}
+
+/* Contrast (WCAG AA 4.5:1), 30.09.2026: gold-deep token darkened above; greys on black lightened;
+   colors written inline in article markup are overridden here so translations keep identical markup */
+.foot-tag{color:#7e7e79}
+.foot-bottom{color:#7d7d7d}
+.section-dark .prose p:not(.lead){color:#85857f}
+.post-card .no,.post-card .more{color:var(--gold-deep)}
+[style*="color:#B8912E"]{color:#8F7024!important}
+[style*="color:#7a7a7a"],[style*="color:#9a9a9a"]{color:#757575!important}
+/* ...but on dark sections the original inline gold already reads well: keep it there */
+:is(.section-dark,.page-hero,.hero,.cta-band,footer) [style*="color:#B8912E"]{color:#B8912E!important}
+
+/* Card titles are h2 where no h2 precedes them (heading order); same look as the h3 they replaced */
+.card h2{font-size:1.17em;color:#fff;margin-bottom:10px}
+:is(.section-dark,.page-hero,.hero,.cta-band,footer) :is([style*="color:#7a7a7a"],[style*="color:#9a9a9a"]){color:#8e8e89!important}
+.section-dark .figure p{color:#85857f}
+.swipe-hint{color:#757575!important}

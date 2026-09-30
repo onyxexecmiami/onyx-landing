@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
+import ogDefaults from './integrations/og-defaults.mjs';
 
 // URLs are the ones Google already indexes: /faq.html, /es/, /ru/.
 // build.format 'preserve': faq.astro -> faq.html, es/index.astro -> es/index.html.
@@ -7,6 +8,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
   site: 'https://onyxexecmiami.com',
   build: { format: 'preserve' },
+  integrations: [ogDefaults()],
   // Brand fonts, downloaded at build time and served from the site itself (no request to Google).
   // Weights match what the site used from Google Fonts; cyrillic is for the Russian pages.
   fonts: [
