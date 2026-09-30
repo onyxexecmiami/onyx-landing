@@ -282,3 +282,37 @@ footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px
 
 /* <picture> wraps AVIF+WebP images; keep it out of layout so `.x img` rules apply as before */
 picture{display:contents}
+
+/* --- Proportions (30.09.2026) --- */
+/* Large screens: scale the whole layout so type, spacing and the 1180px column grow together.
+   Pages carry many inline px sizes, so a per-token bump would leave them behind; zoom keeps ratios. */
+@media (min-width:1500px){html{zoom:1.08}}
+@media (min-width:1700px){html{zoom:1.16}}
+@media (min-width:1900px){html{zoom:1.24}}
+@media (min-width:2300px){html{zoom:1.4}}
+@media (min-width:2800px){html{zoom:1.7}}
+
+/* Sub-page hero sits on the same left edge as the sections below it */
+.page-hero .wrap{max-width:var(--maxw);padding:84px 24px 70px}
+.page-hero .wrap>*{max-width:780px}
+
+/* Grids never end with empty cells */
+@media (min-width:901px){
+  .cards:has(> :nth-child(4):last-child),
+  .cards:has(> :nth-child(7):last-child),
+  .cards:has(> :nth-child(8):last-child){grid-template-columns:repeat(4,1fr)}
+  .cards:has(> :nth-child(7):last-child) > :last-child{grid-column:span 2}
+  .trust-grid:has(> :nth-child(3):last-child){grid-template-columns:repeat(3,1fr)}
+  .related:has(> :nth-child(2):last-child){grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:521px) and (max-width:900px){
+  .cards > :nth-child(odd):last-child{grid-column:span 2}
+}
+
+/* Process steps: short labels, so no tall empty boxes */
+.cards-5 .card{min-height:0;padding:30px 26px 34px}
+.cards-5 .card h3{font-size:clamp(19px,1.7vw,23px);line-height:1.2}
+
+/* Phones: tighter sub-page hero, hero buttons share the row evenly */
+@media (max-width:600px){.page-hero .wrap{padding:56px 24px 48px}}
+@media (max-width:520px){.hero-actions .btn,.page-actions .btn{flex:1 1 auto;justify-content:center}}
