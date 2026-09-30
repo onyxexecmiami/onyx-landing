@@ -1,6 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "onyx-landing",
+  // Vik.ironman@gmail.com's Account: the one holding the onyxexecmiami.com zone.
+  "account_id": "254e9131ec9dcdb10763cc52da149ca4",
   "main": "worker/index.js",
   "compatibility_date": "2026-09-30",
   "assets": {
