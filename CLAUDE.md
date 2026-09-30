@@ -4,6 +4,9 @@ Site of Onyx Executive Miami (private chauffeur service, South Florida). Astro 7
 three languages, served by a Cloudflare Worker. The owner is not a programmer: explain in plain
 words, do the technical work yourself, ask before anything that changes the live site's DNS or mail.
 
+What was done to the site and why (move to Astro and Cloudflare, translations, fixes, what is left for the
+owner): [docs/WORK-LOG-2026-09-30.md](docs/WORK-LOG-2026-09-30.md) — read it first.
+
 ## How the site goes live
 
 Push to `main` → GitHub Actions `.github/workflows/deploy.yml` (until set up: `docs/deploy.yml`, see step 0) → `npm ci`, `npm test`, `npm run build`,
@@ -24,6 +27,9 @@ First-time setup, if not done yet:
 
 ## Editing
 
+- Adding or removing a block of text renumbers the keys after it. Before editing such a page run
+  `python3 scripts/i18n-rekey.py save <page>`, and after `i18n-extract.py` run `python3 scripts/i18n-rekey.py apply <page>`:
+  existing translations follow their English text, only the new pieces need translating.
 - Page text: `src/pages/<page>.astro` (English). Spanish and Russian pages in `src/pages/es/` and
   `src/pages/ru/` are GENERATED — never edit them by hand. After changing English text:
   `python3 scripts/i18n-extract.py`, update the changed keys in `translations/es/<page>.json` and

@@ -3,3 +3,4 @@ dist/
 .astro/
 .wrangler/
 .DS_Store
+.i18n-rekey/
