@@ -23,6 +23,7 @@ npm install
 npm run dev       # local dev server
 npm run build     # build to dist/
 npm test          # worker path-mapping tests
+npm run audit     # full site check on all 99 pages (layout, overflow, accessibility, phone behaviour); needs Chromium
 npm run preview   # serve dist/ through the worker locally (wrangler dev)
 CLOUDFLARE_API_TOKEN=... npm run deploy   # build and deploy; token scoped to the onyxexecmiami.com zone (account in wrangler.jsonc)
 ```

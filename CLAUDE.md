@@ -44,7 +44,9 @@ First-time setup, if not done yet:
   and `scripts/wrap-picture.py`).
 - New page: add `src/pages/<name>.astro` (copy a similar page), then extract/translate/build as above.
   The sitemap and hreflang links update themselves.
-- Before pushing: `npm test` and `npm run build` must pass.
+- Before pushing: `npm test` and `npm run build` must pass. After any change to layout or styles also run
+  `npm run audit` (all pages, all widths: lone cards in grids, misaligned edges, overflow, accessibility, phone
+  behaviour) and look at the changed pages at 1920 px and on a phone — the owner judges the site by eye.
 
 ## Never
 
