@@ -209,25 +209,32 @@ import SiteFooter from '../../components/SiteFooter.astro';
 <main id="main">
 <section class="hero" id="top" style="padding:0">
 <div class="hero-media"><picture><source type="image/avif" srcset="/hero-640.avif 640w, /hero-937.avif 937w" sizes="100vw" /><img src="/hero-937.webp" srcset="/hero-640.webp 640w, /hero-937.webp 937w" sizes="100vw" alt="Fundador de Onyx Executive Miami bajando de una Chevrolet Suburban negra en un resort del sur de Florida" width="937" height="1678" decoding="async" fetchpriority="high" /></picture></div>
-<div class="wrap">
+<div class="wrap hero-grid">
 <div class="hero-inner">
 <p class="eyebrow on-dark">Sur de Florida</p>
 <h1 class="display">Servicio de Chófer Gestionado por su Propietario en Miami</h1>
 <div class="rule"></div>
 <p class="lead">Transporte a aeropuertos y FBO, corporativo, familiar y por hora a través de un único punto de contacto responsable. Cotización fija, vehículo confirmado y novedades directas desde la reserva hasta el destino.</p>
-<p class="hero-trust" style="margin-top:18px;font-size:12px;letter-spacing:.03em;color:#b9b9b3">Permiso de Miami-Dade #64666 · Seguro comercial · COI disponible · Chevrolet Suburban RST 2026</p>
-<div class="hero-stats reveal" style="display:flex;gap:32px;margin-top:28px;margin-bottom:28px;flex-wrap:wrap">
-<div><div style="font-family:var(--display);font-size:22px;color:#D4AF37;letter-spacing:2px">★★★★★</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">5.0 en Google Reviews</div></div>
-<div><div style="font-family:var(--display);font-size:26px;color:#fff">4</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">Idiomas que hablamos</div></div>
-<div><div style="font-family:var(--display);font-size:26px;color:#fff">3</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">Condados de Florida atendidos</div></div>
-<div><div style="font-family:var(--display);font-size:26px;color:#fff">60</div><div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a95;margin-top:4px">Min de espera gratis, aeropuertos</div></div>
+<ul class="hero-chips">
+<li>Permiso de Miami-Dade #64666</li>
+<li>Seguro comercial · COI disponible</li>
+<li>60 min de espera gratis en aeropuertos</li>
+<li>Chevrolet Suburban nueva</li>
+</ul>
+<div class="hs-row reveal">
+<div class="hs"><div class="hs-v stars" aria-hidden="true">★★★★★</div><div class="hs-l">5.0 en Google Reviews</div></div>
+<div class="hs"><div class="hs-v">4</div><div class="hs-l">Idiomas que hablamos</div></div>
+<div class="hs"><div class="hs-v">3</div><div class="hs-l">Condados de Florida atendidos</div></div>
 </div>
 <div class="hero-actions">
-<a class="btn btn-light" href="contact.html#book">Solicitar cotización</a>
+<a class="btn btn-gold" href="#instant-quote">Cotización instantánea</a>
 <a class="btn btn-ghost" href="tel:+17869316699">Llamar</a>
 <a class="btn btn-ghost" href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20reservar%20un%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener">WhatsApp</a>
 </div>
 </div>
+<aside class="qw-wrap" id="instant-quote">
+<div data-onyx-quote style="width:100%;display:flex;justify-content:center"></div>
+</aside>
 </div>
 </section>
 <!-- HOW YOUR RIDE IS HANDLED -->
@@ -539,6 +546,8 @@ import SiteFooter from '../../components/SiteFooter.astro';
 <a href="tel:+17869316699">Llamar</a>
 <a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20reservar%20un%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener">WhatsApp</a>
 </aside>
+<script is:inline src="/quote-data.js?v=2"></script>
+<script is:inline src="/quote.js?v=3" defer></script>
 <script is:inline>
 document.getElementById('yr').textContent=new Date().getFullYear();
 var b=document.getElementById('sendBtn');

@@ -57,13 +57,25 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <section class="section-soft" style="padding-bottom:0">
 <div class="wrap">
 <div class="cards reveal" style="margin-bottom:0">
-<a class="card" href="#book"><div class="no">01</div><h2>Solicitar un traslado</h2><p>Traslado al aeropuerto, por horas o servicio puntual.</p><div class="more">Use el formulario a continuación ↓</div></a>
+<a class="card" href="#quote"><div class="no">01</div><h2>Cotización instantánea</h2><p>Traslados al aeropuerto, al puerto o a la ciudad: vea su tarifa ahora.</p><div class="more">Obtener cotización ↓</div></a>
 <a class="card" href="corporate.html#account"><div class="no">02</div><h2>Cuenta corporativa</h2><p>Viajes de negocios recurrentes, facturación consolidada.</p><div class="more">Abrir una cuenta →</div></a>
 <a class="card" href="school-transportation.html"><div class="no">03</div><h2>Transporte familiar y recurrente</h2><p>Un chófer constante para los desplazamientos habituales de su familia.</p><div class="more">Más información →</div></a>
 </div>
 </div>
 </section>
-<section id="book" class="section-dark">
+<section id="quote" class="section-dark">
+<div class="wrap book">
+<div class="reveal">
+<p class="eyebrow on-dark">Cotización instantánea</p>
+<h2 class="h2">Elija su ruta. Vea su tarifa.</h2>
+<div class="rule"></div>
+<p class="lead">Los traslados a aeropuertos, puertos de cruceros y ciudades de Miami-Dade, Broward y Palm Beach tienen precio fijo de antemano. Elija recogida y destino y reserve en un solo paso.</p>
+<p class="form-note" style="margin-top:18px">¿Servicio por horas, eventos, viajes de larga distancia o recogida en una dirección exacta? Use el formulario de abajo o llámenos.</p>
+</div>
+<div class="reveal qw-wrap"><div data-onyx-quote style="width:100%;display:flex;justify-content:center"></div></div>
+</div>
+</section>
+<section id="book" class="section-dark" style="padding-top:0">
 <div class="wrap book">
 <div class="reveal">
 <p class="eyebrow on-dark">Directo</p>
@@ -125,5 +137,7 @@ window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
+<script is:inline src="/quote-data.js?v=2"></script>
+<script is:inline src="/quote.js?v=3" defer></script>
 <SiteScripts />
 </Base>

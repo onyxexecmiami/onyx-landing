@@ -9,12 +9,12 @@ import SiteScripts from '../components/SiteScripts.astro';
 <Base lang="en" page="rates.html">
 <Fragment slot="head">
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rates &amp; What's Included | Onyx Executive Miami</title>
-<meta name="description" content="How pricing actually works at Onyx Executive Miami: what sets your fare, what Miami-Dade Permit #64666 verifies, and why a confirmed quote beats a rideshare estimate." />
+<title>Chauffeur Rates &amp; Instant Quote — Miami, Fort Lauderdale, Palm Beach | Onyx Executive Miami</title>
+<meta name="description" content="Published flat rates for airport, cruise-port and city transfers across Miami-Dade, Broward and Palm Beach. Get an instant quote, then reserve with one owner-managed chauffeur service." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Onyx Executive Miami" />
-<meta property="og:title" content="Rates &amp; What's Included | Onyx Executive Miami" />
-<meta property="og:description" content="How pricing actually works at Onyx Executive Miami: what sets your fare, what Miami-Dade Permit #64666 verifies, and why a confirmed quote beats a rideshare estimate." />
+<meta property="og:title" content="Chauffeur Rates &amp; Instant Quote | Onyx Executive Miami" />
+<meta property="og:description" content="Published flat rates for airport, cruise-port and city transfers across Miami-Dade, Broward and Palm Beach. Get an instant quote, then reserve with one owner-managed chauffeur service." />
 <meta property="og:url" content="https://onyxexecmiami.com/rates.html" />
 <meta property="og:image" content="https://onyxexecmiami.com/hero-937.webp" />
 <meta name="theme-color" content="#0A0A0A" />
@@ -33,6 +33,11 @@ import SiteScripts from '../components/SiteScripts.astro';
       "@type": "Question",
       "name": "What does Miami-Dade Permit #64666 actually verify?",
       "acceptedAnswer": { "@type": "Answer", "text": "A county-issued for-hire chauffeur registration, which requires a background check, a clean driving record, and annual renewal. It is a public record you can verify independently, not a self-reported claim." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is a chauffeur from MIA to Miami Beach or Brickell?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Published flat rates start at $95 from Miami International Airport to Brickell / Downtown Miami and $105 to Miami Beach, per vehicle, one way. Gratuity, tolls and airport or port parking fees are not included, and a 30% supplement applies between midnight and 6 a.m." }
     },
     {
       "@type": "Question",
@@ -69,15 +74,81 @@ import SiteScripts from '../components/SiteScripts.astro';
 <div class="wrap">
 <p class="breadcrumb"><a href="/">Home</a> / Rates</p>
 <p class="eyebrow on-dark">Rates &amp; What's Included</p>
-<h1 class="display">No meter, no price list — a fare you can question before you accept it.</h1>
+<h1 class="display">Published rates. Confirmed in writing before you ride.</h1>
 <div class="rule"></div>
-<p class="lead">We don't publish a rate card, because a printed number can't account for your date, your route, or what's happening in the city that week. What we publish instead is how the number gets built, what a Miami-Dade permit actually verifies, and why a confirmed quote beats an app's estimate.</p>
+<p class="lead">Airport, cruise-port and city transfers across Miami-Dade, Broward and Palm Beach are priced up front: per vehicle, one way, no meter and no surge. Choose your route below for an instant quote — your fare is confirmed in writing before a vehicle is dispatched.</p>
 <div class="page-actions">
-<a class="btn btn-light" href="tel:+17869316699">Call now</a>
-<a class="btn btn-light" href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a>
-<a class="btn btn-ghost" href="contact.html#book">Request a quote</a>
+<a class="btn btn-gold" href="#quote">Get an instant quote</a>
+<a class="btn btn-ghost" href="tel:+17869316699">Call now</a>
+<a class="btn btn-ghost" href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a>
 </div>
 <p class="trust-line">+1 786 931 ONYX (6699) · Licensed &amp; insured · Miami-Dade Permit #64666 · D-U-N-S&reg; 13-860-0693</p>
+</div>
+</section>
+
+<section id="quote" class="section-dark">
+<div class="wrap book">
+<div class="reveal">
+<p class="eyebrow on-dark">Instant quote</p>
+<h2 class="h2">Pick your route. See your fare.</h2>
+<div class="rule"></div>
+<p class="lead">Select a pickup and drop-off to see the flat rate for a brand-new Chevrolet Suburban with a professional, background-checked chauffeur. Reserve in one step — we confirm by phone, WhatsApp or email.</p>
+<ul class="points" style="margin-top:22px">
+<li><i class="mark"></i><span><b>Per vehicle, one way.</b> The same fare for one passenger or a full vehicle (up to six).</span></li>
+<li><i class="mark"></i><span><b>No surge.</b> The fare you see is the fare you pay, confirmed in writing before dispatch.</span></li>
+<li><i class="mark"></i><span><b>60 minutes free</b> at airports, tracked from actual landing.</span></li>
+</ul>
+</div>
+<div class="reveal qw-wrap"><div data-onyx-quote style="width:100%;display:flex;justify-content:center"></div></div>
+</div>
+</section>
+
+<section class="section-soft">
+<div class="wrap">
+<p class="eyebrow">Popular routes</p>
+<h2 class="h2" style="margin-bottom:12px">Published flat rates.</h2>
+<p style="color:var(--muted);max-width:640px;margin-bottom:34px">Per vehicle, one way, in a brand-new Chevrolet Suburban. Drive times are typical without traffic and run longer in rush hour. Not listed? Use the instant quote above, or call.</p>
+<div class="rate-grid">
+<div class="rate-card reveal"><h3>From Miami International (MIA)</h3><table class="rate-table"><tbody>
+<tr><td>Downtown Miami / Brickell</td><td class="rt-min">~15 min</td><td class="rt-p">$95</td></tr>
+<tr><td>Miami Beach / South Beach</td><td class="rt-min">~20 min</td><td class="rt-p">$105</td></tr>
+<tr><td>Coral Gables</td><td class="rt-min">~10 min</td><td class="rt-p">$95</td></tr>
+<tr><td>Key Biscayne</td><td class="rt-min">~25 min</td><td class="rt-p">$110</td></tr>
+<tr><td>Aventura / Golden Beach</td><td class="rt-min">~25 min</td><td class="rt-p">$115</td></tr>
+<tr><td>Sunny Isles Beach</td><td class="rt-min">~25 min</td><td class="rt-p">$115</td></tr>
+<tr><td>Bal Harbour / Surfside / Bay Harbor</td><td class="rt-min">~25 min</td><td class="rt-p">$110</td></tr>
+<tr><td>Fort Lauderdale</td><td class="rt-min">~35 min</td><td class="rt-p">$135</td></tr>
+<tr><td>Boca Raton</td><td class="rt-min">~55 min</td><td class="rt-p">$175</td></tr>
+<tr><td>Palm Beach (island)</td><td class="rt-min">~85 min</td><td class="rt-p">$230</td></tr>
+</tbody></table></div>
+<div class="rate-card reveal"><h3>From Fort Lauderdale (FLL)</h3><table class="rate-table"><tbody>
+<tr><td>Fort Lauderdale</td><td class="rt-min">~10 min</td><td class="rt-p">$90</td></tr>
+<tr><td>Hollywood / Hallandale Beach / Dania Beach</td><td class="rt-min">~15 min</td><td class="rt-p">$95</td></tr>
+<tr><td>Aventura / Golden Beach</td><td class="rt-min">~15 min</td><td class="rt-p">$100</td></tr>
+<tr><td>Miami Beach / South Beach</td><td class="rt-min">~30 min</td><td class="rt-p">$130</td></tr>
+<tr><td>Downtown Miami / Brickell</td><td class="rt-min">~35 min</td><td class="rt-p">$130</td></tr>
+<tr><td>Boca Raton</td><td class="rt-min">~30 min</td><td class="rt-p">$130</td></tr>
+</tbody></table></div>
+<div class="rate-card reveal"><h3>PortMiami cruise terminals</h3><table class="rate-table"><tbody>
+<tr><td>Downtown Miami / Brickell</td><td class="rt-min">~10 min</td><td class="rt-p">$85</td></tr>
+<tr><td>Miami Beach / South Beach</td><td class="rt-min">~10 min</td><td class="rt-p">$90</td></tr>
+<tr><td>Aventura / Golden Beach</td><td class="rt-min">~25 min</td><td class="rt-p">$110</td></tr>
+<tr><td>Coral Gables</td><td class="rt-min">~15 min</td><td class="rt-p">$100</td></tr>
+</tbody></table></div>
+<div class="rate-card reveal"><h3>Port Everglades cruise terminals</h3><table class="rate-table"><tbody>
+<tr><td>Fort Lauderdale</td><td class="rt-min">~10 min</td><td class="rt-p">$85</td></tr>
+<tr><td>Hollywood / Hallandale Beach / Dania Beach</td><td class="rt-min">~20 min</td><td class="rt-p">$100</td></tr>
+<tr><td>Aventura / Golden Beach</td><td class="rt-min">~20 min</td><td class="rt-p">$105</td></tr>
+<tr><td>Boca Raton</td><td class="rt-min">~30 min</td><td class="rt-p">$125</td></tr>
+</tbody></table></div>
+<div class="rate-card reveal"><h3>From Palm Beach (PBI)</h3><table class="rate-table"><tbody>
+<tr><td>Palm Beach (island)</td><td class="rt-min">~10 min</td><td class="rt-p">$95</td></tr>
+<tr><td>West Palm Beach</td><td class="rt-min">~10 min</td><td class="rt-p">$90</td></tr>
+<tr><td>Boca Raton</td><td class="rt-min">~35 min</td><td class="rt-p">$135</td></tr>
+<tr><td>Jupiter / Tequesta</td><td class="rt-min">~30 min</td><td class="rt-p">$125</td></tr>
+</tbody></table></div>
+</div>
+<p style="color:var(--muted);margin-top:26px;max-width:700px;font-size:14px">Rates exclude gratuity, tolls and airport or port parking fees. A 30% supplement applies to pickups between midnight and 6 a.m. Major event dates (Art Basel, F1, Ultra, boat shows) are quoted individually, always before you confirm. Hourly service, events and long-distance trips are quoted on request.</p>
 </div>
 </section>
 
@@ -86,7 +157,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <p class="eyebrow">How the number gets built</p>
 <h2 class="h2" style="margin-bottom:22px">Four things set your fare — nothing else.</h2>
 <ul class="points">
-<li><i class="mark"></i><span><b>Route.</b> Distance and drive time between your pickup and drop-off, checked against real traffic conditions for your date, not a straight-line estimate.</span></li>
+<li><i class="mark"></i><span><b>Route.</b> Distance between your pickup and drop-off. Airport, port and city routes are published above; anything else is quoted individually before you book.</span></li>
 <li><i class="mark"></i><span><b>Time of day.</b> A 30% supplement applies between midnight and 6 a.m. — it's built into the quoted fare, never added after the ride.</span></li>
 <li><i class="mark"></i><span><b>Wait time beyond the complimentary window.</b> 60 minutes are included at airports and FBOs; time held beyond that is the only variable added after booking, and it's agreed with you in advance, not discovered afterward.</span></li>
 <li><i class="mark"></i><span><b>The calendar.</b> A handful of dates a year — Art Basel, major boat shows, F1, Ultra — put real pressure on vehicle availability across every operator in South Florida, ours included. Those dates are quoted individually, always before you confirm.</span></li>
@@ -193,11 +264,13 @@ import SiteScripts from '../components/SiteScripts.astro';
 <section class="cta-band"><div class="wrap">
 <h2 class="h2">Get your fixed quote.</h2>
 <p>Share your route, date, and time — we'll confirm the exact fare in writing before you book.</p>
-<div class="actions"><a class="btn btn-light" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="contact.html#book">Request a quote</a></div>
+<div class="actions"><a class="btn btn-light" href="tel:+17869316699">Call +1 786 931 ONYX (6699)</a><a class="btn btn-ghost" href="#quote">Get an instant quote</a></div>
 </div></section>
 </main>
 <SiteFooter />
 <aside class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
+<script is:inline src="/quote-data.js?v=2"></script>
+<script is:inline src="/quote.js?v=3" defer></script>
 <SiteScripts />
 </Base>
