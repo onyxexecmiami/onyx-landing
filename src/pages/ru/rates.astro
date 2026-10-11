@@ -50,6 +50,22 @@ import SiteScripts from '../../components/SiteScripts.astro';
     },
     {
       "@type": "Question",
+      "name": "Сколько стоит водитель по часам в Майами?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Почасовой сервис водителя Onyx стоит $100 в час при минимуме 3 часа, а от 6 часов — $80 в час на всё время. Топливо, платные дороги, остановки и ожидание в рамках заказанного времени включены; чаевые — нет."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Есть ли скидка на поездку туда и обратно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Добавьте обратный рейс в ту же бронь — он будет со скидкой 20%: например, MIA — Брикелл $95 плюс $76 обратно, всего $171, с одним подтверждением и одним счётом."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Используете ли вы динамическое ценообразование?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -161,6 +177,33 @@ import SiteScripts from '../../components/SiteScripts.astro';
 </tbody></table></div>
 </div>
 <p style="color:var(--muted);margin-top:26px;max-width:700px;font-size:14px">Тарифы не включают чаевые, платные дороги и парковку в аэропорту или порту. Для подачи с полуночи до 6 утра действует надбавка 30%. Даты крупных событий (Art Basel, F1, Ultra, яхт-шоу) рассчитываются индивидуально — всегда до вашего подтверждения. Почасовая аренда, мероприятия и дальние поездки — по запросу.</p>
+</div>
+</section>
+
+<section class="section-soft">
+<div class="wrap">
+<p class="eyebrow">Больше, чем трансфер</p>
+<h2 class="h2" style="margin-bottom:12px">Почасовая аренда и поездки «туда и обратно».</h2>
+<p style="color:var(--muted);max-width:640px;margin-bottom:34px">Водитель и новый Chevrolet Suburban в вашем распоряжении — или оба направления в одной брони. Воспользуйтесь вкладкой «Почасово» или опцией обратного рейса в расчёте выше.</p>
+<div class="rate-grid">
+<div class="rate-card reveal"><h3>Почасово: $100 в час</h3><table class="rate-table"><tbody>
+<tr><td>3 часа (минимум)</td><td class="rt-min">$100/ч</td><td class="rt-p">$300</td></tr>
+<tr><td>4 часа</td><td class="rt-min">$100/ч</td><td class="rt-p">$400</td></tr>
+<tr><td>5 часов</td><td class="rt-min">$100/ч</td><td class="rt-p">$500</td></tr>
+<tr><td>6 часов</td><td class="rt-min">$80/ч</td><td class="rt-p">$480</td></tr>
+<tr><td>8 часов</td><td class="rt-min">$80/ч</td><td class="rt-p">$640</td></tr>
+<tr><td>10 часов</td><td class="rt-min">$80/ч</td><td class="rt-p">$800</td></tr>
+<tr><td>12 часов</td><td class="rt-min">$80/ч</td><td class="rt-p">$960</td></tr>
+</tbody></table></div>
+<div class="rate-card reveal"><h3>Туда и обратно: обратный рейс со скидкой 20%</h3><table class="rate-table"><tbody>
+<tr><td>MIA — Брикелл / Даунтаун Майами + обратно</td><td class="rt-min">$95 + $76</td><td class="rt-p">$171</td></tr>
+<tr><td>MIA — Майами-Бич / Саут-Бич + обратно</td><td class="rt-min">$105 + $84</td><td class="rt-p">$189</td></tr>
+<tr><td>FLL — Авентура / Голден-Бич + обратно</td><td class="rt-min">$100 + $80</td><td class="rt-p">$180</td></tr>
+<tr><td>MIA — Бока-Ратон + обратно</td><td class="rt-min">$175 + $140</td><td class="rt-p">$315</td></tr>
+<tr><td>PortMiami — Даунтаун Майами / Брикелл + обратно</td><td class="rt-min">$85 + $68</td><td class="rt-p">$153</td></tr>
+</tbody></table></div>
+</div>
+<p style="color:var(--muted);margin-top:26px;max-width:700px;font-size:14px">Почасовые тарифы включают топливо, платные дороги, остановки и ожидание в рамках заказанного времени; чаевые не включены. Надбавка 30% действует для подачи с полуночи до 6 утра на любом из двух плеч поездки «туда и обратно». Одна бронь, одно подтверждение и один счёт на оба направления.</p>
 </div>
 </section>
 
@@ -282,7 +325,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <SiteFooter lang="ru" />
 <aside class="mbar"><a href="tel:+17869316699">Позвонить</a><a href="https://wa.me/17869316699?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BC%D0%BD%D0%B5%20%D0%BD%D1%83%D0%B6%D0%B5%D0%BD%20%D1%80%D0%B0%D1%81%D1%87%D1%91%D1%82%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
-<script is:inline src="/quote-data.js?v=2"></script>
-<script is:inline src="/quote.js?v=3" defer></script>
+<script is:inline src="/quote-data.js?v=3"></script>
+<script is:inline src="/quote.js?v=4" defer></script>
 <SiteScripts />
 </Base>

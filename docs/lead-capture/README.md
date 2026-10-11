@@ -34,3 +34,14 @@ Every request also carries the site language (`lang`) and the page it came from.
 
 All calculator text, zone names and messages live in `public/quote.js` (`S` and `NAMES`), in English, Spanish
 (usted) and Russian (vy). They are not part of the page translation pipeline, so edit them there.
+
+## Hourly rate and return-ride discount
+
+Both live at the top of `scripts/build-quote-data.py`: `HOURLY` (rate per hour, minimum and maximum hours, hours from
+which the discount applies, discount %) and `RETURN_DISCOUNT_PCT`. Currently $100 an hour, 3 to 12 hours, 20% off from
+6 hours, and the return ride of a round trip is 20% off. After changing them run the script, then update the tables on
+`rates.astro` and the numbers in the home page "By the hour / round trip" section and in the translations (the prices
+are the same in every language).
+
+Requests from the calculator now carry `service` (transfer / hourly / round trip), `hours`, return date and time; the
+`Requests` sheet has a column for each.

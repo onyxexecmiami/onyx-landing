@@ -15,6 +15,8 @@ import sys
 import openpyxl
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+HOURLY = {"rate": 100, "min": 3, "max": 12, "discFrom": 6, "discPct": 20}  # $/hour, hours, 20% off from 6 hours
+RETURN_DISCOUNT_PCT = 20  # discount on the return ride of a round trip
 ENDPOINT = ""  # Apps Script web app URL (docs/lead-capture/README.md); empty = requests open in WhatsApp
 
 HUBS = [  # (sheet, id, label, kind)
@@ -109,6 +111,8 @@ def main(xlsx):
         "places": places,
         "table": tables,
         "lateNightPct": 30,
+        "hourly": HOURLY,
+        "returnDiscountPct": RETURN_DISCOUNT_PCT,
         "endpoint": ENDPOINT,
     }
     out = os.path.join(ROOT, "public", "quote-data.js")

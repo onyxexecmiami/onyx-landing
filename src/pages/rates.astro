@@ -41,6 +41,16 @@ import SiteScripts from '../components/SiteScripts.astro';
     },
     {
       "@type": "Question",
+      "name": "How much is a chauffeur by the hour in Miami?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Onyx chauffeur service by the hour is $100 an hour with a 3-hour minimum, and $80 an hour for the whole booking from 6 hours. Fuel, tolls, stops and waiting within the booked time are included; gratuity is not." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a discount for a round trip?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Add your ride back to the same reservation and the return ride is 20% off, for example MIA to Brickell $95 plus a $76 return, $171 in total, with one confirmation and one invoice." }
+    },
+    {
+      "@type": "Question",
       "name": "Do you use surge pricing?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. Your fare is confirmed before the ride and does not change with demand, aside from clearly stated exceptions on major event dates." }
     }
@@ -149,6 +159,33 @@ import SiteScripts from '../components/SiteScripts.astro';
 </tbody></table></div>
 </div>
 <p style="color:var(--muted);margin-top:26px;max-width:700px;font-size:14px">Rates exclude gratuity, tolls and airport or port parking fees. A 30% supplement applies to pickups between midnight and 6 a.m. Major event dates (Art Basel, F1, Ultra, boat shows) are quoted individually, always before you confirm. Hourly service, events and long-distance trips are quoted on request.</p>
+</div>
+</section>
+
+<section class="section-soft">
+<div class="wrap">
+<p class="eyebrow">Beyond the transfer</p>
+<h2 class="h2" style="margin-bottom:12px">By the hour and round trips.</h2>
+<p style="color:var(--muted);max-width:640px;margin-bottom:34px">One chauffeur and one brand-new Chevrolet Suburban at your disposal, or both directions in a single reservation. Use the By the hour tab or the return option in the instant quote above.</p>
+<div class="rate-grid">
+<div class="rate-card reveal"><h3>By the hour: $100 an hour</h3><table class="rate-table"><tbody>
+<tr><td>3 hours (minimum)</td><td class="rt-min">$100/h</td><td class="rt-p">$300</td></tr>
+<tr><td>4 hours</td><td class="rt-min">$100/h</td><td class="rt-p">$400</td></tr>
+<tr><td>5 hours</td><td class="rt-min">$100/h</td><td class="rt-p">$500</td></tr>
+<tr><td>6 hours</td><td class="rt-min">$80/h</td><td class="rt-p">$480</td></tr>
+<tr><td>8 hours</td><td class="rt-min">$80/h</td><td class="rt-p">$640</td></tr>
+<tr><td>10 hours</td><td class="rt-min">$80/h</td><td class="rt-p">$800</td></tr>
+<tr><td>12 hours</td><td class="rt-min">$80/h</td><td class="rt-p">$960</td></tr>
+</tbody></table></div>
+<div class="rate-card reveal"><h3>Round trip: the return ride is 20% off</h3><table class="rate-table"><tbody>
+<tr><td>MIA to Brickell / Downtown Miami + return</td><td class="rt-min">$95 + $76</td><td class="rt-p">$171</td></tr>
+<tr><td>MIA to Miami Beach / South Beach + return</td><td class="rt-min">$105 + $84</td><td class="rt-p">$189</td></tr>
+<tr><td>FLL to Aventura / Golden Beach + return</td><td class="rt-min">$100 + $80</td><td class="rt-p">$180</td></tr>
+<tr><td>MIA to Boca Raton + return</td><td class="rt-min">$175 + $140</td><td class="rt-p">$315</td></tr>
+<tr><td>PortMiami to Downtown Miami / Brickell + return</td><td class="rt-min">$85 + $68</td><td class="rt-p">$153</td></tr>
+</tbody></table></div>
+</div>
+<p style="color:var(--muted);margin-top:26px;max-width:700px;font-size:14px">Hourly rates include fuel, tolls, stops and waiting within your booked time; gratuity is not included. A 30% supplement applies to pickups between midnight and 6 a.m., on either leg of a round trip. One reservation, one confirmation and one invoice for both directions.</p>
 </div>
 </section>
 
@@ -270,7 +307,7 @@ import SiteScripts from '../components/SiteScripts.astro';
 <SiteFooter />
 <aside class="mbar"><a href="tel:+17869316699">Call</a><a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
-<script is:inline src="/quote-data.js?v=2"></script>
-<script is:inline src="/quote.js?v=3" defer></script>
+<script is:inline src="/quote-data.js?v=3"></script>
+<script is:inline src="/quote.js?v=4" defer></script>
 <SiteScripts />
 </Base>

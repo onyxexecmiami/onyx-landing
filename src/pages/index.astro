@@ -279,6 +279,37 @@ import SiteFooter from '../components/SiteFooter.astro';
 <div class="feat-img portrait reveal"><picture><source type="image/avif" srcset="founder.avif" /><img src="founder.webp" alt="Vitalii, founder of Onyx Executive Miami" width="700" height="933" decoding="async" loading="lazy" /></picture></div>
 </div>
 </section>
+<!-- BY THE HOUR / ROUND TRIP -->
+<section id="hourly" class="section-dark" style="padding-top:64px;padding-bottom:64px;border-top:1px solid var(--hair-dark)">
+<div class="wrap">
+<div class="grid-head reveal">
+<p class="eyebrow on-dark">Beyond the transfer</p>
+<h2 class="h2">By the hour. Or there and back.</h2>
+<div class="rule"></div>
+<p class="lead">One chauffeur and one vehicle at your disposal for a day of meetings, or a single reservation that covers both directions. Priced up front, like every Onyx ride.</p>
+</div>
+<div class="hr-grid reveal">
+<div class="hr-card">
+<div class="kicker">$100<em>per hour</em></div>
+<h3>By the hour</h3>
+<p>A private Suburban and chauffeur on standby for the whole booked window: meetings, a night out, a property tour or a full day across Miami-Dade, Broward and Palm Beach.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>3-hour minimum</b>, up to 12 hours.</span></li>
+<li><i class="mark"></i><span><b>20% off from 6 hours:</b> $80 an hour for the whole booking.</span></li>
+<li><i class="mark"></i><span><b>Fuel, tolls, stops and waiting</b> within your booked time are included.</span></li>
+</ul>
+<a class="btn btn-gold" href="#instant-quote" data-qw-mode="hourly">See your hourly fare</a>
+</div>
+<div class="hr-card">
+<div class="kicker">20% off<em>the return ride</em></div>
+<h3>Round trip</h3>
+<p>Add your ride back to the same reservation: one confirmation, one invoice and a timed return pickup, whether it is the airport, a cruise terminal or a dinner across town.</p>
+<p class="hr-eg">Example: MIA to Brickell <b>$95</b> + return <b>$76</b> = <b>$171</b>.</p>
+<a class="btn btn-gold" href="#instant-quote" data-qw-mode="transfer">Price a round trip</a>
+</div>
+</div>
+</div>
+</section>
 <!-- SERVICES -->
 <section id="services" class="section-dark">
 <div class="wrap">
@@ -461,8 +492,8 @@ import SiteFooter from '../components/SiteFooter.astro';
 <a href="tel:+17869316699">Call</a>
 <a href="https://wa.me/17869316699?text=Hi%2C%20I%27d%20like%20to%20arrange%20a%20chauffeur%20in%20South%20Florida." target="_blank" rel="noopener">WhatsApp</a>
 </aside>
-<script is:inline src="/quote-data.js?v=2"></script>
-<script is:inline src="/quote.js?v=3" defer></script>
+<script is:inline src="/quote-data.js?v=3"></script>
+<script is:inline src="/quote.js?v=4" defer></script>
 <script is:inline>
 document.getElementById('yr').textContent=new Date().getFullYear();
 var b=document.getElementById('sendBtn');

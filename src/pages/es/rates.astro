@@ -50,6 +50,22 @@ import SiteScripts from '../../components/SiteScripts.astro';
     },
     {
       "@type": "Question",
+      "name": "¿Cuánto cuesta un chófer por horas en Miami?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El servicio de chófer por horas de Onyx cuesta $100 por hora con un mínimo de 3 horas, y $80 por hora en toda la reserva a partir de 6 horas. Incluye combustible, peajes, paradas y esperas dentro del tiempo reservado; no incluye propina."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay descuento por ida y vuelta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Añada su regreso a la misma reserva y el trayecto de vuelta tiene un 20 % de descuento; por ejemplo, MIA a Brickell $95 más $76 de regreso, $171 en total, con una sola confirmación y una sola factura."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "¿Usan precios dinámicos?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -161,6 +177,33 @@ import SiteScripts from '../../components/SiteScripts.astro';
 </tbody></table></div>
 </div>
 <p style="color:var(--muted);margin-top:26px;max-width:700px;font-size:14px">Las tarifas no incluyen propina, peajes ni estacionamiento en aeropuerto o puerto. Se aplica un recargo del 30 % a recogidas entre la medianoche y las 6 a. m. Las fechas de grandes eventos (Art Basel, F1, Ultra, ferias náuticas) se cotizan individualmente y siempre antes de que usted confirme. El servicio por horas, los eventos y los viajes de larga distancia se cotizan bajo solicitud.</p>
+</div>
+</section>
+
+<section class="section-soft">
+<div class="wrap">
+<p class="eyebrow">Más allá del traslado</p>
+<h2 class="h2" style="margin-bottom:12px">Por horas e ida y vuelta.</h2>
+<p style="color:var(--muted);max-width:640px;margin-bottom:34px">Un chófer y una Chevrolet Suburban nueva a su disposición, o ambos sentidos en una sola reserva. Use la pestaña «Por horas» o la opción de regreso en la cotización instantánea de arriba.</p>
+<div class="rate-grid">
+<div class="rate-card reveal"><h3>Por horas: $100 por hora</h3><table class="rate-table"><tbody>
+<tr><td>3 horas (mínimo)</td><td class="rt-min">$100/h</td><td class="rt-p">$300</td></tr>
+<tr><td>4 horas</td><td class="rt-min">$100/h</td><td class="rt-p">$400</td></tr>
+<tr><td>5 horas</td><td class="rt-min">$100/h</td><td class="rt-p">$500</td></tr>
+<tr><td>6 horas</td><td class="rt-min">$80/h</td><td class="rt-p">$480</td></tr>
+<tr><td>8 horas</td><td class="rt-min">$80/h</td><td class="rt-p">$640</td></tr>
+<tr><td>10 horas</td><td class="rt-min">$80/h</td><td class="rt-p">$800</td></tr>
+<tr><td>12 horas</td><td class="rt-min">$80/h</td><td class="rt-p">$960</td></tr>
+</tbody></table></div>
+<div class="rate-card reveal"><h3>Ida y vuelta: el regreso tiene 20 % de descuento</h3><table class="rate-table"><tbody>
+<tr><td>MIA a Brickell / Centro de Miami + regreso</td><td class="rt-min">$95 + $76</td><td class="rt-p">$171</td></tr>
+<tr><td>MIA a Miami Beach / South Beach + regreso</td><td class="rt-min">$105 + $84</td><td class="rt-p">$189</td></tr>
+<tr><td>FLL a Aventura / Golden Beach + regreso</td><td class="rt-min">$100 + $80</td><td class="rt-p">$180</td></tr>
+<tr><td>MIA a Boca Raton + regreso</td><td class="rt-min">$175 + $140</td><td class="rt-p">$315</td></tr>
+<tr><td>PortMiami a Centro de Miami / Brickell + regreso</td><td class="rt-min">$85 + $68</td><td class="rt-p">$153</td></tr>
+</tbody></table></div>
+</div>
+<p style="color:var(--muted);margin-top:26px;max-width:700px;font-size:14px">Las tarifas por horas incluyen combustible, peajes, paradas y esperas dentro del tiempo reservado; no incluyen propina. Se aplica un recargo del 30 % a recogidas entre la medianoche y las 6 a. m., en cualquiera de los dos tramos de un viaje de ida y vuelta. Una reserva, una confirmación y una factura para ambos sentidos.</p>
 </div>
 </section>
 
@@ -282,7 +325,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <SiteFooter lang="es" />
 <aside class="mbar"><a href="tel:+17869316699">Llamar</a><a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a></aside>
 <YearReveal />
-<script is:inline src="/quote-data.js?v=2"></script>
-<script is:inline src="/quote.js?v=3" defer></script>
+<script is:inline src="/quote-data.js?v=3"></script>
+<script is:inline src="/quote.js?v=4" defer></script>
 <SiteScripts />
 </Base>

@@ -364,6 +364,37 @@ import SiteFooter from '../../components/SiteFooter.astro';
 <div class="feat-img portrait reveal"><picture><source type="image/avif" srcset="/founder.avif" /><img src="/founder.webp" alt="Vitalii, fundador de Onyx Executive Miami" width="700" height="933" decoding="async" loading="lazy" /></picture></div>
 </div>
 </section>
+<!-- BY THE HOUR / ROUND TRIP -->
+<section id="hourly" class="section-dark" style="padding-top:64px;padding-bottom:64px;border-top:1px solid var(--hair-dark)">
+<div class="wrap">
+<div class="grid-head reveal">
+<p class="eyebrow on-dark">Más allá del traslado</p>
+<h2 class="h2">Por horas. O ida y vuelta.</h2>
+<div class="rule"></div>
+<p class="lead">Un chófer y un vehículo a su disposición durante un día de reuniones, o una sola reserva que cubre ambos sentidos. Precio fijo de antemano, como cada viaje de Onyx.</p>
+</div>
+<div class="hr-grid reveal">
+<div class="hr-card">
+<div class="kicker">$100<em>por hora</em></div>
+<h3>Por horas</h3>
+<p>Una Suburban privada y un chófer a su disposición durante todo el periodo reservado: reuniones, una noche en la ciudad, una visita a propiedades o un día completo en Miami-Dade, Broward y Palm Beach.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Mínimo 3 horas</b>, hasta 12 horas.</span></li>
+<li><i class="mark"></i><span><b>20 % de descuento desde 6 horas:</b> $80 por hora durante toda la reserva.</span></li>
+<li><i class="mark"></i><span><b>Combustible, peajes, paradas y esperas</b> dentro del tiempo reservado están incluidos.</span></li>
+</ul>
+<a class="btn btn-gold" href="#instant-quote" data-qw-mode="hourly">Ver su tarifa por horas</a>
+</div>
+<div class="hr-card">
+<div class="kicker">20 % de descuento<em>en el regreso</em></div>
+<h3>Ida y vuelta</h3>
+<p>Añada su regreso a la misma reserva: una confirmación, una factura y una recogida de regreso a la hora acordada, ya sea el aeropuerto, una terminal de cruceros o una cena al otro lado de la ciudad.</p>
+<p class="hr-eg">Ejemplo: MIA a Brickell <b>$95</b> + regreso <b>$76</b> = <b>$171</b>.</p>
+<a class="btn btn-gold" href="#instant-quote" data-qw-mode="transfer">Calcular ida y vuelta</a>
+</div>
+</div>
+</div>
+</section>
 <!-- SERVICES -->
 <section id="services" class="section-dark">
 <div class="wrap">
@@ -546,8 +577,8 @@ import SiteFooter from '../../components/SiteFooter.astro';
 <a href="tel:+17869316699">Llamar</a>
 <a href="https://wa.me/17869316699?text=Hola%2C%20quisiera%20reservar%20un%20ch%C3%B3fer%20en%20el%20sur%20de%20Florida." target="_blank" rel="noopener">WhatsApp</a>
 </aside>
-<script is:inline src="/quote-data.js?v=2"></script>
-<script is:inline src="/quote.js?v=3" defer></script>
+<script is:inline src="/quote-data.js?v=3"></script>
+<script is:inline src="/quote.js?v=4" defer></script>
 <script is:inline>
 document.getElementById('yr').textContent=new Date().getFullYear();
 var b=document.getElementById('sendBtn');

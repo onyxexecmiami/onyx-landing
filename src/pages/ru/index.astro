@@ -364,6 +364,37 @@ import SiteFooter from '../../components/SiteFooter.astro';
 <div class="feat-img portrait reveal"><picture><source type="image/avif" srcset="/founder.avif" /><img src="/founder.webp" alt="Виталий, основатель Onyx Executive Miami" width="700" height="933" decoding="async" loading="lazy" /></picture></div>
 </div>
 </section>
+<!-- BY THE HOUR / ROUND TRIP -->
+<section id="hourly" class="section-dark" style="padding-top:64px;padding-bottom:64px;border-top:1px solid var(--hair-dark)">
+<div class="wrap">
+<div class="grid-head reveal">
+<p class="eyebrow on-dark">Больше, чем трансфер</p>
+<h2 class="h2">Почасово. Или туда и обратно.</h2>
+<div class="rule"></div>
+<p class="lead">Один водитель и один автомобиль в вашем распоряжении на день встреч — или одна бронь, которая покрывает оба направления. Цена известна заранее, как и у каждой поездки Onyx.</p>
+</div>
+<div class="hr-grid reveal">
+<div class="hr-card">
+<div class="kicker">$100<em>в час</em></div>
+<h3>Почасово</h3>
+<p>Частный Suburban и водитель на связи весь заказанный период: встречи, вечер в городе, осмотр объектов или целый день по Майами-Дейд, Броуорду и Палм-Бич.</p>
+<ul class="points">
+<li><i class="mark"></i><span><b>Минимум 3 часа</b>, максимум 12 часов.</span></li>
+<li><i class="mark"></i><span><b>Скидка 20% от 6 часов:</b> $80 в час на всё время брони.</span></li>
+<li><i class="mark"></i><span><b>Топливо, платные дороги, остановки и ожидание</b> в рамках заказанного времени включены.</span></li>
+</ul>
+<a class="btn btn-gold" href="#instant-quote" data-qw-mode="hourly">Узнать цену за часы</a>
+</div>
+<div class="hr-card">
+<div class="kicker">Скидка 20%<em>на обратный рейс</em></div>
+<h3>Туда и обратно</h3>
+<p>Добавьте обратный рейс в ту же бронь: одно подтверждение, один счёт и подача на обратный путь к назначенному времени — будь то аэропорт, круизный терминал или ужин на другом конце города.</p>
+<p class="hr-eg">Пример: MIA — Брикелл <b>$95</b> + обратно <b>$76</b> = <b>$171</b>.</p>
+<a class="btn btn-gold" href="#instant-quote" data-qw-mode="transfer">Цена «туда и обратно»</a>
+</div>
+</div>
+</div>
+</section>
 <!-- SERVICES -->
 <section id="services" class="section-dark">
 <div class="wrap">
@@ -546,8 +577,8 @@ import SiteFooter from '../../components/SiteFooter.astro';
 <a href="tel:+17869316699">Позвонить</a>
 <a href="https://wa.me/17869316699?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%88%D0%BE%D1%84%D1%91%D1%80%D0%B0%20%D0%B2%20%D0%AE%D0%B6%D0%BD%D0%BE%D0%B9%20%D0%A4%D0%BB%D0%BE%D1%80%D0%B8%D0%B4%D0%B5." target="_blank" rel="noopener">WhatsApp</a>
 </aside>
-<script is:inline src="/quote-data.js?v=2"></script>
-<script is:inline src="/quote.js?v=3" defer></script>
+<script is:inline src="/quote-data.js?v=3"></script>
+<script is:inline src="/quote.js?v=4" defer></script>
 <script is:inline>
 document.getElementById('yr').textContent=new Date().getFullYear();
 var b=document.getElementById('sendBtn');
