@@ -63,4 +63,7 @@ jobs:
         run: |
           # A pasted token can carry a line break or trailing text (e.g. Cloudflare's curl example); use the first line only.
           export CLOUDFLARE_API_TOKEN="$(printf '%s' "$CLOUDFLARE_API_TOKEN" | head -n1 | tr -d '[:space:]')"
+          # Shape check only (never prints the token): a Cloudflare API token is 40 characters of A-Z a-z 0-9 _ -
+          if printf '%s' "$CLOUDFLARE_API_TOKEN" | grep -Eq '^[A-Za-z0-9_-]{40}$'; then shape=yes; else shape=no; fi
+          echo "Token check: length=${#CLOUDFLARE_API_TOKEN}, looks like a Cloudflare API token=$shape"
           npx wrangler deploy
