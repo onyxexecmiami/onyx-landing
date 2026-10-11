@@ -60,4 +60,7 @@ jobs:
       - name: Deploy to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: npx wrangler deploy
+        run: |
+          # A pasted token can carry a line break or trailing text (e.g. Cloudflare's curl example); use the first line only.
+          export CLOUDFLARE_API_TOKEN="$(printf '%s' "$CLOUDFLARE_API_TOKEN" | head -n1 | tr -d '[:space:]')"
+          npx wrangler deploy
