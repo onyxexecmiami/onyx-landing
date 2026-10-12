@@ -373,12 +373,12 @@ section:not(.section-dark,.page-hero,.hero,.cta-band) + section.section-dark[sty
 
 /* ===== Instant quote card, gold buttons, home hero (quote.js) =====
    Added with the instant-quote calculator; the brand look (black + gold, Cormorant Garamond + Montserrat) is unchanged. */
-:root{--gold-hi:#E3C45F;--gold-lo:#C39B2B;--glass:rgba(14,14,13,.78)}
+:root{--gold-hi:#E3C45F;--gold-lo:#C39B2B;--btn-hi:#D3BC86;--btn-lo:#B39655;--glass:rgba(14,14,13,.78)}
 
-/* ---------- gold button ---------- */
-.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold-lo));color:#0A0A0A;font-weight:600;border-color:transparent;
-  box-shadow:0 10px 28px -12px rgba(212,175,55,.65),inset 0 1px 0 rgba(255,255,255,.4)}
-.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 14px 32px -12px rgba(212,175,55,.8),inset 0 1px 0 rgba(255,255,255,.4)}
+/* ---------- gold button (matte champagne: calmer than the accent gold) ---------- */
+.btn-gold{background:linear-gradient(180deg,var(--btn-hi),var(--btn-lo));color:#0A0A0A;font-weight:600;border-color:transparent;
+  box-shadow:0 8px 22px -12px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 12px 26px -12px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.22)}
 .btn-gold:active{transform:none}
 .btn-gold:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
@@ -473,9 +473,9 @@ section:not(.section-dark,.page-hero,.hero,.cta-band) + section.section-dark[sty
 .qw-note b{color:#a9a9a2;font-weight:500}
 
 /* ---------- Moovs floating button: match the brand ---------- */
-button.moovs-widget-button{background:linear-gradient(180deg,#E3C45F,#C39B2B)!important;color:#0A0A0A!important;border-radius:4px!important;width:auto!important;height:48px!important;
+button.moovs-widget-button{background:linear-gradient(180deg,#D3BC86,#B39655)!important;color:#0A0A0A!important;border-radius:4px!important;width:auto!important;height:48px!important;
   padding:0 22px!important;gap:10px;font-family:var(--body)!important;font-size:12px!important;font-weight:600!important;letter-spacing:.1em!important;text-transform:uppercase!important;
-  box-shadow:0 14px 34px -10px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.4)!important}
+  box-shadow:0 14px 34px -10px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.18)!important}
 button.moovs-widget-button svg path{stroke:#0A0A0A!important}
 
 /* ---------- responsive ---------- */
@@ -503,12 +503,18 @@ button.moovs-widget-button svg path{stroke:#0A0A0A!important}
 }
 @media(prefers-reduced-motion:reduce){.qw-swap svg,.btn-gold{transition:none}}
 
+/* ---------- gold button: soft light sweep (respects reduced motion) ---------- */
+.btn-gold{position:relative;overflow:hidden;isolation:isolate}
+.btn-gold::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-18deg);animation:onyx-sweep 6s ease-in-out infinite;pointer-events:none}
+@keyframes onyx-sweep{0%,70%{left:-60%}100%{left:130%}}
+@media(prefers-reduced-motion:reduce){.btn-gold::after{animation:none}}
+
 /* ===== Calculator tabs (Transfer / By the hour), return-ride option ===== */
 .qw-route[hidden],.qw-field[hidden],.qw-ret[hidden]{display:none}
 .qw-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;margin:0 0 20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:9px}
 .qw-tab{height:42px;border:0;border-radius:6px;background:transparent;color:#b9b9b2;font-family:var(--body);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
 .qw-tab:hover{color:#fff}
-.qw-tab[aria-selected="true"]{background:linear-gradient(180deg,var(--gold-hi),var(--gold-lo));color:#0A0A0A;font-weight:600;box-shadow:0 6px 16px -8px rgba(212,175,55,.7)}
+.qw-tab[aria-selected="true"]{background:linear-gradient(180deg,var(--btn-hi),var(--btn-lo));color:#0A0A0A;font-weight:600;box-shadow:0 6px 16px -8px rgba(0,0,0,.7)}
 .qw-tab:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .qw-two{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
 .qw-return{display:flex;gap:12px;align-items:flex-start;margin-top:12px;padding:14px 16px;border:1px solid rgba(255,255,255,.12);border-radius:9px;cursor:pointer;background:rgba(255,255,255,.03);transition:border-color .2s,background .2s}
