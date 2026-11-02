@@ -8,7 +8,7 @@ import SiteScripts from '../../components/SiteScripts.astro';
 <Base lang="es" page="contact.html">
 <Fragment slot="head">
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contacto y reservas — Onyx Executive Miami | +1 786 931 ONYX (6699)</title>
+<title>Contacto y reservas. Onyx Executive Miami | +1 786 931 ONYX (6699)</title>
 <meta name="description" content="Reserve con Onyx Executive Miami: llame al +1 786 931 ONYX (6699), escriba por WhatsApp o envíe el formulario. Servicio de chófer privado en Miami, Fort Lauderdale y Palm Beach." />
 <meta name="theme-color" content="#0A0A0A" />
 <Fonts />
@@ -130,7 +130,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 var b=document.getElementById('sendBtn');
 if(b){b.addEventListener('click',function(){
 var v=function(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';};
-var t=['Nueva solicitud de chófer — Onyx Executive Miami','','Nombre: '+(v('f-name')||'—'),'Teléfono: '+(v('f-phone')||'—'),'Correo electrónico: '+(v('f-email')||'—'),'Servicio: '+v('f-svc'),'Fecha/hora: '+(v('f-date')||'—'),'Pasajeros: '+(v('f-pax')||'—'),'Equipaje: '+(v('f-luggage')||'—'),'N.º de vuelo: '+(v('f-flight')||'—'),'Reserva para: '+v('f-for'),'Silla para niños: '+v('f-seat'),'Recogida: '+(v('f-from')||'—'),'Destino: '+(v('f-to')||'—'),'Respuesta preferida: '+v('f-contact-pref'),'Notas: '+(v('f-notes')||'—')];
+var t=['Nueva solicitud de chófer. Onyx Executive Miami','','Nombre: '+(v('f-name')||'—'),'Teléfono: '+(v('f-phone')||'—'),'Correo electrónico: '+(v('f-email')||'—'),'Servicio: '+v('f-svc'),'Fecha/hora: '+(v('f-date')||'—'),'Pasajeros: '+(v('f-pax')||'—'),'Equipaje: '+(v('f-luggage')||'—'),'N.º de vuelo: '+(v('f-flight')||'—'),'Reserva para: '+v('f-for'),'Silla para niños: '+v('f-seat'),'Recogida: '+(v('f-from')||'—'),'Destino: '+(v('f-to')||'—'),'Respuesta preferida: '+v('f-contact-pref'),'Notas: '+(v('f-notes')||'—')];
 if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'contact',event_label:'contact_full_form',service:v('f-svc')});}
 window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'_blank');
 });}

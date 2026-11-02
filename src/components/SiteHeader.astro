@@ -42,16 +42,19 @@ const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 <a href={p + 'pbi-airport.html'} aria-current={c('pbi-airport.html')}>{t.pbi}</a>
 <div class="nav-drop-hr"></div>
 <a href={p + 'private-aviation.html'} aria-current={c('private-aviation.html')}>{t.privateAviationFbo}</a>
+<a href={p + 'opa-locka-airport-opf.html'} aria-current={c('opa-locka-airport-opf.html')}>{t.opf}</a>
+<a href={p + 'cruise-transportation.html'} aria-current={c('cruise-transportation.html')}>{t.cruise}</a>
 <a href={p + 'airport-transfers.html'}>{t.allAirport}</a>
 </div>
-</div><a href={p + 'corporate.html'} aria-current={c('corporate.html')}>{t.corporate}</a><div class="nav-drop"><a href={p + 'executive-chauffeur.html'} aria-current={c('executive-chauffeur.html')}>{t.services}</a>
+</div><div class="nav-drop"><a href={p + 'executive-chauffeur.html'} aria-current={c('executive-chauffeur.html')}>{t.services}</a>
 <div class="nav-drop-panel">
+<a href={p + 'corporate.html'} aria-current={c('corporate.html')}>{t.corporate}</a>
 <a href={p + 'executive-chauffeur.html'}>{t.executiveChauffeur}</a>
 <a href={p + 'event-transportation.html'} aria-current={c('event-transportation.html')}>{t.eventTransportation}</a>
 <a href={p + 'school-transportation.html'} aria-current={c('school-transportation.html')}>{t.schoolTransportation}</a>
 <a href={p + 'long-distance.html'} aria-current={c('long-distance.html')}>{t.longDistance}</a>
 </div>
-</div><a href={p + 'fleet.html'} aria-current={c('fleet.html')}>{t.fleet}</a><div class="nav-drop"><a href={p + 'service-area.html'} aria-current={c('service-area.html')}>{t.serviceArea}</a>
+</div><a href={p + 'rates.html'} aria-current={c('rates.html')}>{t.rates}</a><a href={p + 'fleet.html'} aria-current={c('fleet.html')}>{t.fleet}</a><div class="nav-drop"><a href={p + 'service-area.html'} aria-current={c('service-area.html')}>{t.serviceArea}</a>
 <div class="nav-drop-panel">
 <a href={p + 'aventura.html'} aria-current={c('aventura.html')}>{t.aventura}</a>
 <a href={p + 'sunny-isles.html'} aria-current={c('sunny-isles.html')}>{t.sunnyIsles}</a>
@@ -62,8 +65,14 @@ const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 <div class="nav-drop-hr"></div>
 <a href={p + 'service-area.html'}>{t.allAreas}</a>
 </div>
-</div><a href={p + 'blog.html'} aria-current={c('blog.html')}>{t.blog}</a>
-<a href={p + 'contact.html'} aria-current={c('contact.html')}>{t.contact}</a></nav>
+</div><div class="nav-drop"><a href={p + 'the-onyx-standard.html'} aria-current={c('the-onyx-standard.html')}>{t.fCompany}</a>
+<div class="nav-drop-panel">
+<a href={p + 'the-onyx-standard.html'} aria-current={c('the-onyx-standard.html')}>{t.fStandard}</a>
+<a href={p + 'blog.html'} aria-current={c('blog.html')}>{t.blog}</a>
+<a href={p + 'faq.html'} aria-current={c('faq.html')}>{t.fFaq}</a>
+<a href={p + 'contact.html'} aria-current={c('contact.html')}>{t.contact}</a>
+</div>
+</div></nav>
 <a class="nav-cta" href="tel:+17869316699">{t.call}<span class="nav-cta-num"> +1 786 931 ONYX (6699)</span></a>
 <button type="button" class="nav-toggle" aria-label={t.menu} aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
@@ -73,11 +82,15 @@ const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 <a href={p + 'mia-airport.html'} aria-current={m('mia-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.mia}</a>
 <a href={p + 'fll-airport.html'} aria-current={m('fll-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.fll}</a>
 <a href={p + 'pbi-airport.html'} aria-current={m('pbi-airport.html')} style="padding-left:32px;font-size:14px">↳ {t.pbi}</a>
+<a href={p + 'private-aviation.html'} aria-current={m('private-aviation.html')} style="padding-left:32px;font-size:14px">↳ {t.privateAviationFbo}</a>
+<a href={p + 'opa-locka-airport-opf.html'} aria-current={m('opa-locka-airport-opf.html')} style="padding-left:32px;font-size:14px">↳ {t.opf}</a>
+<a href={p + 'cruise-transportation.html'} aria-current={m('cruise-transportation.html')} style="padding-left:32px;font-size:14px">↳ {t.cruise}</a>
 <a href={p + 'corporate.html'} aria-current={m('corporate.html')}>{t.corporate}</a>
 <a href={p + 'executive-chauffeur.html'} aria-current={m('executive-chauffeur.html')} style="padding-left:32px;font-size:14px">↳ {t.executiveChauffeur}</a>
 <a href={p + 'event-transportation.html'} aria-current={m('event-transportation.html')} style="padding-left:32px;font-size:14px">↳ {t.eventTransportation}</a>
 <a href={p + 'school-transportation.html'} aria-current={m('school-transportation.html')} style="padding-left:32px;font-size:14px">↳ {t.schoolTransportation}</a>
 <a href={p + 'long-distance.html'} aria-current={m('long-distance.html')} style="padding-left:32px;font-size:14px">↳ {t.longDistance}</a>
+<a href={p + 'rates.html'} aria-current={m('rates.html')}>{t.rates}</a>
 <a href={p + 'fleet.html'} aria-current={m('fleet.html')}>{t.fleet}</a>
 <a href={p + 'service-area.html'} aria-current={m('service-area.html')}>{t.serviceArea}</a>
 <a href={p + 'aventura.html'} aria-current={m('aventura.html')} style="padding-left:32px;font-size:14px">↳ {t.aventura}</a>
@@ -86,7 +99,9 @@ const m = (href: string) => (href === mobileCurrent ? 'page' : undefined);
 <a href={p + 'brickell-downtown-miami.html'} aria-current={m('brickell-downtown-miami.html')} style="padding-left:32px;font-size:14px">↳ {t.brickell}</a>
 <a href={p + 'fort-lauderdale.html'} aria-current={m('fort-lauderdale.html')} style="padding-left:32px;font-size:14px">↳ {t.fortLauderdale}</a>
 <a href={p + 'miami-beach.html'} aria-current={m('miami-beach.html')} style="padding-left:32px;font-size:14px">↳ {t.miamiBeach}</a>
+<a href={p + 'the-onyx-standard.html'} aria-current={m('the-onyx-standard.html')}>{t.fStandard}</a>
 <a href={p + 'blog.html'} aria-current={m('blog.html')}>{t.blog}</a>
+<a href={p + 'faq.html'} aria-current={m('faq.html')}>{t.fFaq}</a>
 <a href={p + 'contact.html'} aria-current={m('contact.html')}>{t.contact}</a>
 <a class="mm-call" href="tel:+17869316699">{t.callCta}</a>
 </nav>

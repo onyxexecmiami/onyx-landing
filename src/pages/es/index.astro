@@ -322,7 +322,7 @@ import SiteFooter from '../../components/SiteFooter.astro';
 <div class="figure">
 <div class="persona-stats">
 <div><div class="val">El mismo</div><div class="lbl">Chófer en cada viaje</div></div>
-<div><div class="val">Semanal–Por período</div><div class="lbl">Configuración de ruta</div></div>
+<div><div class="val">Semanal o por plazo</div><div class="lbl">Configuración de ruta</div></div>
 <div><div class="val">4</div><div class="lbl">Idiomas que hablamos</div></div>
 <div><div class="val">#64666</div><div class="lbl">Permiso de Miami-Dade</div></div>
 </div>
@@ -608,7 +608,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 var b=document.getElementById('sendBtn');
 if(b){b.addEventListener('click',function(){
 var v=function(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';};
-var t=['Nueva solicitud de chófer — Onyx Executive Miami','','Nombre: '+(v('f-name')||'—'),'Teléfono: '+(v('f-phone')||'—'),'Servicio: '+v('f-svc'),'Fecha/hora: '+(v('f-date')||'—'),'Pasajeros: '+(v('f-pax')||'—'),'Recogida: '+(v('f-from')||'—'),'Destino: '+(v('f-to')||'—')];
+var t=['Nueva solicitud de chófer. Onyx Executive Miami','','Nombre: '+(v('f-name')||'—'),'Teléfono: '+(v('f-phone')||'—'),'Servicio: '+v('f-svc'),'Fecha/hora: '+(v('f-date')||'—'),'Pasajeros: '+(v('f-pax')||'—'),'Recogida: '+(v('f-from')||'—'),'Destino: '+(v('f-to')||'—')];
 if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'contact',event_label:'home_quick_form',service:v('f-svc')});}
 window.open('https://wa.me/17869316699?text='+encodeURIComponent(t.join('\n')),'_blank');
 });}

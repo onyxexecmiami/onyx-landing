@@ -27,6 +27,7 @@ export const ui = {
     aventura: 'Aventura', sunnyIsles: 'Sunny Isles Beach', balHarbour: 'Bal Harbour',
     brickell: 'Brickell / Downtown', fortLauderdale: 'Fort Lauderdale', miamiBeach: 'Miami Beach',
     allAreas: 'All Service Areas →', blog: 'Blog', contact: 'Contact',
+    rates: 'Rates', opf: 'Opa-locka (OPF)', cruise: 'Cruise Ports',
     callCta: 'Call +1 786 931 ONYX (6699)', menu: 'Menu', navMain: 'Main', navMobile: 'Mobile menu',
     footTag: 'Boutique executive transportation across South Florida.',
     fServices: 'Services', fAirport: 'Airport transfers', fPrivateAviation: 'Private aviation / FBO',
@@ -40,7 +41,7 @@ export const ui = {
     nf: {
       title: 'Page not found | Onyx Executive Miami', eyebrow: 'Error 404 · Page not found',
       h1a: 'A wrong turn.', h1b: 'Your chauffeur knows the way back.',
-      lead: 'The page you asked for has moved or never existed. Pick a destination below, or reach us directly — we answer the phone.',
+      lead: 'The page you asked for has moved or never existed. Pick a destination below, or reach us directly, we answer the phone.',
       home: 'Back to Home', call: 'Call +1 786 931 ONYX', menuLabel: 'Main sections',
       alt: 'Black Onyx Executive Chevrolet Suburban on a rooftop with the Miami skyline behind it',
       tiles: [
@@ -67,6 +68,7 @@ export const ui = {
     aventura: 'Aventura', sunnyIsles: 'Sunny Isles Beach', balHarbour: 'Bal Harbour',
     brickell: 'Brickell / Centro', fortLauderdale: 'Fort Lauderdale', miamiBeach: 'Miami Beach',
     allAreas: 'Todas las Zonas →', blog: 'Blog', contact: 'Contacto',
+    rates: 'Tarifas', opf: 'Opa-locka (OPF)', cruise: 'Puertos de cruceros',
     callCta: 'Llamar +1 786 931 ONYX (6699)', menu: 'Menú', navMain: 'Principal', navMobile: 'Menú móvil',
     footTag: 'Transporte ejecutivo boutique en el sur de Florida.',
     fServices: 'Servicios', fAirport: 'Traslados al aeropuerto', fPrivateAviation: 'Aviación privada / FBO',
@@ -107,6 +109,7 @@ export const ui = {
     aventura: 'Авентура', sunnyIsles: 'Санни-Айлс', balHarbour: 'Бал-Харбор',
     brickell: 'Бриквелл / Центр', fortLauderdale: 'Форт-Лодердейл', miamiBeach: 'Майами-Бич',
     allAreas: 'Все зоны →', blog: 'Блог', contact: 'Контакты',
+    rates: 'Тарифы', opf: 'Опа-лока (OPF)', cruise: 'Круизные порты',
     callCta: 'Позвонить +1 786 931 ONYX (6699)', menu: 'Меню', navMain: 'Основное меню', navMobile: 'Мобильное меню',
     footTag: 'Бутиковый executive-транспорт по Южной Флориде.',
     fServices: 'Услуги', fAirport: 'Трансферы из аэропорта', fPrivateAviation: 'Частная авиация / FBO',
