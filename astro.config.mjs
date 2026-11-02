@@ -9,26 +9,36 @@ export default defineConfig({
   site: 'https://onyxexecmiami.com',
   build: { format: 'preserve' },
   integrations: [ogDefaults()],
-  // Brand fonts, downloaded at build time and served from the site itself (no request to Google).
+  // Fonts (Source Serif 4 headings, Plus Jakarta Sans text, Manrope for Cyrillic), downloaded at build time and served from the site itself (no request to Google).
   // Weights match what the site used from Google Fonts; cyrillic is for the Russian pages.
   fonts: [
     {
       provider: fontProviders.google(),
-      name: 'Cormorant Garamond',
+      name: 'Source Serif 4',
       cssVariable: '--font-display',
       weights: [400, 500, 600],
-      styles: ['normal'],
+      styles: ['normal', 'italic'],
       subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
       fallbacks: ['Georgia', 'serif'],
     },
     {
       provider: fontProviders.google(),
-      name: 'Montserrat',
+      name: 'Plus Jakarta Sans',
       cssVariable: '--font-body',
-      weights: [300, 400, 500, 600],
+      weights: [400, 500, 600, 700],
       styles: ['normal'],
-      subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
+      subsets: ['latin', 'latin-ext'],
       fallbacks: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+    },
+    {
+      // Plus Jakarta Sans has no basic Cyrillic: the Russian pages fall through to Manrope, a close match.
+      provider: fontProviders.google(),
+      name: 'Manrope',
+      cssVariable: '--font-body-cyr',
+      weights: [400, 500, 600, 700],
+      styles: ['normal'],
+      subsets: ['cyrillic', 'cyrillic-ext'],
+      fallbacks: ['sans-serif'],
     },
   ],
 });
