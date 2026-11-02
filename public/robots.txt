@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://onyxexecmiami.com/sitemap.xml
+
+# AI crawlers are welcome; site summary for them: https://onyxexecmiami.com/llms.txt
