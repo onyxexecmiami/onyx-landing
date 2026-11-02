@@ -616,3 +616,6 @@ h1,h2,h3,.display,.h2,.h3{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:
 @media(max-width:420px){.figure .kicker{font-size:clamp(30px,9vw,40px)}}
 .form-grid>*,.field{min-width:0}
 .field input,.field select,.field textarea{width:100%;min-width:0;box-sizing:border-box}
+/* Russian pages: one sans for Cyrillic and Latin so lines do not mix two different type sizes */
+html[lang="ru"]{--body:var(--font-body-cyr,"Manrope"),-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+html[lang="ru"] .hero-trust li{font-size:10.5px;letter-spacing:.05em}

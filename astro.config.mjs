@@ -37,7 +37,7 @@ export default defineConfig({
       cssVariable: '--font-body-cyr',
       weights: [400, 500, 600, 700],
       styles: ['normal'],
-      subsets: ['cyrillic', 'cyrillic-ext'],
+      subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
       fallbacks: ['sans-serif'],
     },
   ],
