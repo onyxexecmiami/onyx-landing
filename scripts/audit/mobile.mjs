@@ -24,6 +24,7 @@ await Promise.all([p.waitForNavigation(), p.tap('.mobile-menu a[href$="fleet.htm
 ok('menu link navigates', p.url().endsWith('/fleet.html'), p.url());
 
 // 2. language switch on the same page
+await p.tap('.lang-dd summary');
 await Promise.all([p.waitForNavigation(), p.tap('.util-lang a[hreflang="ru"]')]);
 ok('language switch keeps the page', p.url().endsWith('/ru/fleet.html'), p.url());
 ok('russian page has lang=ru', (await p.getAttribute('html', 'lang')) === 'ru');
