@@ -652,3 +652,27 @@ html[lang="ru"] .hero-trust li{font-size:10.5px;letter-spacing:.05em}
 @media(min-width:1000px){.trust .wrap{flex-wrap:nowrap}}
 @media(max-width:999px){.trust .wrap{gap:6px 22px}.trust span{font-size:10px}}
 @media(max-width:600px){.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;justify-items:start}.trust span{white-space:normal;font-size:9.5px;line-height:1.35;align-items:flex-start}}
+
+/* dropdowns hang directly from the header bar: no gap between the menu item and its panel */
+@media(min-width:901px){
+  .nav-links{align-items:center}
+  .nav-drop{display:flex;align-items:center;align-self:stretch}
+  .nav-drop-panel{top:100%;transform:translateX(-50%) translateY(0);padding:6px 0;border-top-color:var(--hair)}
+  .nav-drop:hover .nav-drop-panel,.nav-drop:focus-within .nav-drop-panel{transform:translateX(-50%) translateY(0)}
+  .nav-drop-panel .nav-drop-label{padding-top:6px}
+}
+
+/* 2026-11-03: gold borders on every form field, aligned credential markers, lighter and bolder small text, short footer */
+.field input,.field select,.field textarea,
+.qw-field select,.qw-field input,
+.qw-return,.qw-tabs{border-color:var(--gold)}
+.field input:hover,.field select:hover,.qw-field select:hover,.qw-field input:hover,.qw-return:hover{border-color:var(--gold-hi)}
+.trust span .mark,.trust .mark{margin-top:0;align-self:center}
+.trust span{align-items:center}
+footer.site{padding-bottom:56px}
+@media(max-width:768px){footer.site{padding-bottom:88px}}
+.foot-bottom,.foot-bottom span{color:#bdbdb6;font-weight:500}
+.util-bar,.util-bar .util-right>span,.util-bar a{color:#cfcfc9;font-weight:500}
+/* menu arrows: flip around their own centre, so they stay put when the item is hovered */
+.nav-drop>a::after{transform-origin:4px 2.5px}
+.nav-drop:hover>a::after,.nav-drop:focus-within>a::after{transform:translateY(1px) rotate(180deg);transform-origin:4px 2.5px}
