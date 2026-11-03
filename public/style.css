@@ -191,7 +191,7 @@ details .ans{padding:0 0 24px;color:var(--muted);font-size:15px;max-width:66ch}
 @media(max-width:480px){.form-grid{grid-template-columns:1fr}}
 
 /* footer */
-footer.site{background:#060606;color:#8d8d86;padding:58px 0 120px;border-top:1px solid var(--hair-dark)}
+footer.site{background:#060606;color:#8d8d86;padding:58px 0 70px;border-top:1px solid var(--hair-dark)}
 .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;margin-bottom:38px}
 .foot-brand{font-family:var(--display);font-size:25px;color:#fff}.foot-brand span{color:var(--gold)}
 .foot-tag{font-size:13px;color:var(--muted);margin-top:8px;max-width:34ch}
@@ -643,3 +643,12 @@ html[lang="ru"] .hero-trust li{font-size:10.5px;letter-spacing:.05em}
 /* header call button: solid gold, black text */
 .nav-cta{background:#D4AF37;color:#0A0A0A;border-color:#D4AF37;font-weight:600}
 .nav-cta:hover{background:#E3C45F;color:#0A0A0A;border-color:#E3C45F}
+
+/* 2026-11-03: shorter footer, one-line credentials strip on desktop */
+@media(max-width:768px){footer.site{padding-bottom:88px}}
+.trust{padding:14px 0}
+.trust .wrap{gap:8px 28px}
+.trust span{font-size:10.5px;letter-spacing:.07em;gap:8px;white-space:nowrap}
+@media(min-width:1000px){.trust .wrap{flex-wrap:nowrap}}
+@media(max-width:999px){.trust .wrap{gap:6px 22px}.trust span{font-size:10px}}
+@media(max-width:600px){.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;justify-items:start}.trust span{white-space:normal;font-size:9.5px;line-height:1.35;align-items:flex-start}}
