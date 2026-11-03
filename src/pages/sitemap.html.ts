@@ -52,18 +52,18 @@ h1{font:400 clamp(30px,5vw,44px)/1.1 Georgia,serif;margin:0 0 10px;color:#fff}p.
 h2{font:600 11px sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#D4AF37;margin:32px 0 10px}
 table{width:100%;border-collapse:collapse;border:1px solid rgba(255,255,255,.1)}
 td{padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:middle}tr:last-child td{border-bottom:0}tr:hover td{background:rgba(212,175,55,.06)}
-td.p a{color:#fff;text-decoration:none;font-weight:500}td.p a:hover{color:#E3C45F}.u{display:block;font-size:12px;color:#6f6f68;word-break:break-all}
+td.p a{color:#fff;text-decoration:none;font-weight:500}td.p a:hover{color:#E3C45F}.u{display:block;font-size:12px;color:#a3a39c;word-break:break-all}
 td.l{text-align:right;white-space:nowrap}td.l a,td.l .na{display:inline-block;min-width:34px;text-align:center;font-size:11px;letter-spacing:.08em;margin-left:6px;padding:3px 7px;border:1px solid rgba(212,175,55,.45);border-radius:4px;color:#D4AF37;text-decoration:none}
 td.l a:hover{background:#D4AF37;color:#0A0A0A}td.l .na{opacity:.25}
-.foot{margin-top:34px;color:#6f6f68;font-size:13px}.foot a{color:#a9a9a2}
-</style></head><body><div class="wrap">
+.foot{margin-top:34px;color:#a3a39c;font-size:13px}.foot a{color:#a9a9a2}
+</style></head><body><main class="wrap">
 <a class="brand" href="/"><img src="/onyx-mark.svg?v=5" alt=""><span><b>ONYX</b><i>Executive Miami</i></span></a>
 <h1>Sitemap</h1>
 <p class="lead">Every page of onyxexecmiami.com, in English, Spanish and Russian. Search engines use the XML version of this list; this page is for people.</p>
 <div class="stats"><div class="stat"><b>${total}</b><span>Pages in total</span></div>${LANGS.map((l) => `<div class="stat"><b>${byLang[l].size}</b><span>${NAMES[l]}</span></div>`).join('')}</div>
 ${rows}
 <p class="foot">For search engines and AI assistants: <a href="/sitemap.xml?format=xml">sitemap.xml</a>, <a href="/llms.txt">llms.txt</a>, <a href="/llms-full.txt">llms-full.txt</a>, <a href="/robots.txt">robots.txt</a>.</p>
-</div></body></html>
+</main></body></html>
 `;
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 };
