@@ -639,3 +639,7 @@ html[lang="ru"] .hero-trust li{font-size:10.5px;letter-spacing:.05em}
 .lang-menu a:hover{background:rgba(255,255,255,.07);color:#fff}
 .lang-menu a[aria-current="true"]{color:var(--gold)}
 @media(max-width:700px){.lang-menu{right:auto;left:50%;transform:translateX(-50%)}}
+
+/* header call button: solid gold, black text */
+.nav-cta{background:#D4AF37;color:#0A0A0A;border-color:#D4AF37;font-weight:600}
+.nav-cta:hover{background:#E3C45F;color:#0A0A0A;border-color:#E3C45F}

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cacheControl, candidates, directoryRedirect, notFoundPage } from '../worker/index.js';
+import { cacheControl, candidates, contentType, wantsSitemapPage, directoryRedirect, notFoundPage } from '../worker/index.js';
 
 test('pages keep their .html URLs', () => {
   assert.deepEqual(candidates('/faq.html'), ['/faq.html']);
@@ -35,4 +35,19 @@ test('cache lifetime by file type', () => {
   assert.match(cacheControl('/style.css'), /max-age=3600/);
   assert.equal(cacheControl('/faq.html'), null);
   assert.equal(cacheControl('/es/index.html'), null);
+});
+
+test('content type for the sitemap stylesheet and the AI text files', () => {
+  assert.equal(contentType('/llms.txt'), 'text/plain; charset=utf-8');
+  assert.equal(contentType('/llms-full.txt'), 'text/plain; charset=utf-8');
+  assert.equal(contentType('/faq.html'), null);
+});
+
+test('browsers get the readable sitemap, search engines get the XML', () => {
+  const h = (o) => new Headers(o);
+  assert.equal(wantsSitemapPage('/sitemap.xml', '', h({ 'sec-fetch-dest': 'document' })), true);
+  assert.equal(wantsSitemapPage('/sitemap.xml', '', h({ accept: 'text/html' })), false);
+  assert.equal(wantsSitemapPage('/sitemap.xml', '', h({})), false);
+  assert.equal(wantsSitemapPage('/sitemap.xml', '?format=xml', h({ 'sec-fetch-dest': 'document' })), false);
+  assert.equal(wantsSitemapPage('/faq.html', '', h({ 'sec-fetch-dest': 'document' })), false);
 });

@@ -1,24 +1,12 @@
 // sitemap.xml built from the pages that exist, with hreflang links between language versions.
 import type { APIRoute } from 'astro';
-import { LANGS, pageUrl, type Lang } from '../i18n/ui';
-
-const files = Object.keys(import.meta.glob('./**/*.astro'));
-
-function pagesOf(lang: Lang) {
-  const dir = lang === 'en' ? './' : `./${lang}/`;
-  return new Set(
-    files
-      .filter((f) => f.startsWith(dir) && !f.slice(dir.length).includes('/'))
-      .map((f) => f.slice(dir.length).replace(/\.astro$/, '.html'))
-      .filter((p) => p !== '404.html'),
-  );
-}
+import { LANGS, byLang as getByLang, pageUrl, sortPages } from '../i18n/pages';
 
 export const GET: APIRoute = () => {
-  const byLang = Object.fromEntries(LANGS.map((l) => [l, pagesOf(l)])) as Record<Lang, Set<string>>;
+  const byLang = getByLang();
   const urls: string[] = [];
   for (const lang of LANGS) {
-    for (const page of [...byLang[lang]].sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.localeCompare(b)))) {
+    for (const page of sortPages(byLang[lang])) {
       const alts = LANGS.filter((l) => byLang[l].has(page))
         .map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${pageUrl(l, page)}"/>`)
         .concat(byLang.en.has(page) ? [`<xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl('en', page)}"/>`] : []);

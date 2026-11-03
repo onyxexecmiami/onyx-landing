@@ -43,8 +43,14 @@
 - [The Onyx Standard](https://onyxexecmiami.com/the-onyx-standard.html)
 - [FAQ](https://onyxexecmiami.com/faq.html)
 - [Contact and booking](https://onyxexecmiami.com/contact.html)
+- [Art Basel Miami Beach car service](https://onyxexecmiami.com/event-art-basel.html)
 
 ## Optional
 
 - [Blog: guides for getting around South Florida](https://onyxexecmiami.com/blog.html)
+- [MIA, FLL or DJT: which airport to fly into](https://onyxexecmiami.com/blog-miami-airports-guide.html)
+- [Private chauffeur vs Uber and Lyft in Miami](https://onyxexecmiami.com/blog-private-chauffeur-vs-rideshare.html)
+- [Aventura transportation guide](https://onyxexecmiami.com/aventura-transportation-guide.html)
+- [Best restaurants in Sunny Isles Beach](https://onyxexecmiami.com/blog-sunny-isles-restaurants.html)
+- [Full text of every page for AI assistants (llms-full.txt)](https://onyxexecmiami.com/llms-full.txt)
 - [Spanish version](https://onyxexecmiami.com/es/) and [Russian version](https://onyxexecmiami.com/ru/)
