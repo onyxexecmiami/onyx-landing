@@ -40,7 +40,7 @@ export const GET: APIRoute = () => {
   const html = `<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, follow"><title>Sitemap | Onyx Executive Miami</title>
-<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#0A0A0A;color:#e7e7e2;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 .wrap{max-width:900px;margin:0 auto;padding:48px 24px 72px}
@@ -57,7 +57,7 @@ td.l{text-align:right;white-space:nowrap}td.l a,td.l .na{display:inline-block;mi
 td.l a:hover{background:#D4AF37;color:#0A0A0A}td.l .na{opacity:.25}
 .foot{margin-top:34px;color:#6f6f68;font-size:13px}.foot a{color:#a9a9a2}
 </style></head><body><div class="wrap">
-<a class="brand" href="/"><img src="/onyx-mark.svg?v=2" alt=""><span><b>ONYX</b><i>Executive Miami</i></span></a>
+<a class="brand" href="/"><img src="/onyx-mark.svg?v=5" alt=""><span><b>ONYX</b><i>Executive Miami</i></span></a>
 <h1>Sitemap</h1>
 <p class="lead">Every page of onyxexecmiami.com, in English, Spanish and Russian. Search engines use the XML version of this list; this page is for people.</p>
 <div class="stats"><div class="stat"><b>${total}</b><span>Pages in total</span></div>${LANGS.map((l) => `<div class="stat"><b>${byLang[l].size}</b><span>${NAMES[l]}</span></div>`).join('')}</div>
